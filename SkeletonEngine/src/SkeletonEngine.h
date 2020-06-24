@@ -3,7 +3,6 @@
 #pragma once
 
 #include "SkeletonEngine/Application.h"
+#include "SkeletonEngine/Log.h"
 
-// ---------------- Entry Point ----------------
 #include "SkeletonEngine/EntryPoint.h"
-// ---------------------------------------------

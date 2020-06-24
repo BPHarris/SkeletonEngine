@@ -5,7 +5,7 @@
 		#define SE_API __declspec(dllexport)
 	#else
 		#define SE_API __declspec(dllimport)
-	#endif
+	#endif // SE_BUILD_DLL
 #else
 	#error SkeletonEngine only supports windows, thus far.
-#endif
+#endif // SE_PLATFORM_WINDOWS
