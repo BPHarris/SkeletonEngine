@@ -3,6 +3,9 @@
 bin/
 bin-int/
 
+# User files
+*.user
+
 # Prerequisites
 *.d
 
