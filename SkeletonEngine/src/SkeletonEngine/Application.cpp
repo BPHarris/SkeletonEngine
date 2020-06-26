@@ -12,6 +12,7 @@ namespace SkeletonEngine {
 	}
 
 
+	/** Application Run method. */
 	void Application::Run()
 	{
 		while (true);

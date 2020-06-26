@@ -1,4 +1,4 @@
-/* For use by SkeletonEngine applications */
+/* General include, for use by SkeletonEngine applications. */
 
 #pragma once
 

@@ -1,3 +1,8 @@
+/** Log.h
+ *
+ * Wrapper and interface to spdlog.
+ */
+
 #pragma once
 
 #include <memory>
@@ -5,9 +10,9 @@
 #include "Core.h"
 #include "spdlog/spdlog.h"
 
-namespace SkeletonEngine
-{
+namespace SkeletonEngine {
 
+	/** SkeletonEngine Log class. */
 	class SE_API Log
 	{
 	public:
@@ -29,7 +34,7 @@ namespace SkeletonEngine
 #define SE_CORE_INFO(...)   ::SkeletonEngine::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define SE_CORE_TRACE(...)  ::SkeletonEngine::Log::GetCoreLogger()->trace(__VA_ARGS__)
 
-// Client application loging macros
+// Client application logging macros
 #define SE_FATAL(...)       ::SkeletonEngine::Log::GetClientLogger()->fatal(__VA_ARGS__)
 #define SE_ERROR(...)       ::SkeletonEngine::Log::GetClientLogger()->error(__VA_ARGS__)
 #define SE_WARN(...)        ::SkeletonEngine::Log::GetClientLogger()->warn(__VA_ARGS__)

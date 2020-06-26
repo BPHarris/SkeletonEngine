@@ -4,6 +4,7 @@
 
 namespace SkeletonEngine {
 
+	/** SkeletonEngine Log class. */
 	class SE_API Application
 	{
 	public:
