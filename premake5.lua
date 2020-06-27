@@ -18,6 +18,10 @@ project "SkeletonEngine"
     targetdir ("bin/"     .. outputdir .. "/%{prj.name}")
     objdir    ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    -- Precompiled header file
+    pchheader "sepch.h"
+    pchsource "SkeletonEngine/src/sepch.cpp"
+
     -- All *.h and *.cpp files in the project directory
     files
     {
@@ -28,6 +32,7 @@ project "SkeletonEngine"
     -- Include vendor code
     includedirs
     {
+        "%{prj.name}/src",                          -- SkeletonEngine/src
         "%{prj.name}/vendor/spdlog/include"         -- spdlog
     }
 

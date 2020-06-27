@@ -7,8 +7,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 
 namespace SkeletonEngine {
 
@@ -18,7 +16,7 @@ namespace SkeletonEngine {
 	public:
 		WindowClosedEvent() {}
 
-		EVENT_CLASS_TYPE(WindowClose)
+		EVENT_CLASS_TYPE(WindowClosed)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
@@ -37,11 +35,11 @@ namespace SkeletonEngine {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "WindowResizeEvent: (" << m_Width << ", " << m_Height << ")";
+			ss << "WindowResizedEvent: (" << m_Width << ", " << m_Height << ")";
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(WindowResize)
+		EVENT_CLASS_TYPE(WindowResized)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
 	private:

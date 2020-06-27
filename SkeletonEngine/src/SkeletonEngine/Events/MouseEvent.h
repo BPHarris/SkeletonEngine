@@ -7,8 +7,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 
 namespace SkeletonEngine {
 

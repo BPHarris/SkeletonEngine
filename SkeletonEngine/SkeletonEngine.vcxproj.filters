@@ -34,6 +34,7 @@
     <ClInclude Include="src\SkeletonEngine\Log.h">
       <Filter>SkeletonEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\sepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SkeletonEngine\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\SkeletonEngine\Log.cpp">
       <Filter>SkeletonEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\sepch.cpp" />
   </ItemGroup>
 </Project>

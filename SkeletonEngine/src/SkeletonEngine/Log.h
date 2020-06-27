@@ -5,10 +5,10 @@
 
 #pragma once
 
-#include <memory>
-
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
+
 
 namespace SkeletonEngine {
 
@@ -26,6 +26,7 @@ namespace SkeletonEngine {
 	};
 
 }
+
 
 // Engine core loging macros
 #define SE_CORE_FATAL(...)  ::SkeletonEngine::Log::GetCoreLogger()->fatal(__VA_ARGS__)

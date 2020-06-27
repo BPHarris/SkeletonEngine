@@ -5,10 +5,8 @@
 
 #pragma once
 
+#include "sepch.h"
 #include "SkeletonEngine/Core.h"
-
-#include <string>
-#include <functional>
 
 
 namespace SkeletonEngine {
