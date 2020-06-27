@@ -18,6 +18,10 @@
 #include <unordered_set>
 
 
+// Engine (should only be log)
+#include "SkeletonEngine/Log.h"
+
+
 // Platform specific
 #ifdef SE_PLATFORM_WINDOWS
 	#include <Windows.h>
