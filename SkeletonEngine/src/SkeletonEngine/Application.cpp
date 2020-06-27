@@ -1,7 +1,6 @@
 #include "sepch.h"
 #include "Application.h"
 
-#include "SkeletonEngine/Log.h"
 #include "SkeletonEngine/Events/ApplicationEvent.h"
 
 
