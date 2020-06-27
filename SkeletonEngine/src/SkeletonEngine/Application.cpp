@@ -13,6 +13,7 @@ namespace SkeletonEngine {
 
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 
@@ -24,13 +25,9 @@ namespace SkeletonEngine {
 	/** Application Run method. */
 	void Application::Run()
 	{
-		/* Event log example */
-		WindowResizedEvent e(1280, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			SE_TRACE(e);
+			m_Window->OnUpdate();
 		}
-
-		while (true);
 	}
 }
