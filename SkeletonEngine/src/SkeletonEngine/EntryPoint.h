@@ -1,4 +1,7 @@
+/** EntryPoint.h -- Contains SkeletonEngine program entry point. */
+
 #pragma once
+
 
 #ifdef SE_PLATFORM_WINDOWS
 

@@ -8,6 +8,13 @@ workspace "SkeletonEngine"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 
+-- Include directories relative to root
+IncludeDir = {}
+IncludeDir["GLFW"] = "SkeletonEngine/vendor/GLFW/include"
+
+include "SkeletonEngine/vendor/GLFW"
+
+
 -- SkeletonEngine DLL Project
 project "SkeletonEngine"
     location "SkeletonEngine"   -- Place project files in SkeletonEngine/SkeletonEngine
@@ -33,7 +40,15 @@ project "SkeletonEngine"
     includedirs
     {
         "%{prj.name}/src",                          -- SkeletonEngine/src
-        "%{prj.name}/vendor/spdlog/include"         -- spdlog
+        "%{prj.name}/vendor/spdlog/include",        -- spdlog
+        "%{IncludeDir.GLFW}"                        -- GLFW
+    }
+
+    -- Links
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     -- Windows
