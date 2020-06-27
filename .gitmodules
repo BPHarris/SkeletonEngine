@@ -1,3 +1,6 @@
 [submodule "SkeletonEngine/vendor/spdlog"]
 	path = SkeletonEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "SkeletonEngine/vendor/GLFW"]
+	path = SkeletonEngine/vendor/GLFW
+	url = https://github.com/BPHarris/glfw
