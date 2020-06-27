@@ -1,3 +1,8 @@
+/** Application.cpp
+ *
+ * Basic SkeletonEngine Application.
+ */
+
 #include "sepch.h"
 #include "Application.h"
 

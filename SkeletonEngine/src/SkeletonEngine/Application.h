@@ -1,3 +1,8 @@
+/** Application.h
+ *
+ * Basic SkeletonEngine Application interface.
+ */
+
 #pragma once
 
 #include "Core.h"
