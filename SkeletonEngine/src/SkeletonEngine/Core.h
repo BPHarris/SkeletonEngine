@@ -9,3 +9,6 @@
 #else
 	#error SkeletonEngine only supports windows, thus far.
 #endif // SE_PLATFORM_WINDOWS
+
+
+#define BIT(x) (1 << x)

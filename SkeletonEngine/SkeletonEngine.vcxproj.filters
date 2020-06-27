@@ -4,6 +4,9 @@
     <Filter Include="SkeletonEngine">
       <UniqueIdentifier>{A092A68F-8C60-9A95-75F4-0ABC616176FA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SkeletonEngine\Events">
+      <UniqueIdentifier>{840AE9B8-F076-A4B3-B96A-3C112596C61B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\SkeletonEngine.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\SkeletonEngine\EntryPoint.h">
       <Filter>SkeletonEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkeletonEngine\Events\ApplicationEvent.h">
+      <Filter>SkeletonEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkeletonEngine\Events\Event.h">
+      <Filter>SkeletonEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkeletonEngine\Events\KeyEvent.h">
+      <Filter>SkeletonEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SkeletonEngine\Events\MouseEvent.h">
+      <Filter>SkeletonEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\SkeletonEngine\Log.h">
       <Filter>SkeletonEngine</Filter>
