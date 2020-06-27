@@ -35,6 +35,8 @@
       <Filter>SkeletonEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\sepch.h" />
+    <ClInclude Include="src\SkeletonEngine\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SkeletonEngine\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>SkeletonEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\sepch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
