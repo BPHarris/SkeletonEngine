@@ -51,6 +51,9 @@ project "SkeletonEngine"
         "opengl32.lib"
     }
 
+    -- TODO: System filter for macosx
+    -- TODO: System filter for linux
+
     -- Windows
     filter "system:windows"
         cppdialect "C++17"
