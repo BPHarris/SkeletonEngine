@@ -76,6 +76,11 @@ project "SkeletonEngine"
     filter "configurations:Debug"
         defines "SE_DEBUG"
         symbols "On"
+
+        defines
+        {
+            "SE_ENABLE_ASSERTS"
+        }
     
     -- Release
     filter "configurations:Release"
@@ -133,6 +138,11 @@ project "Demo"
     filter "configurations:Debug"
         defines "SE_DEBUG"
         symbols "On"
+
+        defines
+        {
+            "SE_ENABLE_ASSERTS"
+        }
     
     -- Release
     filter "configurations:Release"
