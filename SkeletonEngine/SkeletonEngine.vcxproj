@@ -149,6 +149,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\SkeletonEngine.h" />
     <ClInclude Include="src\SkeletonEngine\Application.h" />
     <ClInclude Include="src\SkeletonEngine\Core.h" />
@@ -158,17 +159,16 @@
     <ClInclude Include="src\SkeletonEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\SkeletonEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\SkeletonEngine\Log.h" />
-    <ClInclude Include="src\sepch.h" />
     <ClInclude Include="src\SkeletonEngine\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\sepch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\SkeletonEngine\Application.cpp" />
     <ClCompile Include="src\SkeletonEngine\Log.cpp" />
     <ClCompile Include="src\sepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
