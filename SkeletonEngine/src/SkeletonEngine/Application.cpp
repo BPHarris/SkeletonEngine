@@ -25,6 +25,9 @@ namespace SkeletonEngine {
 	/** Application Run method. */
 	void Application::Run()
 	{
+		// Log example
+		SE_CORE_INFO("An example INFO level log from engine code.");
+
 		while (m_Running)
 		{
 			m_Window->OnUpdate();
