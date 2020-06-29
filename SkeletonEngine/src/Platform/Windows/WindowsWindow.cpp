@@ -16,6 +16,13 @@ namespace SkeletonEngine {
 	static bool s_GLFWInitialized = false;
 
 
+	/** GLFW error callback function */
+	static void GLFWErrorCallback(int error, const char* description)
+	{
+		SE_CORE_ERROR("GLFW Error {}:{}", error, description);
+	}
+
+
 	/** Create a new WindowsWindow with the given properties */
 	Window* Window::Create(const WindowProperties& porperties)
 	{
@@ -41,6 +48,8 @@ namespace SkeletonEngine {
 			// TODO: glfwTerminate on system shutdown
 			int success = glfwInit();
 			SE_CORE_ASSERT(success, "Could not initialise GLFW.");
+
+			glfwSetErrorCallback(GLFWErrorCallback);
 
 			s_GLFWInitialized = true;
 		}
