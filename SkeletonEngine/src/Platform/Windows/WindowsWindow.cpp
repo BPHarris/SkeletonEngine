@@ -60,52 +60,87 @@ namespace SkeletonEngine {
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
+		
+		/* GLFW Window callback macros */
+#define GET_WINDOW_DATA_AS(data)				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+#define SET_EVENT_CALLBACK(Type, data, ...)		Type event(__VA_ARGS__);\
+												data.EventCallback(event);
+#define SET_SIMPLE_CALLBACK(Type, data)			Type event;\
+												data.EventCallback(event);
+		
 		/* Set GLFW event callbacks */
-#define SIMPLE_EVENT(type, ...)					WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);\
-												data.EventCallback(*(new type(__VA_ARGS__)));
-#define EVENT_CASE(event_case, type, ...)		case event_case: data.EventCallback(*(new type(__VA_ARGS__))); break;
-
 		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
-			{ SIMPLE_EVENT(WindowClosedEvent); });
+			{
+				GET_WINDOW_DATA_AS(data);
+				SET_SIMPLE_CALLBACK(WindowClosedEvent, data);
+			});
 
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
 			{
-				WindowData& data = *(WindowData*) glfwGetWindowUserPointer(window);
+				GET_WINDOW_DATA_AS(data);
 				
+				// Set width/height before callback so that handler has correct values
 				data.Width = width;
 				data.Height = height;
-				data.EventCallback(*(new WindowResizedEvent(width, height)));
+				
+				SET_EVENT_CALLBACK(WindowResizedEvent, data, width, height);
 			});
 
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
 			{
-				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				GET_WINDOW_DATA_AS(data);
 
 				switch (action)
 				{
-					EVENT_CASE(GLFW_PRESS, KeyPressedEvent, key, KeyPressedEvent::JUST_PRESSED);
-					EVENT_CASE(GLFW_RELEASE, KeyReleasedEvent, key);
-					// TODO: Get actual repeat count, instead of KeyPressedEvent::REPEATED placeholder
-					EVENT_CASE(GLFW_REPEAT, KeyPressedEvent, key, KeyPressedEvent::REPEATED);
+					case GLFW_PRESS:
+					{
+						SET_EVENT_CALLBACK(KeyPressedEvent, data, key, KeyPressedEvent::JUST_PRESSED);
+						break;
+					}
+					case GLFW_RELEASE:
+					{
+						SET_EVENT_CALLBACK(KeyReleasedEvent, data, key);
+						break;
+					}
+					case GLFW_REPEAT:
+					{
+						// TODO: Get actual repeat count, instead of KeyPressedEvent::REPEATED placeholder
+						SET_EVENT_CALLBACK(KeyPressedEvent, data, key, KeyPressedEvent::REPEATED);
+						break;
+					}
 				}
 			});
 		
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
 			{
-				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				GET_WINDOW_DATA_AS(data);
 
 				switch (action)
 				{
-					EVENT_CASE(GLFW_PRESS, MouseButtonPressedEvent, button);
-					EVENT_CASE(GLFW_RELEASE, MouseButtonReleasedEvent, button);
+					case GLFW_PRESS:
+					{
+						SET_EVENT_CALLBACK(MouseButtonPressedEvent, data, button);
+						break;
+					}
+					case GLFW_RELEASE:
+					{
+						SET_EVENT_CALLBACK(MouseButtonReleasedEvent, data, button);
+						break;
+					}
 				}
 			});
 
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double x, double y)
-			{ SIMPLE_EVENT(MouseMovedEvent, (float)x, (float)y); });
+			{
+				GET_WINDOW_DATA_AS(data);
+				SET_EVENT_CALLBACK(MouseMovedEvent, data, (float)x, (float)y)
+			});
 
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xoffset, double yoffset)
-			{ SIMPLE_EVENT(MouseScrolledEvent, (float)xoffset, (float)yoffset); });
+			{
+				GET_WINDOW_DATA_AS(data);
+				SET_EVENT_CALLBACK(MouseScrolledEvent, data, (float)xoffset, (float)yoffset)
+			});
 	}
 
 
