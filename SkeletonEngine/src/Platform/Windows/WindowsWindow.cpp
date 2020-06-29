@@ -34,6 +34,7 @@ namespace SkeletonEngine {
 	WindowsWindow::~WindowsWindow() { Shutdown(); }
 
 
+	/** Initialise new window */
 	void WindowsWindow::Init(const WindowProperties& p)
 	{
 		m_Data.Title = p.Title;

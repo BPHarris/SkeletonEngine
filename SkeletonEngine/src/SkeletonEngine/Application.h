@@ -6,8 +6,9 @@
 #pragma once
 
 #include "Core.h"
-#include "Events/Event.h"
-#include "Window.h"
+#include "SkeletonEngine/Window.h"
+#include "SkeletonEngine/Events/Event.h"
+#include "SkeletonEngine/Events/ApplicationEvent.h"
 
 
 namespace SkeletonEngine {
@@ -24,6 +25,8 @@ namespace SkeletonEngine {
 		void OnEvent(Event& e);
 	
 	private:
+		bool OnWindowClose(WindowClosedEvent& e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};

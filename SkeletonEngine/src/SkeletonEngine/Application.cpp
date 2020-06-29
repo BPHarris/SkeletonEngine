@@ -6,8 +6,6 @@
 #include "sepch.h"
 #include "Application.h"
 
-#include "SkeletonEngine/Events/ApplicationEvent.h"
-
 
 namespace SkeletonEngine {
 
@@ -42,6 +40,18 @@ namespace SkeletonEngine {
 	/** Event callback function */
 	void Application::OnEvent(Event& e)
 	{
-		SE_CORE_INFO(e);
+		EventDispatcher dispatcher(e);
+
+		dispatcher.Dispatch<WindowClosedEvent>(BIND_EVENT_FN(OnWindowClose));
+
+		SE_CORE_TRACE(e);
+	}
+
+
+	/** Handle WindowClosedEvent and set to handled (return true) */
+	bool Application::OnWindowClose(WindowClosedEvent& e)
+	{
+		m_Running = false;
+		return true;
 	}
 }
