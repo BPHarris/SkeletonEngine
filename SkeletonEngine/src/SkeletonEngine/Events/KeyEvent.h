@@ -36,13 +36,13 @@ namespace SkeletonEngine {
 			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
 		inline int GetRepeatCount() const { return m_RepeatCount; }
-		inline bool IsJustPressed() const { return GetRepeatCount() != 0; }
+		inline bool IsJustPressed() const { return !m_RepeatCount; }
 
 		/** @return string  string representation of KeyPressedEvent */
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "KeyPressedEvent: " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
+			ss << "KeyPressedEvent: " << m_KeyCode << " (" << ((IsJustPressed()) ? ("IsJustPressed") : ("Repeated")) << ")";
 			return ss.str();
 		}
 
