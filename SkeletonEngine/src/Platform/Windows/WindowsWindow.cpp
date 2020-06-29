@@ -75,9 +75,9 @@ namespace SkeletonEngine {
 	void WindowsWindow::SetVSync(bool enabled)
 	{
 		if (enabled)
-			glfwSwapInterval(1);
+			glfwSwapInterval(VSYNC_ENABLED);
 		else
-			glfwSwapInterval(0);
+			glfwSwapInterval(VSYNC_DISABLED);
 
 		m_Data.VSync = enabled;
 	}

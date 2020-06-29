@@ -16,6 +16,10 @@ namespace SkeletonEngine {
 	class WindowsWindow : public Window
 	{
 	public:
+		static const int VSYNC_ENABLED = 1;
+		static const int VSYNC_DISABLED = 0;
+
+
 		WindowsWindow(const WindowProperties& properties);
 		virtual ~WindowsWindow();
 
