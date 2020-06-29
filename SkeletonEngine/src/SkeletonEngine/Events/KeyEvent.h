@@ -29,6 +29,9 @@ namespace SkeletonEngine {
 	class SE_API KeyPressedEvent : public KeyEvent
 	{
 	public:
+		static const int JUST_PRESSED = 0;
+		static const int REPEATED = 1;
+
 		KeyPressedEvent(int keycode, int repeatCount)
 			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
