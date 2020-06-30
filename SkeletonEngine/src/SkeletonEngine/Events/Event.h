@@ -25,9 +25,9 @@ namespace SkeletonEngine {
 		/* Window Events */
 		WindowClosed,
 		WindowResized,
-		WindowFocused,		/* TODO: Create event class */
-		WindowLostFocus,	/* TODO: Create event class */
-		WindowMoved,		/* TODO: Create event class */
+		WindowFocused,
+		WindowLostFocus,
+		WindowMoved,
 
 		/* Application Events */
 		AppTick,

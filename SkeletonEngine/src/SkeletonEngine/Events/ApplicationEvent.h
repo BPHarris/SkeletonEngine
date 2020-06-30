@@ -47,6 +47,53 @@ namespace SkeletonEngine {
 	};
 
 
+	/** SkeletonEngine Window Focused Event class. */
+	class SE_API WindowFocusedEvent : public Event
+	{
+	public:
+		WindowFocusedEvent() {}
+
+		EVENT_CLASS_TYPE(WindowFocused)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+	};
+
+
+	/** SkeletonEngine Window Lost Focus Event class. */
+	class SE_API WindowLostFocusEvent : public Event
+	{
+	public:
+		WindowLostFocusEvent() {}
+
+		EVENT_CLASS_TYPE(WindowLostFocus)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+	};
+
+
+	/** SkeletonEngine Window Lost Focus Event class. */
+	class SE_API WindowMovedEvent : public Event
+	{
+	public:
+		WindowMovedEvent(unsigned int x, unsigned int y) : m_X(x), m_Y(y) {}
+
+		inline unsigned int GetX() const { return m_X; }
+		inline unsigned int GetY() const { return m_Y; }
+
+		/** @return string  string representation of WindowMovedEvent */
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "WindowMovedEvent: (" << m_X << ", " << m_Y << ")";
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(WindowMoved)
+		EVENT_CLASS_CATEGORY(EventCategoryApplication)
+
+	private:
+		unsigned int m_X, m_Y;
+	};
+
+
 	/** SkeletonEngine App Tick Event class. */
 	class SE_API AppTickEvent : public Event
 	{
