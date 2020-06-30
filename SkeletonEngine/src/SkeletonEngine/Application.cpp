@@ -40,8 +40,6 @@ namespace SkeletonEngine {
 		EventDispatcher dispatcher(e);
 
 		dispatcher.Dispatch<WindowClosedEvent>(BIND_EVENT_FN(OnWindowClose));
-
-		SE_CORE_TRACE(e);
 	}
 
 

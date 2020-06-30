@@ -41,7 +41,7 @@ namespace SkeletonEngine {
 		m_Data.Width = p.Width;
 		m_Data.Height = p.Height;
 
-		SE_CORE_INFO("Created new window \"{}\" ({}, {})", p.Title, p.Width, p.Height);
+		SE_CORE_INFO("Created new window {}", ToString());
 
 		// Initalise GLFW
 		if (!s_GLFWInitialized)
@@ -168,6 +168,7 @@ namespace SkeletonEngine {
 	/** Handle Window Shutdown Event */
 	void WindowsWindow::Shutdown()
 	{
+		SE_CORE_INFO("Closed window {}", ToString());
 		glfwDestroyWindow(m_Window);
 	}
 
