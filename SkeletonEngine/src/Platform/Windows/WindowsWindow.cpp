@@ -86,6 +86,26 @@ namespace SkeletonEngine {
 				SET_EVENT_CALLBACK(WindowResizedEvent, data, width, height);
 			});
 
+		glfwSetWindowFocusCallback(m_Window, [](GLFWwindow* window, int focused)
+			{
+				GET_WINDOW_DATA_AS(data);
+
+				if (focused)
+				{
+					SET_SIMPLE_CALLBACK(WindowFocusedEvent, data);
+				}
+				else
+				{
+					SET_SIMPLE_CALLBACK(WindowLostFocusEvent, data);
+				}
+			});
+
+		glfwSetWindowPosCallback(m_Window, [](GLFWwindow* window, int x, int y)
+			{
+				GET_WINDOW_DATA_AS(data);
+				SET_EVENT_CALLBACK(WindowMovedEvent, data, x, y);
+			});
+
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
 			{
 				GET_WINDOW_DATA_AS(data);
@@ -141,6 +161,7 @@ namespace SkeletonEngine {
 				GET_WINDOW_DATA_AS(data);
 				SET_EVENT_CALLBACK(MouseScrolledEvent, data, (float)xoffset, (float)yoffset)
 			});
+
 	}
 
 

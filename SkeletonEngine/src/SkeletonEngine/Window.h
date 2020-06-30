@@ -25,9 +25,7 @@ namespace SkeletonEngine {
 				const std::string& title = "SkeletonEngine",
 				unsigned int width = 1280,
 				unsigned int height = 720
-		) : Title(title), Width(width), Height(height)
-		{
-		}
+		) : Title(title), Width(width), Height(height) {}
 	};
 
 
