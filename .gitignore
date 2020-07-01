@@ -1,45 +1,15 @@
-# Directories
+# Project Files
+# Visual Studio
 .vs/
-bin/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+# GMake
+Makefile
+
+
+# Binaries
+**/bin/
 bin-int/
-
-# User files
-*.user
-
-# VS Projecy files
-*.sln
-*/*.vcxproj
-*/*.vcxproj.filters
-
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+!vendor/bin/premake/
