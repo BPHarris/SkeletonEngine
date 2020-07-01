@@ -11,7 +11,7 @@ Welcome to SkeletonEngine's documentation!
    :caption: Contents:
 
    about
-   api/library_root
+   api/skeleton_engine
 
 
 

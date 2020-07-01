@@ -47,11 +47,10 @@ extensions = [
 ]
 
 # Breathe setup
-PROJECT_NAME = 'SkeletonEngine'
 breathe_projects = {
-    PROJECT_NAME: './doxygenoutput/xml'       # Doxygen xml output
+    project: './doxygenoutput/xml'       # Doxygen xml output
 }
-breathe_default_project = PROJECT_NAME
+breathe_default_project = project
 
 # Exhale setup
 from textwrap import dedent
@@ -68,13 +67,9 @@ exhale_args = {
     'afterTitleDescription': dedent("""
         .. note::
 
-        Blah blah afterTitleDescription blah.
+        The SkeletonEngine API.
     """),
-    'afterHierarchyDescription': dedent("""
-        .. note::
-        
-        This is the afterHierarchyDescription.
-    """),
+    'afterHierarchyDescription': '',
     
     'createTreeView': True,
     'treeViewIsBootstrap': True,
@@ -126,8 +121,68 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#
-# html_theme_options = {}
+
+html_logo = '../Resources/logo.png'
+html_theme_options = {
+    'navbar_title': project,                    # (Default: ``project`` value)
+    'navbar_site_name': 'Site',                 # (Default: "Site")
+
+    # A list of tuples containing pages or urls to link to.
+    # Valid tuples should be in the following forms:
+    #    (name, page)                 # a link to a page
+    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+    #    (name, "http://example.com", True) # arbitrary absolute url
+    # Note the "1" or "True" value above as the third argument to indicate
+    # an arbitrary url.
+    'navbar_links': [],                         # (Default: [])
+
+    # Render the next and previous page links in navbar.
+    'navbar_sidebarrel': True,                  # (Default: True)
+
+    # Render the current pages TOC in the navbar.
+    'navbar_pagenav': True,                     # (Default: True)
+
+    # Tab name for the current pages TOC.
+    'navbar_pagenav_name': 'Contents',          # (Default: 'Page')
+
+    # Global TOC depth for "site" navbar tab.
+    # Switching to -1 shows all levels.
+    'globaltoc_depth': -1,                       # (Default: 1)
+
+    # Include hidden TOCs in Site navbar?
+    #
+    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+    # non-hidden ``toctree`` directives in the same page, or else the build
+    # will break.
+    'globaltoc_includehidden': 'true',          # (Default: 'true')
+
+    # HTML navbar class to attach to <div> element.
+    # For black navbar, do 'navbar navbar-inverse'
+    'navbar_class': 'navbar',                   # (Default: 'navbar')
+
+    # Fix navigation bar to top of page?
+    'navbar_fixed_top': 'true',                 # (Default: 'true')
+
+    # Location of link to source.
+    # Values: ('nav', 'footer', or anything else to exclude)
+    'source_link_position': 'nav',              # (Default: 'nav')
+
+    # Bootswatch (http://bootswatch.com/) theme.
+    #
+    # Options are nothing (default) or the name of a valid theme
+    # such as "cosmo" or "sandstone".
+    #
+    # The set of valid themes depend on the version of Bootstrap
+    # that's used (the next config option).
+    #
+    # Currently, the supported themes are:
+    # - Bootstrap 2: https://bootswatch.com/2
+    # - Bootstrap 3: https://bootswatch.com/3
+    'bootswatch_theme': 'paper',                # (Default: '')
+
+    # Choose Bootstrap version. Values: ('3', '2')
+    'bootstrap_version': '3',                   # (Default: '3')
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

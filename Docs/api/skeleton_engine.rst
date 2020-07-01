@@ -6,19 +6,12 @@ SkeletonEngine API
 
 .. note::
 
-Blah blah afterTitleDescription blah.
+The SkeletonEngine API.
 
 
 .. include:: class_view_hierarchy.rst
 
 .. include:: file_view_hierarchy.rst
-
-
-
-.. note::
-
-This is the afterHierarchyDescription.
-
 
 .. include:: unabridged_api.rst
 
