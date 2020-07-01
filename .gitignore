@@ -6,6 +6,11 @@ bin-int/
 # User files
 *.user
 
+# VS Projecy files
+*.sln
+*/*.vcxproj
+*/*.vcxproj.filters
+
 # Prerequisites
 *.d
 
