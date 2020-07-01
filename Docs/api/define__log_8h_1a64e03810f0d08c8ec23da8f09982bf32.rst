@@ -1,0 +1,13 @@
+.. _exhale_define__log_8h_1a64e03810f0d08c8ec23da8f09982bf32:
+
+Define SE_CORE_ERROR
+====================
+
+- Defined in :ref:`file_SkeletonEngine_src_SkeletonEngine_Log.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SE_CORE_ERROR

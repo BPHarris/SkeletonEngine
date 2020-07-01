@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_event_dispatcher" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::EventDispatcher</compoundname>
+    <includes refid="_event_8h" local="no">Event.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_skeleton_engine_1_1_event_dispatcher_1a6d58ac363343bc2ed0b88217cd558d34" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::function&lt; bool(T &amp;)&gt;</type>
+        <definition>using SkeletonEngine::EventDispatcher::EventFn =  std::function&lt;bool(T&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>EventFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="94" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_event_dispatcher_1aaaf1f285397a5d01f7a0c97e52da7e01" prot="private" static="no" mutable="no">
+        <type><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> &amp;</type>
+        <definition>Event&amp; SkeletonEngine::EventDispatcher::m_Event</definition>
+        <argsstring></argsstring>
+        <name>m_Event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="111" column="7" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_event_dispatcher_1aab24a45877617db578900550ded03dc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::EventDispatcher::EventDispatcher</definition>
+        <argsstring>(Event &amp;event)</argsstring>
+        <name>EventDispatcher</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="97" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_event_dispatcher_1aca6f04eebd7cc035ad24f46758d1b3a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool SkeletonEngine::EventDispatcher::Dispatch</definition>
+        <argsstring>(EventFn&lt; T &gt; func)</argsstring>
+        <name>Dispatch</name>
+        <param>
+          <type>EventFn&lt; T &gt;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="100" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="100" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> Dispatcher class. </para>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="91" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="92" bodyend="112"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_event_dispatcher_1aca6f04eebd7cc035ad24f46758d1b3a0" prot="public" virt="non-virtual"><scope>SkeletonEngine::EventDispatcher</scope><name>Dispatch</name></member>
+      <member refid="class_skeleton_engine_1_1_event_dispatcher_1aab24a45877617db578900550ded03dc9" prot="public" virt="non-virtual"><scope>SkeletonEngine::EventDispatcher</scope><name>EventDispatcher</name></member>
+      <member refid="class_skeleton_engine_1_1_event_dispatcher_1a6d58ac363343bc2ed0b88217cd558d34" prot="private" virt="non-virtual"><scope>SkeletonEngine::EventDispatcher</scope><name>EventFn</name></member>
+      <member refid="class_skeleton_engine_1_1_event_dispatcher_1aaaf1f285397a5d01f7a0c97e52da7e01" prot="private" virt="non-virtual"><scope>SkeletonEngine::EventDispatcher</scope><name>m_Event</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

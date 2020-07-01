@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_window" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SkeletonEngine::Window</compoundname>
+    <derivedcompoundref refid="class_skeleton_engine_1_1_windows_window" prot="public" virt="non-virtual">SkeletonEngine::WindowsWindow</derivedcompoundref>
+    <includes refid="_window_8h" local="no">Window.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_skeleton_engine_1_1_window_1adbb3feff4618a6866529ee5ca519917c" prot="public" static="no">
+        <type>std::function&lt; void(<ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> &amp;)&gt;</type>
+        <definition>using SkeletonEngine::Window::EventCallbackFn =  std::function&lt;void(Event&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>EventCallbackFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="36" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Window.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1a5a58caa3f44b110c3e1a7c6e5a6132c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual SkeletonEngine::Window::~Window</definition>
+        <argsstring>()</argsstring>
+        <name>~Window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="38" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Window.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1a1c3725a84f5ea63148fcbd94a16863a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SkeletonEngine::Window::OnUpdate</definition>
+        <argsstring>()=0</argsstring>
+        <name>OnUpdate</name>
+        <reimplementedby refid="class_skeleton_engine_1_1_windows_window_1a1d742cb0684d631dc59597de1038723d">OnUpdate</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="40" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1ad13566cf97d7836815848d8b03faf971" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string SkeletonEngine::Window::GetTitle</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetTitle</name>
+        <reimplementedby refid="class_skeleton_engine_1_1_windows_window_1ab7546afe2f7df36e726e901d5c16f034">GetTitle</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="42" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1ab9e0f01d94eb5f5b1a5fffbc79e2ec7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int SkeletonEngine::Window::GetWidth</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetWidth</name>
+        <reimplementedby refid="class_skeleton_engine_1_1_windows_window_1ae78e4380ef3061c94710ac7b0807b691">GetWidth</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="43" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1a18ca4e63f4004211d84d66069978b003" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int SkeletonEngine::Window::GetHeight</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetHeight</name>
+        <reimplementedby refid="class_skeleton_engine_1_1_windows_window_1a9e06b6e9258eae0c353f6f9bfc133c36">GetHeight</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="44" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1a7de7c9973fdfbc554ca1a807f6073de0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string SkeletonEngine::Window::ToString</definition>
+        <argsstring>() const</argsstring>
+        <name>ToString</name>
+        <reimplementedby refid="class_skeleton_engine_1_1_windows_window_1a90c4a3ce673f61126065909e33e83707">ToString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="46" column="21" bodyfile="SkeletonEngine/src/SkeletonEngine/Window.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1a432631d4b321ab5f1a36b4320a83d14c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SkeletonEngine::Window::SetEventCallback</definition>
+        <argsstring>(const EventCallbackFn &amp;callback)=0</argsstring>
+        <name>SetEventCallback</name>
+        <reimplementedby refid="class_skeleton_engine_1_1_windows_window_1a9e49e06dee974758bcc8ba3631dea81f">SetEventCallback</reimplementedby>
+        <param>
+          <type>const EventCallbackFn &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="48" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1ae282dcedc8af578d9180d6bb4e0b658e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SkeletonEngine::Window::SetVSync</definition>
+        <argsstring>(bool enabled)=0</argsstring>
+        <name>SetVSync</name>
+        <reimplementedby refid="class_skeleton_engine_1_1_windows_window_1aa39ec82ed01ed56ca1f308997d7a0fce">SetVSync</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="49" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1a353f9aa35b191c705c7a3af5822a1b22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool SkeletonEngine::Window::IsVSync</definition>
+        <argsstring>() const =0</argsstring>
+        <name>IsVSync</name>
+        <reimplementedby refid="class_skeleton_engine_1_1_windows_window_1a21045a4e53e096af549868f97a73d7dc">IsVSync</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="50" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_1abbf537752f2c710bb01196da1b877fae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> *</type>
+        <definition>Window * SkeletonEngine::Window::Create</definition>
+        <argsstring>(const WindowProperties &amp;p=WindowProperties())</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const <ref refid="struct_skeleton_engine_1_1_window_properties" kindref="compound">WindowProperties</ref> &amp;</type>
+          <declname>p</declname>
+          <defname>porperties</defname>
+          <defval><ref refid="struct_skeleton_engine_1_1_window_properties" kindref="compound">WindowProperties</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="class_skeleton_engine_1_1_windows_window" kindref="compound">WindowsWindow</ref> with the given properties </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="52" column="15" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> <ndash/> Interface representing a desktop system based <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SkeletonEngine::Window</label>
+        <link refid="class_skeleton_engine_1_1_window"/>
+      </node>
+      <node id="2">
+        <label>SkeletonEngine::WindowsWindow</label>
+        <link refid="class_skeleton_engine_1_1_windows_window"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="SkeletonEngine/src/SkeletonEngine/Window.h" line="33" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Window.h" bodystart="34" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_window_1abbf537752f2c710bb01196da1b877fae" prot="public" virt="non-virtual"><scope>SkeletonEngine::Window</scope><name>Create</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1adbb3feff4618a6866529ee5ca519917c" prot="public" virt="non-virtual"><scope>SkeletonEngine::Window</scope><name>EventCallbackFn</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1a18ca4e63f4004211d84d66069978b003" prot="public" virt="pure-virtual"><scope>SkeletonEngine::Window</scope><name>GetHeight</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1ad13566cf97d7836815848d8b03faf971" prot="public" virt="pure-virtual"><scope>SkeletonEngine::Window</scope><name>GetTitle</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1ab9e0f01d94eb5f5b1a5fffbc79e2ec7a" prot="public" virt="pure-virtual"><scope>SkeletonEngine::Window</scope><name>GetWidth</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1a353f9aa35b191c705c7a3af5822a1b22" prot="public" virt="pure-virtual"><scope>SkeletonEngine::Window</scope><name>IsVSync</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1a1c3725a84f5ea63148fcbd94a16863a7" prot="public" virt="pure-virtual"><scope>SkeletonEngine::Window</scope><name>OnUpdate</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1a432631d4b321ab5f1a36b4320a83d14c" prot="public" virt="pure-virtual"><scope>SkeletonEngine::Window</scope><name>SetEventCallback</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1ae282dcedc8af578d9180d6bb4e0b658e" prot="public" virt="pure-virtual"><scope>SkeletonEngine::Window</scope><name>SetVSync</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1a7de7c9973fdfbc554ca1a807f6073de0" prot="public" virt="virtual"><scope>SkeletonEngine::Window</scope><name>ToString</name></member>
+      <member refid="class_skeleton_engine_1_1_window_1a5a58caa3f44b110c3e1a7c6e5a6132c0" prot="public" virt="virtual"><scope>SkeletonEngine::Window</scope><name>~Window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

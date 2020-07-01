@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_b08418fd5a0c205f5f46659943153452" kind="dir">
+    <compoundname>SkeletonEngine/src/SkeletonEngine</compoundname>
+    <innerdir refid="dir_dac94aceb73af5e6740776c8c8e9924b">SkeletonEngine/src/SkeletonEngine/Events</innerdir>
+    <innerfile refid="_application_8cpp">Application.cpp</innerfile>
+    <innerfile refid="_application_8h">Application.h</innerfile>
+    <innerfile refid="_core_8h">Core.h</innerfile>
+    <innerfile refid="_entry_point_8h">EntryPoint.h</innerfile>
+    <innerfile refid="_log_8cpp">Log.cpp</innerfile>
+    <innerfile refid="_log_8h">Log.h</innerfile>
+    <innerfile refid="_window_8h">Window.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/SkeletonEngine/"/>
+  </compounddef>
+</doxygen>

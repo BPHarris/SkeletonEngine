@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_log" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::Log</compoundname>
+    <includes refid="_log_8h" local="no">Log.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" prot="private" static="yes" mutable="no">
+        <type>std::shared_ptr&lt; spdlog::logger &gt;</type>
+        <definition>std::shared_ptr&lt; spdlog::logger &gt; SkeletonEngine::Log::s_CoreLogger</definition>
+        <argsstring></argsstring>
+        <name>s_CoreLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="24" column="24" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" prot="private" static="yes" mutable="no">
+        <type>std::shared_ptr&lt; spdlog::logger &gt;</type>
+        <definition>std::shared_ptr&lt; spdlog::logger &gt; SkeletonEngine::Log::s_ClientLogger</definition>
+        <argsstring></argsstring>
+        <name>s_ClientLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="25" column="24" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_log_1af81dd8215db06bb58a8082dd7773878b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::Log::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise core and client log consoles. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="19" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.cpp" bodystart="18" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_log_1afce1f7b669686396496ef9829d329a3b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; spdlog::logger &gt; &amp;</type>
+        <definition>static std::shared_ptr&lt;spdlog::logger&gt;&amp; SkeletonEngine::Log::GetCoreLogger</definition>
+        <argsstring>()</argsstring>
+        <name>GetCoreLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="21" column="31" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_log_1ae4d75be88c10bb59e3e1fb66c4098d34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; spdlog::logger &gt; &amp;</type>
+        <definition>static std::shared_ptr&lt;spdlog::logger&gt;&amp; SkeletonEngine::Log::GetClientLogger</definition>
+        <argsstring>()</argsstring>
+        <name>GetClientLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="22" column="31" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_log" kindref="compound">Log</ref> class. </para>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="16" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="17" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_log_1ae4d75be88c10bb59e3e1fb66c4098d34" prot="public" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>GetClientLogger</name></member>
+      <member refid="class_skeleton_engine_1_1_log_1afce1f7b669686396496ef9829d329a3b" prot="public" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>GetCoreLogger</name></member>
+      <member refid="class_skeleton_engine_1_1_log_1af81dd8215db06bb58a8082dd7773878b" prot="public" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>Init</name></member>
+      <member refid="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" prot="private" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>s_ClientLogger</name></member>
+      <member refid="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" prot="private" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>s_CoreLogger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

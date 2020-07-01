@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Listing for File Event.h &#8212; SkeletonEngine  documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview\bootstrap-treeview.min.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/bootstrap-treeview\bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          SkeletonEngine</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Program Listing for File Event.h</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/api/program_listing_file_SkeletonEngine_src_SkeletonEngine_Events_Event.h.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="program-listing-for-file-event-h">
+<span id="program-listing-file-skeletonengine-src-skeletonengine-events-event-h"></span><h1>Program Listing for File Event.h<a class="headerlink" href="#program-listing-for-file-event-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_SkeletonEngine_src_SkeletonEngine_Events_Event.h.html#file-skeletonengine-src-skeletonengine-events-event-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">SkeletonEngine\src\SkeletonEngine\Events\Event.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;sepch.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;SkeletonEngine/Core.h&quot;</span><span class="cp"></span>
+
+
+<span class="k">namespace</span> <span class="n">SkeletonEngine</span> <span class="p">{</span>
+
+    <span class="cm">/* Events in the SkeletonEngine are currently blocking.</span>
+<span class="cm">     *</span>
+<span class="cm">     * At some point this should be changed to be buffered and processed in the</span>
+<span class="cm">     * event phase of the update stage.</span>
+<span class="cm">     */</span>
+
+    <span class="k">enum</span> <span class="k">class</span> <span class="nc">EventType</span>
+    <span class="p">{</span>
+        <span class="n">None</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+
+        <span class="cm">/* Window Events */</span>
+        <span class="n">WindowClosed</span><span class="p">,</span>
+        <span class="n">WindowResized</span><span class="p">,</span>
+        <span class="n">WindowFocused</span><span class="p">,</span>
+        <span class="n">WindowLostFocus</span><span class="p">,</span>
+        <span class="n">WindowMoved</span><span class="p">,</span>
+
+        <span class="cm">/* Application Events */</span>
+        <span class="n">AppTick</span><span class="p">,</span>
+        <span class="n">AppUpdate</span><span class="p">,</span>
+        <span class="n">AppRender</span><span class="p">,</span>
+
+        <span class="cm">/* Keyboard Events */</span>
+        <span class="n">KeyPressed</span><span class="p">,</span>
+        <span class="n">KeyReleased</span><span class="p">,</span>
+
+        <span class="cm">/* Mouse Events */</span>
+        <span class="n">MouseButtonPressed</span><span class="p">,</span>
+        <span class="n">MouseButtonReleased</span><span class="p">,</span>
+        <span class="n">MouseMoved</span><span class="p">,</span>
+        <span class="n">MouseScrolled</span>
+    <span class="p">};</span>
+
+
+    <span class="k">enum</span> <span class="n">EventCategory</span>
+    <span class="p">{</span>
+        <span class="n">None</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">EventCategoryApplication</span>    <span class="o">=</span> <span class="n">BIT</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+        <span class="n">EventCategoryInput</span>          <span class="o">=</span> <span class="n">BIT</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">EventCategoryKeyboard</span>       <span class="o">=</span> <span class="n">BIT</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+        <span class="n">EventCategoryMouse</span>          <span class="o">=</span> <span class="n">BIT</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+        <span class="n">EventCategoryMouseButton</span>    <span class="o">=</span> <span class="n">BIT</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="p">};</span>
+
+
+<span class="cp">#define EVENT_CLASS_TYPE(type)  static EventType GetStaticType() { return EventType::##type; }\</span>
+<span class="cp">                                virtual EventType GetEventType() const override { return GetStaticType(); }\</span>
+<span class="cp">                                virtual const char* GetName() const override { return #type; }</span>
+
+<span class="cp">#define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }</span>
+
+
+    <span class="k">class</span> <span class="nc">SE_API</span> <span class="n">Event</span>
+    <span class="p">{</span>
+        <span class="k">friend</span> <span class="k">class</span> <span class="nc">EventDispatcher</span><span class="p">;</span>
+
+    <span class="k">public</span><span class="o">:</span>
+        <span class="k">virtual</span> <span class="n">EventType</span> <span class="n">GetEventType</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">virtual</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="nf">GetName</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">GetCategoryFlags</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">GetName</span><span class="p">();</span> <span class="p">}</span>
+
+        <span class="kr">inline</span> <span class="kt">bool</span> <span class="n">IsInCategory</span><span class="p">(</span><span class="n">EventCategory</span> <span class="n">category</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">GetCategoryFlags</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">category</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="k">protected</span><span class="o">:</span>
+        <span class="kt">bool</span> <span class="n">m_Handled</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">};</span>
+
+
+    <span class="k">class</span> <span class="nc">EventDispatcher</span>
+    <span class="p">{</span>
+        <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+        <span class="k">using</span> <span class="n">EventFn</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span>
+
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">EventDispatcher</span><span class="p">(</span><span class="n">Event</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="o">:</span> <span class="n">m_Event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="p">{}</span>
+
+        <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+        <span class="kt">bool</span> <span class="n">Dispatch</span><span class="p">(</span><span class="n">EventFn</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">func</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">m_Event</span><span class="p">.</span><span class="n">GetEventType</span><span class="p">()</span> <span class="o">==</span> <span class="n">T</span><span class="o">::</span><span class="n">GetStaticType</span><span class="p">())</span>
+            <span class="p">{</span>
+                <span class="n">m_Event</span><span class="p">.</span><span class="n">m_Handled</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">m_Event</span><span class="p">);</span>
+                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="k">private</span><span class="o">:</span>
+        <span class="n">Event</span><span class="o">&amp;</span> <span class="n">m_Event</span><span class="p">;</span>
+    <span class="p">};</span>
+
+
+    <span class="kr">inline</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">os</span><span class="p">,</span> <span class="k">const</span> <span class="n">Event</span><span class="o">&amp;</span> <span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">e</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, BP Harris.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_window_closed_event" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::WindowClosedEvent</compoundname>
+    <basecompoundref refid="class_skeleton_engine_1_1_event" prot="public" virt="non-virtual">SkeletonEngine::Event</basecompoundref>
+    <includes refid="_application_event_8h" local="no">ApplicationEvent.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_closed_event_1a6dcb7e6d5e586a7fb57d437c84fe6ab2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::WindowClosedEvent::WindowClosedEvent</definition>
+        <argsstring>()</argsstring>
+        <name>WindowClosedEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="17" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_closed_event_1ae07f55bb5bd082ae93c85401177b18a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <definition>virtual EventType SkeletonEngine::WindowClosedEvent::GetEventType</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetEventType</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b">GetEventType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="19" column="86" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_closed_event_1a6cd8c3bc340e84967f8a6c7be38762a8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* SkeletonEngine::WindowClosedEvent::GetName</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a">GetName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="19" column="160" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_closed_event_1a24473ee73a69eb319739edebb5b55c01" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int SkeletonEngine::WindowClosedEvent::GetCategoryFlags</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetCategoryFlags</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03">GetCategoryFlags</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="20" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_window_closed_event_1a19e31c9f15c59f0cf4ada38ca0cab6c6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <definition>static EventType SkeletonEngine::WindowClosedEvent::GetStaticType</definition>
+        <argsstring>()</argsstring>
+        <name>GetStaticType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="19" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> Closed <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>SkeletonEngine::WindowClosedEvent</label>
+        <link refid="class_skeleton_engine_1_1_window_closed_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>SkeletonEngine::WindowClosedEvent</label>
+        <link refid="class_skeleton_engine_1_1_window_closed_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="14" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="15" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_window_closed_event_1a24473ee73a69eb319739edebb5b55c01" prot="public" virt="virtual"><scope>SkeletonEngine::WindowClosedEvent</scope><name>GetCategoryFlags</name></member>
+      <member refid="class_skeleton_engine_1_1_window_closed_event_1ae07f55bb5bd082ae93c85401177b18a9" prot="public" virt="virtual"><scope>SkeletonEngine::WindowClosedEvent</scope><name>GetEventType</name></member>
+      <member refid="class_skeleton_engine_1_1_window_closed_event_1a6cd8c3bc340e84967f8a6c7be38762a8" prot="public" virt="virtual"><scope>SkeletonEngine::WindowClosedEvent</scope><name>GetName</name></member>
+      <member refid="class_skeleton_engine_1_1_window_closed_event_1a19e31c9f15c59f0cf4ada38ca0cab6c6" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowClosedEvent</scope><name>GetStaticType</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowClosedEvent</scope><name>IsInCategory</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1a7b196d51d636dac3b56aeb2089a1a833" prot="protected" virt="non-virtual"><scope>SkeletonEngine::WindowClosedEvent</scope><name>m_Handled</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c" prot="public" virt="virtual"><scope>SkeletonEngine::WindowClosedEvent</scope><name>ToString</name></member>
+      <member refid="class_skeleton_engine_1_1_window_closed_event_1a6dcb7e6d5e586a7fb57d437c84fe6ab2" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowClosedEvent</scope><name>WindowClosedEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

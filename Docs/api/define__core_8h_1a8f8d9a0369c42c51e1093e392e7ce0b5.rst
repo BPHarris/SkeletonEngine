@@ -1,0 +1,13 @@
+.. _exhale_define__core_8h_1a8f8d9a0369c42c51e1093e392e7ce0b5:
+
+Define SE_CORE_ASSERT
+=====================
+
+- Defined in :ref:`file_SkeletonEngine_src_SkeletonEngine_Core.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SE_CORE_ASSERT

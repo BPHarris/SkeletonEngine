@@ -1,0 +1,13 @@
+.. _exhale_define__log_8h_1ae659d861ad82a50c501ea560c52c6d40:
+
+Define SE_FATAL
+===============
+
+- Defined in :ref:`file_SkeletonEngine_src_SkeletonEngine_Log.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SE_FATAL

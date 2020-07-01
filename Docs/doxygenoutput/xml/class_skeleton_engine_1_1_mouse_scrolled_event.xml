@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_mouse_scrolled_event" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::MouseScrolledEvent</compoundname>
+    <basecompoundref refid="class_skeleton_engine_1_1_event" prot="public" virt="non-virtual">SkeletonEngine::Event</basecompoundref>
+    <includes refid="_mouse_event_8h" local="no">MouseEvent.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_mouse_scrolled_event_1a8e892dd72c1e309bd56ec2d6fb88c62b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SkeletonEngine::MouseScrolledEvent::m_XOffset</definition>
+        <argsstring></argsstring>
+        <name>m_XOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="111" column="7" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_mouse_scrolled_event_1a5ac3591a2db0471f558da95c2600f416" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SkeletonEngine::MouseScrolledEvent::m_YOffset</definition>
+        <argsstring></argsstring>
+        <name>m_YOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="111" column="17" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_scrolled_event_1a2e1a2ea1c70a30a49a197e1cdee417b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::MouseScrolledEvent::MouseScrolledEvent</definition>
+        <argsstring>(float xOffset, float yOffset)</argsstring>
+        <name>MouseScrolledEvent</name>
+        <param>
+          <type>float</type>
+          <declname>xOffset</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="93" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="93" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_scrolled_event_1a7dee208e19c1ef8461f89b0b6132141b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SkeletonEngine::MouseScrolledEvent::GetXOffset</definition>
+        <argsstring>() const</argsstring>
+        <name>GetXOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="96" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_scrolled_event_1a7a0e596a18006cba004ed7c34edea9b1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SkeletonEngine::MouseScrolledEvent::GetYOffset</definition>
+        <argsstring>() const</argsstring>
+        <name>GetYOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="97" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_scrolled_event_1a77cc7463bc99f77b62809994b024e4d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string SkeletonEngine::MouseScrolledEvent::ToString</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToString</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c">ToString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string string representation of <ref refid="class_skeleton_engine_1_1_mouse_scrolled_event" kindref="compound">MouseScrolledEvent</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="100" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="100" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_scrolled_event_1a6c56e2732357335ac5c819baa86813a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <definition>virtual EventType SkeletonEngine::MouseScrolledEvent::GetEventType</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetEventType</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b">GetEventType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="107" column="87" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_scrolled_event_1ac07fde15ef95ce510bc7c9cacbc31cb5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* SkeletonEngine::MouseScrolledEvent::GetName</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a">GetName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="107" column="161" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_scrolled_event_1ae2506d5c2f5f53ebe0302a8fff31296e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int SkeletonEngine::MouseScrolledEvent::GetCategoryFlags</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetCategoryFlags</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03">GetCategoryFlags</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="108" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_scrolled_event_1a07195bc6618408d8ad06cd402ab3429a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <definition>static EventType SkeletonEngine::MouseScrolledEvent::GetStaticType</definition>
+        <argsstring>()</argsstring>
+        <name>GetStaticType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="107" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> MouseScrolled event class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>SkeletonEngine::MouseScrolledEvent</label>
+        <link refid="class_skeleton_engine_1_1_mouse_scrolled_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>SkeletonEngine::MouseScrolledEvent</label>
+        <link refid="class_skeleton_engine_1_1_mouse_scrolled_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="90" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="91" bodyend="112"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1ae2506d5c2f5f53ebe0302a8fff31296e" prot="public" virt="virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>GetCategoryFlags</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a6c56e2732357335ac5c819baa86813a3" prot="public" virt="virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>GetEventType</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1ac07fde15ef95ce510bc7c9cacbc31cb5" prot="public" virt="virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>GetName</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a07195bc6618408d8ad06cd402ab3429a" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>GetStaticType</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a7dee208e19c1ef8461f89b0b6132141b" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>GetXOffset</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a7a0e596a18006cba004ed7c34edea9b1" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>GetYOffset</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>IsInCategory</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1a7b196d51d636dac3b56aeb2089a1a833" prot="protected" virt="non-virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>m_Handled</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a8e892dd72c1e309bd56ec2d6fb88c62b" prot="private" virt="non-virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>m_XOffset</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a5ac3591a2db0471f558da95c2600f416" prot="private" virt="non-virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>m_YOffset</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a2e1a2ea1c70a30a49a197e1cdee417b0" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>MouseScrolledEvent</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a77cc7463bc99f77b62809994b024e4d9" prot="public" virt="virtual"><scope>SkeletonEngine::MouseScrolledEvent</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

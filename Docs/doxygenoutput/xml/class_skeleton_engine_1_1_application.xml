@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_application" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::Application</compoundname>
+    <includes refid="_application_8h" local="no">Application.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_application_1ace702edabc8e90af07224d82d210d608" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Window&gt; SkeletonEngine::Application::m_Window</definition>
+        <argsstring></argsstring>
+        <name>m_Window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="30" column="17" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_application_1a92f9846a7cbcbf9aefb2e8c616d7e111" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SkeletonEngine::Application::m_Running</definition>
+        <argsstring></argsstring>
+        <name>m_Running</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="31" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_application_1a0ccf5dbca675babd9aba0203bd63d554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::Application::Application</definition>
+        <argsstring>()</argsstring>
+        <name>Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="20" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_application_1a33d11cf381554a653f725660bb2981d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>SkeletonEngine::Application::~Application</definition>
+        <argsstring>()</argsstring>
+        <name>~Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="21" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_application_1a19ebb0f0318e9c4019c1c4d77b6265f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::Application::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref> Run method. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="23" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_application_1a30ff4ff8fcb0996db56e7eeb3a44d595" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::Application::OnEvent</definition>
+        <argsstring>(Event &amp;e)</argsstring>
+        <name>OnEvent</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> callback function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="25" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="38" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_application_1a3a288aa4ce55d75e07a45aade28a07b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SkeletonEngine::Application::OnWindowClose</definition>
+        <argsstring>(WindowClosedEvent &amp;e)</argsstring>
+        <name>OnWindowClose</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_window_closed_event" kindref="compound">WindowClosedEvent</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle <ref refid="class_skeleton_engine_1_1_window_closed_event" kindref="compound">WindowClosedEvent</ref> and set to handled (return true) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="28" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="47" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_log" kindref="compound">Log</ref> class. </para>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="17" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="18" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_application_1a0ccf5dbca675babd9aba0203bd63d554" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>Application</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1a92f9846a7cbcbf9aefb2e8c616d7e111" prot="private" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>m_Running</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1ace702edabc8e90af07224d82d210d608" prot="private" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>m_Window</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1a30ff4ff8fcb0996db56e7eeb3a44d595" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>OnEvent</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1a3a288aa4ce55d75e07a45aade28a07b3" prot="private" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>OnWindowClose</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1a19ebb0f0318e9c4019c1c4d77b6265f6" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>Run</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1a33d11cf381554a653f725660bb2981d3" prot="public" virt="virtual"><scope>SkeletonEngine::Application</scope><name>~Application</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

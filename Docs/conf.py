@@ -16,6 +16,9 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# -- Import Sphinx Theme -----------------------------------------------------
+
+import sphinx_bootstrap_theme
 
 # -- Project information -----------------------------------------------------
 
@@ -39,7 +42,50 @@ release = u''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'breathe',
+    'exhale'
 ]
+
+# Breathe setup
+PROJECT_NAME = 'SkeletonEngine'
+breathe_projects = {
+    PROJECT_NAME: './doxygenoutput/xml'       # Doxygen xml output
+}
+breathe_default_project = PROJECT_NAME
+
+# Exhale setup
+from textwrap import dedent
+# TIP: if using the sphinx-bootstrap-theme, you need
+# "treeViewIsBootstrap": True
+exhale_args = {
+    # Required
+    'containmentFolder': './api',
+    'rootFileName': 'skeleton_engine.rst',
+    'rootFileTitle': 'SkeletonEngine API',
+    'doxygenStripFromPath': '..',
+    
+    # Optional
+    'afterTitleDescription': dedent("""
+        .. note::
+
+        Blah blah afterTitleDescription blah.
+    """),
+    'afterHierarchyDescription': dedent("""
+        .. note::
+        
+        This is the afterHierarchyDescription.
+    """),
+    
+    'createTreeView': True,
+    'treeViewIsBootstrap': True,
+    
+    'exhaleExecutesDoxygen': True,
+    'exhaleDoxygenStdin': 'INPUT = ../SkeletonEngine/src'
+}
+
+# Syntax highlighting
+primary_domain = 'cpp'
+highlight_language = 'cpp'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -74,7 +120,8 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

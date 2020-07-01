@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="namespace_skeleton_engine" kind="namespace" language="C++">
+    <compoundname>SkeletonEngine</compoundname>
+    <innerclass refid="class_skeleton_engine_1_1_application" prot="public">SkeletonEngine::Application</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_app_render_event" prot="public">SkeletonEngine::AppRenderEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_app_tick_event" prot="public">SkeletonEngine::AppTickEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_app_update_event" prot="public">SkeletonEngine::AppUpdateEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_event" prot="public">SkeletonEngine::Event</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_event_dispatcher" prot="public">SkeletonEngine::EventDispatcher</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_key_event" prot="public">SkeletonEngine::KeyEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_key_pressed_event" prot="public">SkeletonEngine::KeyPressedEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_key_released_event" prot="public">SkeletonEngine::KeyReleasedEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_log" prot="public">SkeletonEngine::Log</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_mouse_button_event" prot="public">SkeletonEngine::MouseButtonEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_mouse_button_pressed_event" prot="public">SkeletonEngine::MouseButtonPressedEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_mouse_button_released_event" prot="public">SkeletonEngine::MouseButtonReleasedEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_mouse_moved_event" prot="public">SkeletonEngine::MouseMovedEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_mouse_scrolled_event" prot="public">SkeletonEngine::MouseScrolledEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_window" prot="public">SkeletonEngine::Window</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_window_closed_event" prot="public">SkeletonEngine::WindowClosedEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_window_focused_event" prot="public">SkeletonEngine::WindowFocusedEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_window_lost_focus_event" prot="public">SkeletonEngine::WindowLostFocusEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_window_moved_event" prot="public">SkeletonEngine::WindowMovedEvent</innerclass>
+    <innerclass refid="struct_skeleton_engine_1_1_window_properties" prot="public">SkeletonEngine::WindowProperties</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_window_resized_event" prot="public">SkeletonEngine::WindowResizedEvent</innerclass>
+    <innerclass refid="class_skeleton_engine_1_1_windows_window" prot="public">SkeletonEngine::WindowsWindow</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>EventType</name>
+        <enumvalue id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7c87dff2b968b5c85baf1def063c776d" prot="public">
+          <name>WindowClosed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51facbaad9b233665221bfc0a4a450a594cf" prot="public">
+          <name>WindowResized</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa30b616e8eab20ea6423d55b0fb45c20b" prot="public">
+          <name>WindowFocused</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa1c2119b9d61e623975f13f1029f1d97c" prot="public">
+          <name>WindowLostFocus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fab94473d9dfc85f8fdbf5cb3b1d992bda" prot="public">
+          <name>WindowMoved</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa559b408d45669603dbac61cd15984f13" prot="public">
+          <name>AppTick</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac177abb86f28dea426f2e3409e14bcda" prot="public">
+          <name>AppUpdate</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa4b2eb3c601042333ac1c0565ff58e3d6" prot="public">
+          <name>AppRender</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac17e6984c1e5a887a49831beadee6bca" prot="public">
+          <name>KeyPressed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa4a77f07c8ad223b71ab4ce78a63841ab" prot="public">
+          <name>KeyReleased</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7349f643d689997b7c54bf93e4095f5c" prot="public">
+          <name>MouseButtonPressed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7584c169de594c27f00084b93186fd7c" prot="public">
+          <name>MouseButtonReleased</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac2770ad109c8063ce69a3608a9a16c08" prot="public">
+          <name>MouseMoved</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa50edb169910041bb3c06f6e8322d74c1" prot="public">
+          <name>MouseScrolled</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> Type </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="21" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="22" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EventCategory</name>
+        <enumvalue id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca452303e2266c6ac4143467be4cbcf105" prot="public">
+          <name>None</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" prot="public">
+          <name>EventCategoryApplication</name>
+          <initializer>= BIT(0)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca95f9c9fee20c17a3cf2027ce28bdad9a" prot="public">
+          <name>EventCategoryInput</name>
+          <initializer>= BIT(1)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca802c1853e839968d1c46a8e89923334a" prot="public">
+          <name>EventCategoryKeyboard</name>
+          <initializer>= BIT(2)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fcac5986e98fe1e40dc8e62b456b418e38f" prot="public">
+          <name>EventCategoryMouse</name>
+          <initializer>= BIT(3)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca27ceeb5913fce202a75e0c4f819b308a" prot="public">
+          <name>EventCategoryMouseButton</name>
+          <initializer>= BIT(4)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> Category </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="50" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="51" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_skeleton_engine_1af5eaa32bc1a077e8c38a0664300149b3" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool SkeletonEngine::s_GLFWInitialized</definition>
+        <argsstring></argsstring>
+        <name>s_GLFWInitialized</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" line="16" column="13" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SkeletonEngine::GLFWErrorCallback</definition>
+        <argsstring>(int error, const char *description)</argsstring>
+        <name>GLFWErrorCallback</name>
+        <param>
+          <type>int</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>GLFW error callback function </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" line="20" column="13" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_skeleton_engine_1a3ecba78e8136f5fde0386b52489c170d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref> *</type>
+        <definition>Application* SkeletonEngine::CreateApplication</definition>
+        <argsstring>()</argsstring>
+        <name>CreateApplication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>To be defined in client application. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="35" column="13" declfile="SkeletonEngine/src/SkeletonEngine/Application.h" declline="35" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; SkeletonEngine::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Event &amp;e)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>To string operator overloading. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="116" column="8" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="116" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>WindowsWindow.cpp</para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> Windows <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> implementation.</para>
+<para><ref refid="_windows_window_8h_source" kindref="compound">WindowsWindow.h</ref></para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> Windows <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> interface.</para>
+<para>Application.cpp</para>
+<para>Basic <ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref>.</para>
+<para><ref refid="_application_8h_source" kindref="compound">Application.h</ref></para>
+<para>Basic <ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref> interface.</para>
+<para><ref refid="_application_event_8h_source" kindref="compound">ApplicationEvent.h</ref></para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref> events.</para>
+<para><ref refid="_event_8h_source" kindref="compound">Event.h</ref></para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> event system.</para>
+<para><ref refid="_key_event_8h_source" kindref="compound">KeyEvent.h</ref></para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> keyboard events.</para>
+<para><ref refid="_mouse_event_8h_source" kindref="compound">MouseEvent.h</ref></para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> mouse events.</para>
+<para>Log.cpp</para>
+<para>Wrapper and interface to spdlog.</para>
+<para><ref refid="_log_8h_source" kindref="compound">Log.h</ref></para>
+<para>Wrapper and interface to spdlog.</para>
+<para><ref refid="_window_8h_source" kindref="compound">Window.h</ref></para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> generic <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> interface. </para>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

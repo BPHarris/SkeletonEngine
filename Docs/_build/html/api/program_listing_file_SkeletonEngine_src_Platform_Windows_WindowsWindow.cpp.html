@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Listing for File WindowsWindow.cpp &#8212; SkeletonEngine  documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview\bootstrap-treeview.min.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/bootstrap-treeview\bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          SkeletonEngine</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Program Listing for File WindowsWindow.cpp</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/api/program_listing_file_SkeletonEngine_src_Platform_Windows_WindowsWindow.cpp.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="program-listing-for-file-windowswindow-cpp">
+<span id="program-listing-file-skeletonengine-src-platform-windows-windowswindow-cpp"></span><h1>Program Listing for File WindowsWindow.cpp<a class="headerlink" href="#program-listing-for-file-windowswindow-cpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_SkeletonEngine_src_Platform_Windows_WindowsWindow.cpp.html#file-skeletonengine-src-platform-windows-windowswindow-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">SkeletonEngine\src\Platform\Windows\WindowsWindow.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;sepch.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;WindowsWindow.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;SkeletonEngine/Events/ApplicationEvent.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;SkeletonEngine/Events/KeyEvent.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;SkeletonEngine/Events/MouseEvent.h&quot;</span><span class="cp"></span>
+
+
+<span class="k">namespace</span> <span class="n">SkeletonEngine</span> <span class="p">{</span>
+
+    <span class="k">static</span> <span class="kt">bool</span> <span class="n">s_GLFWInitialized</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
+
+    <span class="k">static</span> <span class="kt">void</span> <span class="nf">GLFWErrorCallback</span><span class="p">(</span><span class="kt">int</span> <span class="n">error</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">description</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">SE_CORE_ERROR</span><span class="p">(</span><span class="s">&quot;GLFW Error {}:{}&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">,</span> <span class="n">description</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="n">Window</span><span class="o">*</span> <span class="n">Window</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">porperties</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">WindowsWindow</span><span class="p">(</span><span class="n">porperties</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">WindowsWindow</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span> <span class="n">Init</span><span class="p">(</span><span class="n">p</span><span class="p">);</span> <span class="p">}</span>
+    <span class="n">WindowsWindow</span><span class="o">::~</span><span class="n">WindowsWindow</span><span class="p">()</span> <span class="p">{</span> <span class="n">Shutdown</span><span class="p">();</span> <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">m_Data</span><span class="p">.</span><span class="n">Title</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">Title</span><span class="p">;</span>
+        <span class="n">m_Data</span><span class="p">.</span><span class="n">Width</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>
+        <span class="n">m_Data</span><span class="p">.</span><span class="n">Height</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">Height</span><span class="p">;</span>
+
+        <span class="n">SE_CORE_INFO</span><span class="p">(</span><span class="s">&quot;Created new window {}&quot;</span><span class="p">,</span> <span class="n">ToString</span><span class="p">());</span>
+
+        <span class="c1">// Initalise GLFW</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">s_GLFWInitialized</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// TODO: glfwTerminate on system shutdown</span>
+            <span class="kt">int</span> <span class="n">success</span> <span class="o">=</span> <span class="n">glfwInit</span><span class="p">();</span>
+            <span class="n">SE_CORE_ASSERT</span><span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="s">&quot;Could not initialise GLFW.&quot;</span><span class="p">);</span>
+
+            <span class="n">glfwSetErrorCallback</span><span class="p">(</span><span class="n">GLFWErrorCallback</span><span class="p">);</span>
+
+            <span class="n">s_GLFWInitialized</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">m_Window</span> <span class="o">=</span> <span class="n">glfwCreateWindow</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">p</span><span class="p">.</span><span class="n">Width</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">p</span><span class="p">.</span><span class="n">Height</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">Title</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="k">nullptr</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
+        <span class="n">glfwMakeContextCurrent</span><span class="p">(</span><span class="n">m_Window</span><span class="p">);</span>
+        <span class="n">glfwSetWindowUserPointer</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m_Data</span><span class="p">);</span>
+        <span class="n">SetVSync</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+
+
+        <span class="cm">/* GLFW Window callback macros */</span>
+<span class="cp">#define GET_WINDOW_DATA_AS(data)                WindowData&amp; data = *(WindowData*)glfwGetWindowUserPointer(window);</span>
+<span class="cp">#define SET_EVENT_CALLBACK(Type, data, ...)     Type event(__VA_ARGS__);\</span>
+<span class="cp">                                                data.EventCallback(event);</span>
+<span class="cp">#define SET_SIMPLE_CALLBACK(Type, data)         Type event;\</span>
+<span class="cp">                                                data.EventCallback(event);</span>
+
+        <span class="cm">/* Set GLFW event callbacks */</span>
+        <span class="n">glfwSetWindowCloseCallback</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="p">[](</span><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">GET_WINDOW_DATA_AS</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+                <span class="n">SET_SIMPLE_CALLBACK</span><span class="p">(</span><span class="n">WindowClosedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+            <span class="p">});</span>
+
+        <span class="n">glfwSetWindowSizeCallback</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="p">[](</span><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">GET_WINDOW_DATA_AS</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+                <span class="c1">// Set width/height before callback so that handler has correct values</span>
+                <span class="n">data</span><span class="p">.</span><span class="n">Width</span> <span class="o">=</span> <span class="n">width</span><span class="p">;</span>
+                <span class="n">data</span><span class="p">.</span><span class="n">Height</span> <span class="o">=</span> <span class="n">height</span><span class="p">;</span>
+
+                <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">WindowResizedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+            <span class="p">});</span>
+
+        <span class="n">glfwSetWindowFocusCallback</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="p">[](</span><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">,</span> <span class="kt">int</span> <span class="n">focused</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">GET_WINDOW_DATA_AS</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">focused</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">SET_SIMPLE_CALLBACK</span><span class="p">(</span><span class="n">WindowFocusedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">else</span>
+                <span class="p">{</span>
+                    <span class="n">SET_SIMPLE_CALLBACK</span><span class="p">(</span><span class="n">WindowLostFocusEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+
+        <span class="n">glfwSetWindowPosCallback</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="p">[](</span><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">GET_WINDOW_DATA_AS</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+                <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">WindowMovedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+            <span class="p">});</span>
+
+        <span class="n">glfwSetKeyCallback</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="p">[](</span><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="n">scancode</span><span class="p">,</span> <span class="kt">int</span> <span class="n">action</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mods</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">GET_WINDOW_DATA_AS</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+                <span class="k">switch</span> <span class="p">(</span><span class="n">action</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">case</span> <span class="nl">GLFW_PRESS</span><span class="p">:</span>
+                    <span class="p">{</span>
+                        <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">KeyPressedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">KeyPressedEvent</span><span class="o">::</span><span class="n">JUST_PRESSED</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">case</span> <span class="nl">GLFW_RELEASE</span><span class="p">:</span>
+                    <span class="p">{</span>
+                        <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">KeyReleasedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">case</span> <span class="nl">GLFW_REPEAT</span><span class="p">:</span>
+                    <span class="p">{</span>
+                        <span class="c1">// TODO: Get actual repeat count, instead of KeyPressedEvent::REPEATED placeholder</span>
+                        <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">KeyPressedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">KeyPressedEvent</span><span class="o">::</span><span class="n">REPEATED</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+
+        <span class="n">glfwSetMouseButtonCallback</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="p">[](</span><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">,</span> <span class="kt">int</span> <span class="n">button</span><span class="p">,</span> <span class="kt">int</span> <span class="n">action</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mods</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">GET_WINDOW_DATA_AS</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+                <span class="k">switch</span> <span class="p">(</span><span class="n">action</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="k">case</span> <span class="nl">GLFW_PRESS</span><span class="p">:</span>
+                    <span class="p">{</span>
+                        <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">MouseButtonPressedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">button</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="k">case</span> <span class="nl">GLFW_RELEASE</span><span class="p">:</span>
+                    <span class="p">{</span>
+                        <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">MouseButtonReleasedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">button</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+
+        <span class="n">glfwSetCursorPosCallback</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="p">[](</span><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">GET_WINDOW_DATA_AS</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+                <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">MouseMovedEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">y</span><span class="p">)</span>
+            <span class="p">});</span>
+
+        <span class="n">glfwSetScrollCallback</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="p">[](</span><span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">,</span> <span class="kt">double</span> <span class="n">xoffset</span><span class="p">,</span> <span class="kt">double</span> <span class="n">yoffset</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">GET_WINDOW_DATA_AS</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+                <span class="n">SET_EVENT_CALLBACK</span><span class="p">(</span><span class="n">MouseScrolledEvent</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">xoffset</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">yoffset</span><span class="p">)</span>
+            <span class="p">});</span>
+
+    <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">Shutdown</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">SE_CORE_INFO</span><span class="p">(</span><span class="s">&quot;Closed window {}&quot;</span><span class="p">,</span> <span class="n">ToString</span><span class="p">());</span>
+        <span class="n">glfwDestroyWindow</span><span class="p">(</span><span class="n">m_Window</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">OnUpdate</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">glfwPollEvents</span><span class="p">();</span>
+        <span class="n">glfwSwapBuffers</span><span class="p">(</span><span class="n">m_Window</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">SetVSync</span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+            <span class="n">glfwSwapInterval</span><span class="p">(</span><span class="n">VSYNC_ENABLED</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="nf">glfwSwapInterval</span><span class="p">(</span><span class="n">VSYNC_DISABLED</span><span class="p">);</span>
+
+        <span class="n">m_Data</span><span class="p">.</span><span class="n">VSync</span> <span class="o">=</span> <span class="n">enabled</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kt">bool</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">IsVSync</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">m_Data</span><span class="p">.</span><span class="n">VSync</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, BP Harris.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_mouse_button_event" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::MouseButtonEvent</compoundname>
+    <basecompoundref refid="class_skeleton_engine_1_1_event" prot="public" virt="non-virtual">SkeletonEngine::Event</basecompoundref>
+    <derivedcompoundref refid="class_skeleton_engine_1_1_mouse_button_pressed_event" prot="public" virt="non-virtual">SkeletonEngine::MouseButtonPressedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_skeleton_engine_1_1_mouse_button_released_event" prot="public" virt="non-virtual">SkeletonEngine::MouseButtonReleasedEvent</derivedcompoundref>
+    <includes refid="_mouse_event_8h" local="no">MouseEvent.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_mouse_button_event_1a1a3904fbff500ccd00d6570915853cfa" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SkeletonEngine::MouseButtonEvent::m_Button</definition>
+        <argsstring></argsstring>
+        <name>m_Button</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="22" column="5" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_button_event_1ac445d8c52f2402781085b644c2e7f918" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SkeletonEngine::MouseButtonEvent::GetMouseButton</definition>
+        <argsstring>() const</argsstring>
+        <name>GetMouseButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="17" column="12" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_button_event_1ab2637737e542b0c13e35a2af4b1834f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int SkeletonEngine::MouseButtonEvent::GetCategoryFlags</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetCategoryFlags</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03">GetCategoryFlags</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="19" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_button_event_1a7e72b2965a004d7f98363b25ec414256" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::MouseButtonEvent::MouseButtonEvent</definition>
+        <argsstring>(int button)</argsstring>
+        <name>MouseButtonEvent</name>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="24" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> MouseButton event base class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>SkeletonEngine::MouseButtonReleasedEvent</label>
+        <link refid="class_skeleton_engine_1_1_mouse_button_released_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>SkeletonEngine::MouseButtonEvent</label>
+        <link refid="class_skeleton_engine_1_1_mouse_button_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SkeletonEngine::MouseButtonPressedEvent</label>
+        <link refid="class_skeleton_engine_1_1_mouse_button_pressed_event"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>SkeletonEngine::MouseButtonEvent</label>
+        <link refid="class_skeleton_engine_1_1_mouse_button_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="14" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="15" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_mouse_button_event_1ab2637737e542b0c13e35a2af4b1834f3" prot="public" virt="virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>GetCategoryFlags</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b" prot="public" virt="pure-virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>GetEventType</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_button_event_1ac445d8c52f2402781085b644c2e7f918" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>GetMouseButton</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a" prot="public" virt="pure-virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>GetName</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>IsInCategory</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_button_event_1a1a3904fbff500ccd00d6570915853cfa" prot="protected" virt="non-virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>m_Button</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1a7b196d51d636dac3b56aeb2089a1a833" prot="protected" virt="non-virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>m_Handled</name></member>
+      <member refid="class_skeleton_engine_1_1_mouse_button_event_1a7e72b2965a004d7f98363b25ec414256" prot="protected" virt="non-virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>MouseButtonEvent</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c" prot="public" virt="virtual"><scope>SkeletonEngine::MouseButtonEvent</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_2f4ac3f1bb39a055b29819bfb1727a4d" kind="dir">
+    <compoundname>SkeletonEngine/src</compoundname>
+    <innerdir refid="dir_ae79bfdcfda77e6065db959e01f7b15b">SkeletonEngine/src/Platform</innerdir>
+    <innerdir refid="dir_b08418fd5a0c205f5f46659943153452">SkeletonEngine/src/SkeletonEngine</innerdir>
+    <innerfile refid="sepch_8cpp">sepch.cpp</innerfile>
+    <innerfile refid="sepch_8h">sepch.h</innerfile>
+    <innerfile refid="_skeleton_engine_8h">SkeletonEngine.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/"/>
+  </compounddef>
+</doxygen>

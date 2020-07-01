@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_key_released_event" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::KeyReleasedEvent</compoundname>
+    <basecompoundref refid="class_skeleton_engine_1_1_key_event" prot="public" virt="non-virtual">SkeletonEngine::KeyEvent</basecompoundref>
+    <includes refid="_key_event_8h" local="no">KeyEvent.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_key_released_event_1a77a63ca90f9cbba073cfc1d59daa7311" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::KeyReleasedEvent::KeyReleasedEvent</definition>
+        <argsstring>(int keycode)</argsstring>
+        <name>KeyReleasedEvent</name>
+        <param>
+          <type>int</type>
+          <declname>keycode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" line="59" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_key_released_event_1a7925446f4c05595aaf9783bf0b525a01" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string SkeletonEngine::KeyReleasedEvent::ToString</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToString</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c">ToString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string string representation of <ref refid="class_skeleton_engine_1_1_key_released_event" kindref="compound">KeyReleasedEvent</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" line="62" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" bodystart="62" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_key_released_event_1a0fe332cda86a74bdf5c80a2049a84294" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <definition>virtual EventType SkeletonEngine::KeyReleasedEvent::GetEventType</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetEventType</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b">GetEventType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" line="69" column="85" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_key_released_event_1a4e6c74940afe8533afd6d226a1fb06d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* SkeletonEngine::KeyReleasedEvent::GetName</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a">GetName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" line="69" column="159" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_key_released_event_1a6870876a69a30a4043433672835e97ac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <definition>static EventType SkeletonEngine::KeyReleasedEvent::GetStaticType</definition>
+        <argsstring>()</argsstring>
+        <name>GetStaticType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" line="69" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> Key Pressed <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SkeletonEngine::KeyReleasedEvent</label>
+        <link refid="class_skeleton_engine_1_1_key_released_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="2">
+        <label>SkeletonEngine::KeyEvent</label>
+        <link refid="class_skeleton_engine_1_1_key_event"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SkeletonEngine::KeyReleasedEvent</label>
+        <link refid="class_skeleton_engine_1_1_key_released_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="2">
+        <label>SkeletonEngine::KeyEvent</label>
+        <link refid="class_skeleton_engine_1_1_key_event"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" line="56" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h" bodystart="57" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_key_event_1ad7d5119a2c7a28b4f07e5d34a5faa435" prot="public" virt="virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>GetCategoryFlags</name></member>
+      <member refid="class_skeleton_engine_1_1_key_released_event_1a0fe332cda86a74bdf5c80a2049a84294" prot="public" virt="virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>GetEventType</name></member>
+      <member refid="class_skeleton_engine_1_1_key_event_1a034ce7510999223f4477b0d6697563c5" prot="public" virt="non-virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>GetKeyCode</name></member>
+      <member refid="class_skeleton_engine_1_1_key_released_event_1a4e6c74940afe8533afd6d226a1fb06d6" prot="public" virt="virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>GetName</name></member>
+      <member refid="class_skeleton_engine_1_1_key_released_event_1a6870876a69a30a4043433672835e97ac" prot="public" virt="non-virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>GetStaticType</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" prot="public" virt="non-virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>IsInCategory</name></member>
+      <member refid="class_skeleton_engine_1_1_key_event_1a3b27b210824beb351908a22596790b10" prot="protected" virt="non-virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>KeyEvent</name></member>
+      <member refid="class_skeleton_engine_1_1_key_released_event_1a77a63ca90f9cbba073cfc1d59daa7311" prot="public" virt="non-virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>KeyReleasedEvent</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1a7b196d51d636dac3b56aeb2089a1a833" prot="protected" virt="non-virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>m_Handled</name></member>
+      <member refid="class_skeleton_engine_1_1_key_event_1ae705206480025e0353d0b1b7bc37e653" prot="protected" virt="non-virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>m_KeyCode</name></member>
+      <member refid="class_skeleton_engine_1_1_key_released_event_1a7925446f4c05595aaf9783bf0b525a01" prot="public" virt="virtual"><scope>SkeletonEngine::KeyReleasedEvent</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

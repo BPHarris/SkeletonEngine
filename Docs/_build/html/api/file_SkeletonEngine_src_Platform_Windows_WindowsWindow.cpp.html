@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File WindowsWindow.cpp &#8212; SkeletonEngine  documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview\bootstrap-treeview.min.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/bootstrap-treeview\bootstrap-treeview.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          SkeletonEngine</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">File WindowsWindow.cpp</a><ul>
+<li><a class="reference internal" href="#definition-skeletonengine-src-platform-windows-windowswindow-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">SkeletonEngine\src\Platform\Windows\WindowsWindow.cpp</span></code>)</a></li>
+<li><a class="reference internal" href="#includes">Includes</a></li>
+<li><a class="reference internal" href="#namespaces">Namespaces</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#defines">Defines</a></li>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/api/file_SkeletonEngine_src_Platform_Windows_WindowsWindow.cpp.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="file-windowswindow-cpp">
+<span id="file-skeletonengine-src-platform-windows-windowswindow-cpp"></span><h1>File WindowsWindow.cpp<a class="headerlink" href="#file-windowswindow-cpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="dir_SkeletonEngine_src_Platform_Windows.html#dir-skeletonengine-src-platform-windows"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">SkeletonEngine\src\Platform\Windows</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-skeletonengine-src-platform-windows-windowswindow-cpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">SkeletonEngine\src\Platform\Windows\WindowsWindow.cpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id3">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id4">Functions</a></p></li>
+<li><p><a class="reference internal" href="#defines" id="id5">Defines</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id6">Variables</a></p></li>
+</ul>
+</div>
+<div class="section" id="definition-skeletonengine-src-platform-windows-windowswindow-cpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">SkeletonEngine\src\Platform\Windows\WindowsWindow.cpp</span></code>)<a class="headerlink" href="#definition-skeletonengine-src-platform-windows-windowswindow-cpp" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_SkeletonEngine_src_Platform_Windows_WindowsWindow.cpp.html">Program Listing for File WindowsWindow.cpp</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SkeletonEngine/Events/ApplicationEvent.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SkeletonEngine/Events/KeyEvent.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SkeletonEngine/Events/MouseEvent.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WindowsWindow.h</span></code> (<a class="reference internal" href="file_SkeletonEngine_src_Platform_Windows_WindowsWindow.h.html#file-skeletonengine-src-platform-windows-windowswindow-h"><span class="std std-ref">File WindowsWindow.h</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sepch.h</span></code> (<a class="reference internal" href="file_SkeletonEngine_src_sepch.h.html#file-skeletonengine-src-sepch-h"><span class="std std-ref">File sepch.h</span></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_SkeletonEngine.html#namespace-skeletonengine"><span class="std std-ref">Namespace SkeletonEngine</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#exhale-function-namespace-skeleton-engine-1a044879dfa14670d0e29b7636f947af2a"><span class="std std-ref">Function SkeletonEngine::GLFWErrorCallback</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="defines">
+<h2>Defines<a class="headerlink" href="#defines" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="define__windows_window_8cpp_1a4c442a29eba1657dc53ec8d5d948a65e.html#exhale-define-windows-window-8cpp-1a4c442a29eba1657dc53ec8d5d948a65e"><span class="std std-ref">Define GET_WINDOW_DATA_AS</span></a></p></li>
+<li><p><a class="reference internal" href="define__windows_window_8cpp_1a08c64717ebfe3c3b2d3bdc664988eadb.html#exhale-define-windows-window-8cpp-1a08c64717ebfe3c3b2d3bdc664988eadb"><span class="std std-ref">Define SET_EVENT_CALLBACK</span></a></p></li>
+<li><p><a class="reference internal" href="define__windows_window_8cpp_1a387f8f910705f23eadb2b1094312d8b3.html#exhale-define-windows-window-8cpp-1a387f8f910705f23eadb2b1094312d8b3"><span class="std std-ref">Define SET_SIMPLE_CALLBACK</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_namespace_skeleton_engine_1af5eaa32bc1a077e8c38a0664300149b3.html#exhale-variable-namespace-skeleton-engine-1af5eaa32bc1a077e8c38a0664300149b3"><span class="std std-ref">Variable SkeletonEngine::s_GLFWInitialized</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, BP Harris.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

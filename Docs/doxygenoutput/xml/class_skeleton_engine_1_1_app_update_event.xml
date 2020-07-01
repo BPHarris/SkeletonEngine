@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_app_update_event" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::AppUpdateEvent</compoundname>
+    <basecompoundref refid="class_skeleton_engine_1_1_event" prot="public" virt="non-virtual">SkeletonEngine::Event</basecompoundref>
+    <includes refid="_application_event_8h" local="no">ApplicationEvent.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_app_update_event_1ac2c43b15d0cc4bea150e48f321acddf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::AppUpdateEvent::AppUpdateEvent</definition>
+        <argsstring>()</argsstring>
+        <name>AppUpdateEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="112" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_app_update_event_1a62ebdd93d0c6561117247a92de4b55ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <definition>virtual EventType SkeletonEngine::AppUpdateEvent::GetEventType</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetEventType</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b">GetEventType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="114" column="83" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_app_update_event_1ac062b230dd824661e0c91afafbd87b7e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* SkeletonEngine::AppUpdateEvent::GetName</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a">GetName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="114" column="157" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_app_update_event_1af598154199a6063498e3fecbfa2583ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int SkeletonEngine::AppUpdateEvent::GetCategoryFlags</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetCategoryFlags</name>
+        <reimplements refid="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03">GetCategoryFlags</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="115" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="115" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_app_update_event_1afd075379cf939c84a61b26f7a1ef233d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <definition>static EventType SkeletonEngine::AppUpdateEvent::GetStaticType</definition>
+        <argsstring>()</argsstring>
+        <name>GetStaticType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="114" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> App Update <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>SkeletonEngine::AppUpdateEvent</label>
+        <link refid="class_skeleton_engine_1_1_app_update_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SkeletonEngine::Event</label>
+        <link refid="class_skeleton_engine_1_1_event"/>
+      </node>
+      <node id="1">
+        <label>SkeletonEngine::AppUpdateEvent</label>
+        <link refid="class_skeleton_engine_1_1_app_update_event"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="109" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="110" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_app_update_event_1ac2c43b15d0cc4bea150e48f321acddf8" prot="public" virt="non-virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>AppUpdateEvent</name></member>
+      <member refid="class_skeleton_engine_1_1_app_update_event_1af598154199a6063498e3fecbfa2583ea" prot="public" virt="virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>GetCategoryFlags</name></member>
+      <member refid="class_skeleton_engine_1_1_app_update_event_1a62ebdd93d0c6561117247a92de4b55ea" prot="public" virt="virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>GetEventType</name></member>
+      <member refid="class_skeleton_engine_1_1_app_update_event_1ac062b230dd824661e0c91afafbd87b7e" prot="public" virt="virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>GetName</name></member>
+      <member refid="class_skeleton_engine_1_1_app_update_event_1afd075379cf939c84a61b26f7a1ef233d" prot="public" virt="non-virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>GetStaticType</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" prot="public" virt="non-virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>IsInCategory</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1a7b196d51d636dac3b56aeb2089a1a833" prot="protected" virt="non-virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>m_Handled</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c" prot="public" virt="virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

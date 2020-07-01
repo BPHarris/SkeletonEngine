@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_cf8fba022632677c037922044cf9a627" kind="dir">
+    <compoundname>SkeletonEngine/src/Platform/Windows</compoundname>
+    <innerfile refid="_windows_window_8cpp">WindowsWindow.cpp</innerfile>
+    <innerfile refid="_windows_window_8h">WindowsWindow.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/Platform/Windows/"/>
+  </compounddef>
+</doxygen>

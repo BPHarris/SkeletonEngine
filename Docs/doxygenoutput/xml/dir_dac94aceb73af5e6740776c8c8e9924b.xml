@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_dac94aceb73af5e6740776c8c8e9924b" kind="dir">
+    <compoundname>SkeletonEngine/src/SkeletonEngine/Events</compoundname>
+    <innerfile refid="_application_event_8h">ApplicationEvent.h</innerfile>
+    <innerfile refid="_event_8h">Event.h</innerfile>
+    <innerfile refid="_key_event_8h">KeyEvent.h</innerfile>
+    <innerfile refid="_mouse_event_8h">MouseEvent.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/"/>
+  </compounddef>
+</doxygen>
