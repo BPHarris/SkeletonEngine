@@ -13,3 +13,5 @@ Makefile
 **/bin/
 bin-int/
 !vendor/bin/premake/
+
+.vscode/
