@@ -6,10 +6,11 @@ bin-int/
 # User files
 *.user
 
-# VS Projecy files
+# Generated project files
 *.sln
 */*.vcxproj
 */*.vcxproj.filters
+Makefile
 
 # Prerequisites
 *.d
