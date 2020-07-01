@@ -1,6 +1,9 @@
+# Editor settings
+.vs/
+.vscode/
+
 # Project Files
 # Visual Studio
-.vs/
 **.sln
 **.vcxproj
 **.vcxproj.filters
@@ -13,5 +16,3 @@ Makefile
 **/bin/
 bin-int/
 !vendor/bin/premake/
-
-.vscode/
