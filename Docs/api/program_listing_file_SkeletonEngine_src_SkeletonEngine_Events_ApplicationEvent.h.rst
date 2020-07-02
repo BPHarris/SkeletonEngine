@@ -31,24 +31,21 @@ Program Listing for File ApplicationEvent.h
        class SE_API WindowResizedEvent : public Event
        {
        public:
+           unsigned int m_Width, m_Height;
+   
+       public:
            WindowResizedEvent(unsigned int width, unsigned int height)
                : m_Width(width), m_Height(height) {}
-   
-           inline unsigned int GetWidth() const { return m_Width;  }
-           inline unsigned int GetHeight() const { return m_Height; }
    
            std::string ToString() const override
            {
                std::stringstream ss;
-               ss << "WindowResizedEvent: (" << m_Width << ", " << m_Height << ")";
+               ss << "WindowResizedEvent(" << m_Width << ", " << m_Height << ")";
                return ss.str();
            }
    
            EVENT_CLASS_TYPE(WindowResized)
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
-   
-       private:
-           unsigned int m_Width, m_Height;
        };
    
    
@@ -74,24 +71,21 @@ Program Listing for File ApplicationEvent.h
    
        class SE_API WindowMovedEvent : public Event
        {
+       private:
+           unsigned int m_X, m_Y;
+   
        public:
            WindowMovedEvent(unsigned int x, unsigned int y) : m_X(x), m_Y(y) {}
-   
-           inline unsigned int GetX() const { return m_X; }
-           inline unsigned int GetY() const { return m_Y; }
    
            std::string ToString() const override
            {
                std::stringstream ss;
-               ss << "WindowMovedEvent: (" << m_X << ", " << m_Y << ")";
+               ss << "WindowMovedEvent(" << m_X << ", " << m_Y << ")";
                return ss.str();
            }
    
            EVENT_CLASS_TYPE(WindowMoved)
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
-   
-       private:
-           unsigned int m_X, m_Y;
        };
    
    

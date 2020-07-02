@@ -48,7 +48,10 @@ extensions = [
 
 # Breathe setup
 breathe_projects = {
-    project: './doxygenoutput/xml'       # Doxygen xml output
+    project: './doxygenoutput/xml'          # Doxygen xml output
+}
+breathe_doxygen_config_options = {
+    'EXTRACT_PRIVATE': 'YES'
 }
 breathe_default_project = project
 

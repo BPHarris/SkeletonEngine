@@ -4,7 +4,7 @@
  */
 
 #include "sepch.h"
-#include "WindowsWindow.h"
+#include "Platform/Windows/WindowsWindow.h"
 
 #include "SkeletonEngine/Events/ApplicationEvent.h"
 #include "SkeletonEngine/Events/KeyEvent.h"
@@ -13,28 +13,16 @@
 
 namespace SkeletonEngine {
 
+	/** State of GLFW initialisation. */
 	static bool s_GLFWInitialized = false;
 
 
-	/** GLFW error callback function */
 	static void GLFWErrorCallback(int error, const char* description)
 	{
 		SE_CORE_ERROR("GLFW Error {}:{}", error, description);
 	}
 
 
-	/** Create a new WindowsWindow with the given properties */
-	Window* Window::Create(const WindowProperties& porperties)
-	{
-		return new WindowsWindow(porperties);
-	}
-
-
-	WindowsWindow::WindowsWindow(const WindowProperties& p) { Init(p); }
-	WindowsWindow::~WindowsWindow() { Shutdown(); }
-
-
-	/** Initialise new window */
 	void WindowsWindow::Init(const WindowProperties& p)
 	{
 		m_Data.Title = p.Title;
@@ -55,12 +43,13 @@ namespace SkeletonEngine {
 			s_GLFWInitialized = true;
 		}
 
+		// GLFW Window Setup
 		m_Window = glfwCreateWindow((int)p.Width, (int)p.Height, p.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
-		SetVSync(true);
-
 		
+		SetVSync(true);
+				
 		/* GLFW Window callback macros */
 #define GET_WINDOW_DATA_AS(data)				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 #define SET_EVENT_CALLBACK(Type, data, ...)		Type event(__VA_ARGS__);\
@@ -165,15 +154,15 @@ namespace SkeletonEngine {
 	}
 
 
-	/** Handle Window Shutdown Event */
-	void WindowsWindow::Shutdown()
+	Window* Window::Create(const WindowProperties& porperties)
 	{
-		SE_CORE_INFO("Closed window {}", ToString());
-		glfwDestroyWindow(m_Window);
+		return new WindowsWindow(porperties);
 	}
 
+	WindowsWindow::WindowsWindow(const WindowProperties& p) { Init(p); }
+	WindowsWindow::~WindowsWindow() { Close(); }
 
-	/** Handle Window Update */
+
 	void WindowsWindow::OnUpdate()
 	{
 		glfwPollEvents();
@@ -181,21 +170,22 @@ namespace SkeletonEngine {
 	}
 
 
-	/** SetVSync to the given setting */
 	void WindowsWindow::SetVSync(bool enabled)
 	{
-		if (enabled)
-			glfwSwapInterval(VSYNC_ENABLED);
-		else
-			glfwSwapInterval(VSYNC_DISABLED);
-
+		glfwSwapInterval(enabled ? VSYNC_ENABLED : VSYNC_DISABLED);
 		m_Data.VSync = enabled;
 	}
 
 
-	/** @return bool    true if VSync enabled, false otherwise */
 	bool WindowsWindow::IsVSync() const
 	{
 		return m_Data.VSync;
+	}
+
+
+	void WindowsWindow::Close()
+	{
+		SE_CORE_INFO("Closed window {}", ToString());
+		glfwDestroyWindow(m_Window);
 	}
 }

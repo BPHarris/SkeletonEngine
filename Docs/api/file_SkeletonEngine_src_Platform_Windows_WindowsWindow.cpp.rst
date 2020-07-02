@@ -29,13 +29,13 @@ Includes
 --------
 
 
+- ``Platform/Windows/WindowsWindow.h``
+
 - ``SkeletonEngine/Events/ApplicationEvent.h``
 
 - ``SkeletonEngine/Events/KeyEvent.h``
 
 - ``SkeletonEngine/Events/MouseEvent.h``
-
-- ``WindowsWindow.h`` (:ref:`file_SkeletonEngine_src_Platform_Windows_WindowsWindow.h`)
 
 - ``sepch.h`` (:ref:`file_SkeletonEngine_src_sepch.h`)
 

@@ -1,6 +1,9 @@
-/** WindowsWindow.h
- *
- * SkeletonEngine Windows Window interface.
+/**
+ * @file    WindowsWindow.h
+ * @brief   SkeletonEngine Windows Window interface.
+ * 
+ * @author  BP Harris
+ * @date    July 2020
  */
 
 #pragma once
@@ -19,25 +22,50 @@ namespace SkeletonEngine {
 		static const int VSYNC_ENABLED = 1;
 		static const int VSYNC_DISABLED = 0;
 
+		/** Pointer to underlying GLFW Window. */
+		GLFWwindow* m_Window;
+	
+	private:
+		struct WindowData
+		{
+			std::string Title;
+			unsigned int Width;
+			unsigned int Height;
+			bool VSync;
 
+			EventCallbackFn EventCallback;
+		};
+
+		WindowData m_Data;
+
+	private:
+		virtual void Init(const WindowProperties& properties);
+
+	public:
 		WindowsWindow(const WindowProperties& properties);
 		virtual ~WindowsWindow();
 
+		
 		void OnUpdate() override;
 
+		
 		virtual std::string GetTitle() const override { return m_Data.Title; }
 		inline unsigned int GetWidth() const override { return m_Data.Width;  }
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
+		
 		/** @return string  string representation of the window */
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "(" 
-					<< "WindowsWindow \"" << GetTitle() << "\", "
-					<< GetWidth() << ", " << GetHeight()
-					<< ", " << (IsVSync() ? "VSync" : "")
+			
+			ss  << "WindowsWindow("
+				<< "\"" << GetTitle() << "\"" << ", "
+				<< GetWidth() << ", "
+				<< GetHeight()
+				<< (IsVSync() ? ", VSync" : "")
 				<< ")";
+
 			return ss.str();
 		}
 
@@ -45,23 +73,7 @@ namespace SkeletonEngine {
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 
-	private:
-		virtual void Init(const WindowProperties& properties);
-		virtual void Shutdown();
-
-	private:
-		GLFWwindow* m_Window;
-
-		struct WindowData
-		{
-			std::string Title;
-			unsigned int Width, Height;
-			bool VSync;
-
-			EventCallbackFn EventCallback;
-		};
-
-		WindowData m_Data;
+		virtual void Close();
 	};
 
 }

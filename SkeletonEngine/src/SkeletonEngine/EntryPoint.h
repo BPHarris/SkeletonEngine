@@ -1,4 +1,10 @@
-/** EntryPoint.h -- Contains SkeletonEngine program entry point. */
+/**
+ * @file    EntryPoint.h
+ * @brief   Contains SkeletonEngine program entry point.
+ * 
+ * @author  BP Harris
+ * @date    July 2020
+ */
 
 #pragma once
 

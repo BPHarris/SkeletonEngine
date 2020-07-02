@@ -1,6 +1,9 @@
-/** Application.cpp
- *
- * Basic SkeletonEngine Application.
+/**
+ * @file    Application.cpp
+ * @brief   Basic SkeletonEngine Application.
+ * 
+ * @author  BP Harris
+ * @date    July 2020
  */
 
 #include "sepch.h"
@@ -19,12 +22,9 @@ namespace SkeletonEngine {
 	}
 
 
-	Application::~Application()
-	{
-	}
+	Application::~Application() {}
 
 
-	/** Application Run method. */
 	void Application::Run()
 	{
 		while (m_Running)
@@ -34,7 +34,6 @@ namespace SkeletonEngine {
 	}
 
 
-	/** Event callback function */
 	void Application::OnEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
@@ -43,7 +42,6 @@ namespace SkeletonEngine {
 	}
 
 
-	/** Handle WindowClosedEvent and set to handled (return true) */
 	bool Application::OnWindowClose(WindowClosedEvent& e)
 	{
 		m_Running = false;

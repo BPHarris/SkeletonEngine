@@ -274,8 +274,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -457,7 +461,7 @@
 <dl class="cpp class">
 <dt id="_CPPv4N14SkeletonEngine18WindowResizedEventE">
 <span id="_CPPv3N14SkeletonEngine18WindowResizedEventE"></span><span id="_CPPv2N14SkeletonEngine18WindowResizedEventE"></span><span id="SkeletonEngine::WindowResizedEvent"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event"></span><em class="property">class </em><code class="sig-prename descclassname">SkeletonEngine<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">WindowResizedEvent</code> : <em class="property">public</em> SkeletonEngine::<a class="reference internal" href="class_skeleton_engine_1_1_event.html#_CPPv4N14SkeletonEngine5EventE" title="SkeletonEngine::Event">Event</a><a class="headerlink" href="#_CPPv4N14SkeletonEngine18WindowResizedEventE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>SkeletonEngine <a class="reference internal" href="class_skeleton_engine_1_1_window.html#class_skeleton_engine_1_1_window"><span class="std std-ref">Window</span></a> Resized <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> class. </p>
+<dd><p>SkeletonEngine <a class="reference internal" href="#class_skeleton_engine_1_1_window_resized_event"><span class="std std-ref">WindowResizedEvent</span></a> class. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
@@ -466,20 +470,10 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4NK14SkeletonEngine18WindowResizedEvent8GetWidthEv">
-<span id="_CPPv3NK14SkeletonEngine18WindowResizedEvent8GetWidthEv"></span><span id="_CPPv2NK14SkeletonEngine18WindowResizedEvent8GetWidthEv"></span><span id="SkeletonEngine::WindowResizedEvent::GetWidthC"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event_1aefe49ec5c2319006d3992a4f63f123df"></span>unsigned int <code class="sig-name descname">GetWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine18WindowResizedEvent8GetWidthEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4NK14SkeletonEngine18WindowResizedEvent9GetHeightEv">
-<span id="_CPPv3NK14SkeletonEngine18WindowResizedEvent9GetHeightEv"></span><span id="_CPPv2NK14SkeletonEngine18WindowResizedEvent9GetHeightEv"></span><span id="SkeletonEngine::WindowResizedEvent::GetHeightC"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event_1a69327157838de09249c29665b65426ff"></span>unsigned int <code class="sig-name descname">GetHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine18WindowResizedEvent9GetHeightEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine18WindowResizedEvent8ToStringEv">
 <span id="_CPPv3NK14SkeletonEngine18WindowResizedEvent8ToStringEv"></span><span id="_CPPv2NK14SkeletonEngine18WindowResizedEvent8ToStringEv"></span><span id="SkeletonEngine::WindowResizedEvent::ToStringC"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event_1adf32ce7a5294c51e986ab2b7fe586974"></span>std::string <code class="sig-name descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine18WindowResizedEvent8ToStringEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>string string representation of <a class="reference internal" href="#class_skeleton_engine_1_1_window_resized_event"><span class="std std-ref">WindowResizedEvent</span></a> </p>
+<dt><strong>Return</strong></dt><dd><p>std::string string representation of <a class="reference internal" href="#class_skeleton_engine_1_1_window_resized_event"><span class="std std-ref">WindowResizedEvent</span></a>. </p>
 </dd>
 </dl>
 </p>
@@ -488,16 +482,44 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine18WindowResizedEvent12GetEventTypeEv">
 <span id="_CPPv3NK14SkeletonEngine18WindowResizedEvent12GetEventTypeEv"></span><span id="_CPPv2NK14SkeletonEngine18WindowResizedEvent12GetEventTypeEv"></span><span id="SkeletonEngine::WindowResizedEvent::GetEventTypeC"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event_1ab231247d8546c4168c4c0f14a382c49a"></span><a class="reference internal" href="enum_namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f.html#_CPPv4N14SkeletonEngine9EventTypeE" title="SkeletonEngine::EventType">EventType</a> <code class="sig-name descname">GetEventType</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine18WindowResizedEvent12GetEventTypeEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a>’s EventType. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine18WindowResizedEvent7GetNameEv">
 <span id="_CPPv3NK14SkeletonEngine18WindowResizedEvent7GetNameEv"></span><span id="_CPPv2NK14SkeletonEngine18WindowResizedEvent7GetNameEv"></span><span id="SkeletonEngine::WindowResizedEvent::GetNameC"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event_1a4c30e3431fb460c9ee57a26267471623"></span><em class="property">const</em> char *<code class="sig-name descname">GetName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine18WindowResizedEvent7GetNameEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> name. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine18WindowResizedEvent16GetCategoryFlagsEv">
 <span id="_CPPv3NK14SkeletonEngine18WindowResizedEvent16GetCategoryFlagsEv"></span><span id="_CPPv2NK14SkeletonEngine18WindowResizedEvent16GetCategoryFlagsEv"></span><span id="SkeletonEngine::WindowResizedEvent::GetCategoryFlagsC"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event_1a60e82ef72be2d1c224037685a0a512d7"></span>int <code class="sig-name descname">GetCategoryFlags</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine18WindowResizedEvent16GetCategoryFlagsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a>’s GetCategoryFlags. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt id="_CPPv4N14SkeletonEngine18WindowResizedEvent7m_WidthE">
+<span id="_CPPv3N14SkeletonEngine18WindowResizedEvent7m_WidthE"></span><span id="_CPPv2N14SkeletonEngine18WindowResizedEvent7m_WidthE"></span><span id="SkeletonEngine::WindowResizedEvent::m_Width__unsigned-i"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event_1afe67e3fea2d5ea17893460e561aa4470"></span>unsigned int <code class="sig-name descname">m_Width</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine18WindowResizedEvent7m_WidthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N14SkeletonEngine18WindowResizedEvent8m_HeightE">
+<span id="_CPPv3N14SkeletonEngine18WindowResizedEvent8m_HeightE"></span><span id="_CPPv2N14SkeletonEngine18WindowResizedEvent8m_HeightE"></span><span id="SkeletonEngine::WindowResizedEvent::m_Height__unsigned-i"></span><span class="target" id="class_skeleton_engine_1_1_window_resized_event_1ac4842403732288c76e040e8fea4a60ee"></span>unsigned int <code class="sig-name descname">m_Height</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine18WindowResizedEvent8m_HeightE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>

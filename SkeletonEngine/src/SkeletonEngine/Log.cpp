@@ -1,6 +1,9 @@
-/** Log.cpp
- *
- * Wrapper and interface to spdlog.
+/**
+ * @file    Log.cpp
+ * @brief   Wrapper to spdlog.
+ * 
+ * @author  BP Harris
+ * @date    July 2020
  */
 
 #include "sepch.h"
@@ -14,7 +17,7 @@ namespace SkeletonEngine {
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
 	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
 
-	/** Initialise core and client log consoles. */
+	
 	void Log::Init()
 	{
 		spdlog::set_pattern("%^[%T] [%n] %v%$");

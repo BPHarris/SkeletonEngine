@@ -1,3 +1,11 @@
+/**
+ * @file    Core.h
+ * @brief   Core defines for SkeletonEngine.
+ * 
+ * @author  BP Harris
+ * @date    July 2020
+ */
+
 #pragma once
 
 

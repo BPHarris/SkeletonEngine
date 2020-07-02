@@ -10,11 +10,13 @@ Program Listing for File SkeletonEngine.h
 
 .. code-block:: cpp
 
-   /* General include, for use by SkeletonEngine applications. */
    
    #pragma once
    
+   /* ------------------------------------------------------------------------- */
    #include "SkeletonEngine/Application.h"
    #include "SkeletonEngine/Log.h"
    
+   /* ------------------------------------------------------------------------- */
    #include "SkeletonEngine/EntryPoint.h"
+   /* ------------------------------------------------------------------------- */

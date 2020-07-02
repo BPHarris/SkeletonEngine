@@ -274,8 +274,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -465,18 +469,26 @@
 <dl class="cpp class">
 <dt id="_CPPv4N14SkeletonEngine8KeyEventE">
 <span id="_CPPv3N14SkeletonEngine8KeyEventE"></span><span id="_CPPv2N14SkeletonEngine8KeyEventE"></span><span id="SkeletonEngine::KeyEvent"></span><span class="target" id="class_skeleton_engine_1_1_key_event"></span><em class="property">class </em><code class="sig-prename descclassname">SkeletonEngine<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">KeyEvent</code> : <em class="property">public</em> SkeletonEngine::<a class="reference internal" href="class_skeleton_engine_1_1_event.html#_CPPv4N14SkeletonEngine5EventE" title="SkeletonEngine::Event">Event</a><a class="headerlink" href="#_CPPv4N14SkeletonEngine8KeyEventE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>SkeletonEngine Key <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> base class. </p>
+<dd><p>SkeletonEngine <a class="reference internal" href="#class_skeleton_engine_1_1_key_event"><span class="std std-ref">KeyEvent</span></a> base class. </p>
 <p>Subclassed by <a class="reference internal" href="class_skeleton_engine_1_1_key_pressed_event.html#class_skeleton_engine_1_1_key_pressed_event"><span class="std std-ref">SkeletonEngine::KeyPressedEvent</span></a>, <a class="reference internal" href="class_skeleton_engine_1_1_key_released_event.html#class_skeleton_engine_1_1_key_released_event"><span class="std std-ref">SkeletonEngine::KeyReleasedEvent</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
-<dt id="_CPPv4NK14SkeletonEngine8KeyEvent10GetKeyCodeEv">
-<span id="_CPPv3NK14SkeletonEngine8KeyEvent10GetKeyCodeEv"></span><span id="_CPPv2NK14SkeletonEngine8KeyEvent10GetKeyCodeEv"></span><span id="SkeletonEngine::KeyEvent::GetKeyCodeC"></span><span class="target" id="class_skeleton_engine_1_1_key_event_1a034ce7510999223f4477b0d6697563c5"></span>int <code class="sig-name descname">GetKeyCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine8KeyEvent10GetKeyCodeEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine8KeyEvent16GetCategoryFlagsEv">
 <span id="_CPPv3NK14SkeletonEngine8KeyEvent16GetCategoryFlagsEv"></span><span id="_CPPv2NK14SkeletonEngine8KeyEvent16GetCategoryFlagsEv"></span><span id="SkeletonEngine::KeyEvent::GetCategoryFlagsC"></span><span class="target" id="class_skeleton_engine_1_1_key_event_1ad7d5119a2c7a28b4f07e5d34a5faa435"></span>int <code class="sig-name descname">GetCategoryFlags</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine8KeyEvent16GetCategoryFlagsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a>’s GetCategoryFlags. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt id="_CPPv4N14SkeletonEngine8KeyEvent9m_KeycodeE">
+<span id="_CPPv3N14SkeletonEngine8KeyEvent9m_KeycodeE"></span><span id="_CPPv2N14SkeletonEngine8KeyEvent9m_KeycodeE"></span><span id="SkeletonEngine::KeyEvent::m_Keycode__i"></span><span class="target" id="class_skeleton_engine_1_1_key_event_1a6b74f1dd072006446fc3f0defcb4c769"></span>int <code class="sig-name descname">m_Keycode</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine8KeyEvent9m_KeycodeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -485,14 +497,6 @@
 <dl class="cpp function">
 <dt id="_CPPv4N14SkeletonEngine8KeyEvent8KeyEventEi">
 <span id="_CPPv3N14SkeletonEngine8KeyEvent8KeyEventEi"></span><span id="_CPPv2N14SkeletonEngine8KeyEvent8KeyEventEi"></span><span id="SkeletonEngine::KeyEvent::KeyEvent__i"></span><span class="target" id="class_skeleton_engine_1_1_key_event_1a3b27b210824beb351908a22596790b10"></span><code class="sig-name descname">KeyEvent</code><span class="sig-paren">(</span>int <em>keycode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SkeletonEngine8KeyEvent8KeyEventEi" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Protected Attributes</p>
-<dl class="cpp var">
-<dt id="_CPPv4N14SkeletonEngine8KeyEvent9m_KeyCodeE">
-<span id="_CPPv3N14SkeletonEngine8KeyEvent9m_KeyCodeE"></span><span id="_CPPv2N14SkeletonEngine8KeyEvent9m_KeyCodeE"></span><span id="SkeletonEngine::KeyEvent::m_KeyCode__i"></span><span class="target" id="class_skeleton_engine_1_1_key_event_1ae705206480025e0353d0b1b7bc37e653"></span>int <code class="sig-name descname">m_KeyCode</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine8KeyEvent9m_KeyCodeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>

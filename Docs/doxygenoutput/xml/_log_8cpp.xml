@@ -11,7 +11,7 @@
       </node>
       <node id="14">
         <label>Core.h</label>
-        <link refid="_core_8h_source"/>
+        <link refid="_core_8h"/>
       </node>
       <node id="1">
         <label>SkeletonEngine/src/SkeletonEngine/Log.cpp</label>
@@ -40,7 +40,7 @@
       </node>
       <node id="13">
         <label>SkeletonEngine/Log.h</label>
-        <link refid="_log_8h_source"/>
+        <link refid="_log_8h"/>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
@@ -65,7 +65,7 @@
       </node>
       <node id="2">
         <label>sepch.h</label>
-        <link refid="sepch_8h_source"/>
+        <link refid="sepch_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -98,34 +98,41 @@
     </incdepgraph>
     <innernamespace refid="namespace_skeleton_engine">SkeletonEngine</innernamespace>
     <briefdescription>
+<para>Wrapper to spdlog. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>BP Harris </para>
+</simplesect>
+<simplesect kind="date"><para>July 2020 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;sepch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/sinks/stdout_color_sinks.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sepch_8h" kindref="compound">sepch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_log_8h" kindref="compound">Log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/sinks/stdout_color_sinks.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;spdlog::logger&gt;<sp/>Log::s_CoreLogger;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;spdlog::logger&gt;<sp/>Log::s_ClientLogger;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref><sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_skeleton_engine_1_1_log_1af81dd8215db06bb58a8082dd7773878b" kindref="member">Log::Init</ref>()</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::set_pattern(</highlight><highlight class="stringliteral">&quot;%^[%T]<sp/>[%n]<sp/>%v%$&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_CoreLogger<sp/>=<sp/>spdlog::stdout_color_mt(</highlight><highlight class="stringliteral">&quot;SkeletonEngine&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_CoreLogger-&gt;set_level(spdlog::level::trace);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;spdlog::logger&gt;<sp/><ref refid="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" kindref="member">Log::s_CoreLogger</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;spdlog::logger&gt;<sp/><ref refid="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" kindref="member">Log::s_ClientLogger</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_skeleton_engine_1_1_log_1af81dd8215db06bb58a8082dd7773878b" kindref="member">Log::Init</ref>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::set_pattern(</highlight><highlight class="stringliteral">&quot;%^[%T]<sp/>[%n]<sp/>%v%$&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_ClientLogger<sp/>=<sp/>spdlog::stdout_color_mt(</highlight><highlight class="stringliteral">&quot;Application&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_ClientLogger-&gt;set_level(spdlog::level::trace);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" kindref="member">s_CoreLogger</ref><sp/>=<sp/>spdlog::stdout_color_mt(</highlight><highlight class="stringliteral">&quot;SkeletonEngine&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" kindref="member">s_CoreLogger</ref>-&gt;set_level(spdlog::level::trace);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" kindref="member">s_ClientLogger</ref><sp/>=<sp/>spdlog::stdout_color_mt(</highlight><highlight class="stringliteral">&quot;Application&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" kindref="member">s_ClientLogger</ref>-&gt;set_level(spdlog::level::trace);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="SkeletonEngine/src/SkeletonEngine/Log.cpp"/>
   </compounddef>

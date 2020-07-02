@@ -27,9 +27,7 @@ Program Listing for File Application.cpp
        }
    
    
-       Application::~Application()
-       {
-       }
+       Application::~Application() {}
    
    
        void Application::Run()

@@ -11,11 +11,11 @@
       </node>
       <node id="3">
         <label>Core.h</label>
-        <link refid="_core_8h_source"/>
+        <link refid="_core_8h"/>
       </node>
       <node id="21">
         <label>SkeletonEngine/EntryPoint.h</label>
-        <link refid="_entry_point_8h_source"/>
+        <link refid="_entry_point_8h"/>
       </node>
       <node id="11">
         <label>string</label>
@@ -28,13 +28,13 @@
       </node>
       <node id="20">
         <label>SkeletonEngine/Events/ApplicationEvent.h</label>
-        <link refid="_application_event_8h_source"/>
+        <link refid="_application_event_8h"/>
         <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>SkeletonEngine/Application.h</label>
-        <link refid="_application_8h_source"/>
+        <link refid="_application_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -49,7 +49,7 @@
       </node>
       <node id="4">
         <label>SkeletonEngine/Window.h</label>
-        <link refid="_window_8h_source"/>
+        <link refid="_window_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -62,7 +62,7 @@
       </node>
       <node id="16">
         <label>SkeletonEngine/Log.h</label>
-        <link refid="_log_8h_source"/>
+        <link refid="_log_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
@@ -84,7 +84,7 @@
       </node>
       <node id="5">
         <label>sepch.h</label>
-        <link refid="sepch_8h_source"/>
+        <link refid="sepch_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
@@ -113,7 +113,7 @@
       </node>
       <node id="19">
         <label>SkeletonEngine/Events/Event.h</label>
-        <link refid="_event_8h_source"/>
+        <link refid="_event_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -134,18 +134,26 @@
       </node>
     </incdepgraph>
     <briefdescription>
+<para>General include, for use by <ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> applications. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>BP Harris </para>
+</simplesect>
+<simplesect kind="date"><para>July 2020 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/>General<sp/>include,<sp/>for<sp/>use<sp/>by<sp/>SkeletonEngine<sp/>applications.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SkeletonEngine/Application.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SkeletonEngine/Log.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SkeletonEngine/EntryPoint.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>-------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_application_8h" kindref="compound">SkeletonEngine/Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_log_8h" kindref="compound">SkeletonEngine/Log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>-------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_entry_point_8h" kindref="compound">SkeletonEngine/EntryPoint.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>-------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="SkeletonEngine/src/SkeletonEngine.h"/>
   </compounddef>

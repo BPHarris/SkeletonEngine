@@ -14,6 +14,7 @@ Program Listing for File sepch.h
    #pragma once
    
    
+   /* -------------------------------- General -------------------------------- */
    #include <iostream>
    #include <memory>
    #include <utility>
@@ -21,7 +22,7 @@ Program Listing for File sepch.h
    #include <functional>
    
    
-   // Data Structures
+   /* ---------------------------- Data Structures ---------------------------- */
    #include <string>
    #include <sstream>
    #include <vector>
@@ -29,11 +30,11 @@ Program Listing for File sepch.h
    #include <unordered_set>
    
    
-   // Engine (should only be log)
+   /* -------------------------------- Engine --------------------------------- */
    #include "SkeletonEngine/Log.h"
    
    
-   // Platform specific
+   /* ------------------------------- Platform -------------------------------- */
    #ifdef SE_PLATFORM_WINDOWS
        #include <Windows.h>
    #endif // SE_PLATFORM_WINDOWS

@@ -3,8 +3,8 @@
   <compounddef id="class_skeleton_engine_1_1_log" kind="class" language="C++" prot="public">
     <compoundname>SkeletonEngine::Log</compoundname>
     <includes refid="_log_8h" local="no">Log.h</includes>
-      <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" prot="private" static="yes" mutable="no">
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" prot="public" static="yes" mutable="no">
         <type>std::shared_ptr&lt; spdlog::logger &gt;</type>
         <definition>std::shared_ptr&lt; spdlog::logger &gt; SkeletonEngine::Log::s_CoreLogger</definition>
         <argsstring></argsstring>
@@ -12,12 +12,24 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Core engine logger.</para>
+<para><simplesect kind="see"><para><ref refid="_log_8h_1a16235c9ba69da98491b689d10d6ca015" kindref="member">SE_CORE_FATAL</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="_log_8h_1a64e03810f0d08c8ec23da8f09982bf32" kindref="member">SE_CORE_ERROR</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="_log_8h_1a25f73b073cea69f85a4505ab6c8b0edc" kindref="member">SE_CORE_WARN</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="_log_8h_1a878083cd6d1f2aa2e277bf4a00a4b7fd" kindref="member">SE_CORE_INFO</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="_log_8h_1ab7df8661b1deddcc135c2c01c3b8bad0" kindref="member">SE_CORE_TRACE</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="24" column="24" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="24" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="34" column="24" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="34" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" prot="private" static="yes" mutable="no">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" prot="public" static="yes" mutable="no">
         <type>std::shared_ptr&lt; spdlog::logger &gt;</type>
         <definition>std::shared_ptr&lt; spdlog::logger &gt; SkeletonEngine::Log::s_ClientLogger</definition>
         <argsstring></argsstring>
@@ -25,10 +37,22 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Client application logger.</para>
+<para><simplesect kind="see"><para><ref refid="_log_8h_1ae659d861ad82a50c501ea560c52c6d40" kindref="member">SE_FATAL</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="_log_8h_1a208b4b6aa3c53ed09bd0d648e93786bd" kindref="member">SE_ERROR</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="_log_8h_1aa1ef56d1ab9455064a5dd142c67d81f3" kindref="member">SE_WARN</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="_log_8h_1ad790656eb6464dacefa324d901fca312" kindref="member">SE_INFO</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="_log_8h_1a9feabbef3b97529e335ac2f8a814a553" kindref="member">SE_TRACE</ref> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="25" column="24" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="25" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="45" column="24" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -40,37 +64,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Initialise core and client log consoles. </para>
+<para>Initialise core and client loggers. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="19" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.cpp" bodystart="18" bodyend="27"/>
-      </memberdef>
-      <memberdef kind="function" id="class_skeleton_engine_1_1_log_1afce1f7b669686396496ef9829d329a3b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::shared_ptr&lt; spdlog::logger &gt; &amp;</type>
-        <definition>static std::shared_ptr&lt;spdlog::logger&gt;&amp; SkeletonEngine::Log::GetCoreLogger</definition>
-        <argsstring>()</argsstring>
-        <name>GetCoreLogger</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="21" column="31" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="21" bodyend="21"/>
-      </memberdef>
-      <memberdef kind="function" id="class_skeleton_engine_1_1_log_1ae4d75be88c10bb59e3e1fb66c4098d34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::shared_ptr&lt; spdlog::logger &gt; &amp;</type>
-        <definition>static std::shared_ptr&lt;spdlog::logger&gt;&amp; SkeletonEngine::Log::GetClientLogger</definition>
-        <argsstring>()</argsstring>
-        <name>GetClientLogger</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="22" column="31" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="22" bodyend="22"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="23" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.cpp" bodystart="21" bodyend="30"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -78,13 +76,11 @@
     <detaileddescription>
 <para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_log" kindref="compound">Log</ref> class. </para>
     </detaileddescription>
-    <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="16" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="17" bodyend="26"/>
+    <location file="SkeletonEngine/src/SkeletonEngine/Log.h" line="19" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Log.h" bodystart="20" bodyend="46"/>
     <listofallmembers>
-      <member refid="class_skeleton_engine_1_1_log_1ae4d75be88c10bb59e3e1fb66c4098d34" prot="public" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>GetClientLogger</name></member>
-      <member refid="class_skeleton_engine_1_1_log_1afce1f7b669686396496ef9829d329a3b" prot="public" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>GetCoreLogger</name></member>
       <member refid="class_skeleton_engine_1_1_log_1af81dd8215db06bb58a8082dd7773878b" prot="public" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>Init</name></member>
-      <member refid="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" prot="private" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>s_ClientLogger</name></member>
-      <member refid="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" prot="private" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>s_CoreLogger</name></member>
+      <member refid="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" prot="public" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>s_ClientLogger</name></member>
+      <member refid="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" prot="public" virt="non-virtual"><scope>SkeletonEngine::Log</scope><name>s_CoreLogger</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -9,7 +9,7 @@
       </node>
       <node id="14">
         <label>Core.h</label>
-        <link refid="_core_8h_source"/>
+        <link refid="_core_8h"/>
       </node>
       <node id="8">
         <label>string</label>
@@ -34,7 +34,7 @@
       </node>
       <node id="13">
         <label>SkeletonEngine/Log.h</label>
-        <link refid="_log_8h_source"/>
+        <link refid="_log_8h"/>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
@@ -56,7 +56,7 @@
       </node>
       <node id="2">
         <label>sepch.h</label>
-        <link refid="sepch_8h_source"/>
+        <link refid="sepch_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -88,12 +88,18 @@
       </node>
     </incdepgraph>
     <briefdescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> precompiled header corresponding *.cpp file. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>BP Harris </para>
+</simplesect>
+<simplesect kind="date"><para>July 2020 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="3"><highlight class="preprocessor">#include<sp/>&quot;sepch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sepch_8h" kindref="compound">sepch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="SkeletonEngine/src/sepch.cpp"/>
   </compounddef>

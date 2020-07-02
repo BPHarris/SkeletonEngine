@@ -29,38 +29,31 @@ Program Listing for File Event.h
        {
            None = 0,
            
-           /* Window Events */
-           WindowClosed,
-           WindowResized,
-           WindowFocused,
-           WindowLostFocus,
-           WindowMoved,
-   
-           /* Application Events */
-           AppTick,
-           AppUpdate,
-           AppRender,
-   
-           /* Keyboard Events */
-           KeyPressed,
-           KeyReleased,
-   
-           /* Mouse Events */
-           MouseButtonPressed,
-           MouseButtonReleased,
-           MouseMoved,
-           MouseScrolled
+           WindowClosed,           
+           WindowResized,          
+           WindowFocused,          
+           WindowLostFocus,        
+           WindowMoved,            
+           AppTick,                
+           AppUpdate,              
+           AppRender,              
+           KeyPressed,             
+           KeyReleased,            
+           MouseButtonPressed,     
+           MouseButtonReleased,    
+           MouseMoved,             
+           MouseScrolled           
        };
    
    
        enum EventCategory
        {
            None = 0,
-           EventCategoryApplication    = BIT(0),
-           EventCategoryInput          = BIT(1),
-           EventCategoryKeyboard       = BIT(2),
-           EventCategoryMouse          = BIT(3),
-           EventCategoryMouseButton    = BIT(4)
+           EventCategoryApplication    = BIT(0),       
+           EventCategoryInput          = BIT(1),       
+           EventCategoryKeyboard       = BIT(2),       
+           EventCategoryMouse          = BIT(3),       
+           EventCategoryMouseButton    = BIT(4)        
        };
    
    
@@ -75,19 +68,22 @@ Program Listing for File Event.h
        {
            friend class EventDispatcher;
    
+       protected:
+           bool m_Handled = false;
+   
        public:
            virtual EventType GetEventType() const = 0;
+   
            virtual const char* GetName() const = 0;
+   
            virtual int GetCategoryFlags() const = 0;
+   
            virtual std::string ToString() const { return GetName(); }
    
            inline bool IsInCategory(EventCategory category)
            {
                return GetCategoryFlags() & category;
            }
-   
-       protected:
-           bool m_Handled = false;
        };
    
    
@@ -95,6 +91,9 @@ Program Listing for File Event.h
        {
            template<typename T>
            using EventFn = std::function<bool(T&)>;
+   
+       private:
+           Event& m_Event;
    
        public:
            EventDispatcher(Event& event) : m_Event(event) {}
@@ -109,9 +108,6 @@ Program Listing for File Event.h
                }
                return false;
            }
-       
-       private:
-           Event& m_Event;
        };
    
    

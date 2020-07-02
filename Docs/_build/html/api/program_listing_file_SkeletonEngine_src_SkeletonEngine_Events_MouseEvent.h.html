@@ -272,8 +272,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -434,13 +438,12 @@
     <span class="k">class</span> <span class="nc">SE_API</span> <span class="nl">MouseButtonEvent</span> <span class="p">:</span> <span class="k">public</span> <span class="n">Event</span>
     <span class="p">{</span>
     <span class="k">public</span><span class="o">:</span>
-        <span class="kr">inline</span> <span class="kt">int</span> <span class="n">GetMouseButton</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_Button</span><span class="p">;</span> <span class="p">}</span>
+        <span class="kt">int</span> <span class="n">m_Button</span><span class="p">;</span>
 
+    <span class="k">public</span><span class="o">:</span>
         <span class="n">EVENT_CLASS_CATEGORY</span><span class="p">(</span><span class="n">EventCategoryMouse</span> <span class="o">|</span> <span class="n">EventCategoryInput</span><span class="p">)</span>
 
     <span class="k">protected</span><span class="o">:</span>
-        <span class="kt">int</span> <span class="n">m_Button</span><span class="p">;</span>
-
         <span class="n">MouseButtonEvent</span><span class="p">(</span><span class="kt">int</span> <span class="n">button</span><span class="p">)</span> <span class="o">:</span> <span class="n">m_Button</span><span class="p">(</span><span class="n">button</span><span class="p">)</span> <span class="p">{}</span>
     <span class="p">};</span>
 
@@ -453,7 +456,7 @@
         <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span>
         <span class="p">{</span>
             <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">ss</span><span class="p">;</span>
-            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MouseButtonPressedEvent: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_Button</span><span class="p">;</span>
+            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MouseButtonPressedEvent(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_Button</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span><span class="p">;</span>
             <span class="k">return</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
         <span class="p">}</span>
 
@@ -469,7 +472,7 @@
         <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span>
         <span class="p">{</span>
             <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">ss</span><span class="p">;</span>
-            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MouseButtonReleasedEvent: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_Button</span><span class="p">;</span>
+            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MouseButtonReleasedEvent(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_Button</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span><span class="p">;</span>
             <span class="k">return</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
         <span class="p">}</span>
 
@@ -479,48 +482,42 @@
 
     <span class="k">class</span> <span class="nc">SE_API</span> <span class="nl">MouseMovedEvent</span> <span class="p">:</span> <span class="k">public</span> <span class="n">Event</span>
     <span class="p">{</span>
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">float</span> <span class="n">m_MouseX</span><span class="p">,</span> <span class="n">m_MouseY</span><span class="p">;</span>
+
     <span class="k">public</span><span class="o">:</span>
         <span class="n">MouseMovedEvent</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">)</span> <span class="o">:</span> <span class="n">m_MouseX</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">m_MouseY</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="p">{}</span>
-
-        <span class="kr">inline</span> <span class="kt">float</span> <span class="n">GetX</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_MouseX</span><span class="p">;</span> <span class="p">}</span>
-        <span class="kr">inline</span> <span class="kt">float</span> <span class="n">GetY</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_MouseY</span><span class="p">;</span> <span class="p">}</span>
 
         <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span>
         <span class="p">{</span>
             <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">ss</span><span class="p">;</span>
-            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MouseMovedEvent: (&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_MouseX</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_MouseY</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span><span class="p">;</span>
+            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MouseMovedEvent(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_MouseX</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_MouseY</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span><span class="p">;</span>
             <span class="k">return</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
         <span class="p">}</span>
 
         <span class="n">EVENT_CLASS_TYPE</span><span class="p">(</span><span class="n">MouseMoved</span><span class="p">)</span>
         <span class="n">EVENT_CLASS_CATEGORY</span><span class="p">(</span><span class="n">EventCategoryMouse</span> <span class="o">|</span> <span class="n">EventCategoryInput</span><span class="p">)</span>
-
-    <span class="k">private</span><span class="o">:</span>
-        <span class="kt">float</span> <span class="n">m_MouseX</span><span class="p">,</span> <span class="n">m_MouseY</span><span class="p">;</span>
     <span class="p">};</span>
 
 
     <span class="k">class</span> <span class="nc">SE_API</span> <span class="nl">MouseScrolledEvent</span> <span class="p">:</span> <span class="k">public</span> <span class="n">Event</span>
     <span class="p">{</span>
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">float</span> <span class="n">m_XOffset</span><span class="p">,</span> <span class="n">m_YOffset</span><span class="p">;</span>
+
     <span class="k">public</span><span class="o">:</span>
         <span class="n">MouseScrolledEvent</span><span class="p">(</span><span class="kt">float</span> <span class="n">xOffset</span><span class="p">,</span> <span class="kt">float</span> <span class="n">yOffset</span><span class="p">)</span>
             <span class="o">:</span> <span class="n">m_XOffset</span><span class="p">(</span><span class="n">xOffset</span><span class="p">),</span> <span class="n">m_YOffset</span><span class="p">(</span><span class="n">yOffset</span><span class="p">)</span> <span class="p">{}</span>
 
-        <span class="kr">inline</span> <span class="kt">float</span> <span class="n">GetXOffset</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_XOffset</span><span class="p">;</span> <span class="p">}</span>
-        <span class="kr">inline</span> <span class="kt">float</span> <span class="n">GetYOffset</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_YOffset</span><span class="p">;</span> <span class="p">}</span>
-
         <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span>
         <span class="p">{</span>
             <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">ss</span><span class="p">;</span>
-            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MouseScrolledEvent: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">GetXOffset</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">GetYOffset</span><span class="p">();</span>
+            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MouseScrolledEvent(&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_XOffset</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_YOffset</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span><span class="p">;</span>
             <span class="k">return</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
         <span class="p">}</span>
 
         <span class="n">EVENT_CLASS_TYPE</span><span class="p">(</span><span class="n">MouseScrolled</span><span class="p">)</span>
         <span class="n">EVENT_CLASS_CATEGORY</span><span class="p">(</span><span class="n">EventCategoryMouse</span> <span class="o">|</span> <span class="n">EventCategoryInput</span><span class="p">)</span>
-
-    <span class="k">private</span><span class="o">:</span>
-        <span class="kt">float</span> <span class="n">m_XOffset</span><span class="p">,</span> <span class="n">m_YOffset</span><span class="p">;</span>
     <span class="p">};</span>
 
 <span class="p">}</span>

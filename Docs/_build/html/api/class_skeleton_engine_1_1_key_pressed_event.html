@@ -274,8 +274,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -457,7 +461,7 @@
 <dl class="cpp class">
 <dt id="_CPPv4N14SkeletonEngine15KeyPressedEventE">
 <span id="_CPPv3N14SkeletonEngine15KeyPressedEventE"></span><span id="_CPPv2N14SkeletonEngine15KeyPressedEventE"></span><span id="SkeletonEngine::KeyPressedEvent"></span><span class="target" id="class_skeleton_engine_1_1_key_pressed_event"></span><em class="property">class </em><code class="sig-prename descclassname">SkeletonEngine<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">KeyPressedEvent</code> : <em class="property">public</em> SkeletonEngine::<a class="reference internal" href="class_skeleton_engine_1_1_key_event.html#_CPPv4N14SkeletonEngine8KeyEventE" title="SkeletonEngine::KeyEvent">KeyEvent</a><a class="headerlink" href="#_CPPv4N14SkeletonEngine15KeyPressedEventE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>SkeletonEngine Key Pressed <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> class. </p>
+<dd><p>SkeletonEngine <a class="reference internal" href="#class_skeleton_engine_1_1_key_pressed_event"><span class="std std-ref">KeyPressedEvent</span></a> class. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
@@ -466,14 +470,17 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4NK14SkeletonEngine15KeyPressedEvent14GetRepeatCountEv">
-<span id="_CPPv3NK14SkeletonEngine15KeyPressedEvent14GetRepeatCountEv"></span><span id="_CPPv2NK14SkeletonEngine15KeyPressedEvent14GetRepeatCountEv"></span><span id="SkeletonEngine::KeyPressedEvent::GetRepeatCountC"></span><span class="target" id="class_skeleton_engine_1_1_key_pressed_event_1acd605145e5b37d30c1a17787f4d490a4"></span>int <code class="sig-name descname">GetRepeatCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine15KeyPressedEvent14GetRepeatCountEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine15KeyPressedEvent13IsJustPressedEv">
 <span id="_CPPv3NK14SkeletonEngine15KeyPressedEvent13IsJustPressedEv"></span><span id="_CPPv2NK14SkeletonEngine15KeyPressedEvent13IsJustPressedEv"></span><span id="SkeletonEngine::KeyPressedEvent::IsJustPressedC"></span><span class="target" id="class_skeleton_engine_1_1_key_pressed_event_1ad412a192912bb39a0c54ddf206ffd683"></span>bool <code class="sig-name descname">IsJustPressed</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine15KeyPressedEvent13IsJustPressedEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Check if the key has just been pressed or if it is a repeated key.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if the key was just pressed. </p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>false otherwise (key is a repeat). </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine15KeyPressedEvent8ToStringEv">
@@ -488,11 +495,29 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine15KeyPressedEvent12GetEventTypeEv">
 <span id="_CPPv3NK14SkeletonEngine15KeyPressedEvent12GetEventTypeEv"></span><span id="_CPPv2NK14SkeletonEngine15KeyPressedEvent12GetEventTypeEv"></span><span id="SkeletonEngine::KeyPressedEvent::GetEventTypeC"></span><span class="target" id="class_skeleton_engine_1_1_key_pressed_event_1ae25eaa513e498692f64aa1076693a798"></span><a class="reference internal" href="enum_namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f.html#_CPPv4N14SkeletonEngine9EventTypeE" title="SkeletonEngine::EventType">EventType</a> <code class="sig-name descname">GetEventType</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine15KeyPressedEvent12GetEventTypeEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a>’s EventType. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine15KeyPressedEvent7GetNameEv">
 <span id="_CPPv3NK14SkeletonEngine15KeyPressedEvent7GetNameEv"></span><span id="_CPPv2NK14SkeletonEngine15KeyPressedEvent7GetNameEv"></span><span id="SkeletonEngine::KeyPressedEvent::GetNameC"></span><span class="target" id="class_skeleton_engine_1_1_key_pressed_event_1ada3b001409b48a0c5fa1637fc8a378ed"></span><em class="property">const</em> char *<code class="sig-name descname">GetName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine15KeyPressedEvent7GetNameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> name. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt id="_CPPv4N14SkeletonEngine15KeyPressedEvent13m_RepeatCountE">
+<span id="_CPPv3N14SkeletonEngine15KeyPressedEvent13m_RepeatCountE"></span><span id="_CPPv2N14SkeletonEngine15KeyPressedEvent13m_RepeatCountE"></span><span id="SkeletonEngine::KeyPressedEvent::m_RepeatCount__i"></span><span class="target" id="class_skeleton_engine_1_1_key_pressed_event_1ac98e9afc5070ef67d52e83ba463ded89"></span>int <code class="sig-name descname">m_RepeatCount</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine15KeyPressedEvent13m_RepeatCountE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>

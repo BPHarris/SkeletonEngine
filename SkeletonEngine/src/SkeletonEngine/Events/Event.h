@@ -1,6 +1,9 @@
-/** Event.h
- *
- * SkeletonEngine event system.
+/**
+ * @file    Event.h
+ * @brief   SkeletonEngine event system.
+ * 
+ * @author  BP Harris
+ * @date    July 2020
  */
 
 #pragma once
@@ -17,44 +20,40 @@ namespace SkeletonEngine {
 	 * event phase of the update stage.
 	 */
 
-	/** SkeletonEngine Event Type */
+	/** SkeletonEngine EventType. */
 	enum class EventType
 	{
 		None = 0,
 		
-		/* Window Events */
-		WindowClosed,
-		WindowResized,
-		WindowFocused,
-		WindowLostFocus,
-		WindowMoved,
+		WindowClosed,			/**< Window closed. */
+		WindowResized,			/**< Window resized. */
+		WindowFocused,			/**< Window gained focused. */
+		WindowLostFocus,		/**< Window lost focus. */
+		WindowMoved,			/**< Window moved. */
 
-		/* Application Events */
-		AppTick,
-		AppUpdate,
-		AppRender,
+		AppTick,				/**< Application tick. */
+		AppUpdate,				/**< Application update. */
+		AppRender,				/**< Application render. */
 
-		/* Keyboard Events */
-		KeyPressed,
-		KeyReleased,
+		KeyPressed,				/**< Key pressed (or repeated). */
+		KeyReleased,			/**< Key released. */
 
-		/* Mouse Events */
-		MouseButtonPressed,
-		MouseButtonReleased,
-		MouseMoved,
-		MouseScrolled
+		MouseButtonPressed,		/**< Mouse clicked/mouse button pressed. */
+		MouseButtonReleased,	/**< Mouse unclicked/mouse button released. */
+		MouseMoved,				/**< Mouse moved. */
+		MouseScrolled			/**< Mouse scolled up/down. */
 	};
 
 
-	/** SkeletonEngine Event Category */
+	/** SkeletonEngine EventCategory */
 	enum EventCategory
 	{
 		None = 0,
-		EventCategoryApplication    = BIT(0),
-		EventCategoryInput	        = BIT(1),
-		EventCategoryKeyboard       = BIT(2),
-		EventCategoryMouse          = BIT(3),
-		EventCategoryMouseButton    = BIT(4)
+		EventCategoryApplication    = BIT(0),		/**< Application events */
+		EventCategoryInput	        = BIT(1),		/**< Input events */
+		EventCategoryKeyboard       = BIT(2),		/**< Keyboard events */
+		EventCategoryMouse          = BIT(3),		/**< Mouse events */
+		EventCategoryMouseButton    = BIT(4)		/**< Mouse button events */
 	};
 
 
@@ -70,28 +69,44 @@ namespace SkeletonEngine {
 	{
 		friend class EventDispatcher;
 
+	protected:
+		bool m_Handled = false;
+
 	public:
+		/** @return    The Event's EventType. */
 		virtual EventType GetEventType() const = 0;
+
+		/** @return    The Event name. */
 		virtual const char* GetName() const = 0;
+
+		/** @return    The Event's GetCategoryFlags. */
 		virtual int GetCategoryFlags() const = 0;
+
+		/** @return    The string representation of the Event. */
 		virtual std::string ToString() const { return GetName(); }
 
-		/** @return bool    true if in given category, false otherwise */
+		/**
+		 * Check if this Event is in the given category.
+		 * 
+		 * @param   category    The category to check against.
+		 * @return              true if the Event is in the the EventCategory
+		 * @return              false otherwise
+		 */
 		inline bool IsInCategory(EventCategory category)
 		{
 			return GetCategoryFlags() & category;
 		}
-
-	protected:
-		bool m_Handled = false;
 	};
 
 
-	/** SkeletonEngine Event Dispatcher class. */
+	/** SkeletonEngine EventDispatcher template class. */
 	class EventDispatcher
 	{
 		template<typename T>
 		using EventFn = std::function<bool(T&)>;
+
+	private:
+		Event& m_Event;
 
 	public:
 		EventDispatcher(Event& event) : m_Event(event) {}
@@ -106,13 +121,16 @@ namespace SkeletonEngine {
 			}
 			return false;
 		}
-	
-	private:
-		Event& m_Event;
 	};
 
 
-	/** To string operator overloading. */
+	/**
+	 * Operator overload for << and Event.
+	 * 
+	 * @param os    Left-hand side.
+	 * @param e     An Event instance.
+	 * @return      String concatination of os and e.
+	 */
 	inline std::ostream& operator<<(std::ostream& os, const Event& e)
 	{
 		return os << e.ToString();

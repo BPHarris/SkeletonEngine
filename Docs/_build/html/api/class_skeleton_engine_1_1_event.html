@@ -274,8 +274,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -475,28 +479,55 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine5Event12GetEventTypeEv">
 <span id="_CPPv3NK14SkeletonEngine5Event12GetEventTypeEv"></span><span id="_CPPv2NK14SkeletonEngine5Event12GetEventTypeEv"></span><span id="SkeletonEngine::Event::GetEventTypeC"></span><span class="target" id="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b"></span><a class="reference internal" href="enum_namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f.html#_CPPv4N14SkeletonEngine9EventTypeE" title="SkeletonEngine::EventType">EventType</a> <code class="sig-name descname">GetEventType</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK14SkeletonEngine5Event12GetEventTypeEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a>’s EventType. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine5Event7GetNameEv">
 <span id="_CPPv3NK14SkeletonEngine5Event7GetNameEv"></span><span id="_CPPv2NK14SkeletonEngine5Event7GetNameEv"></span><span id="SkeletonEngine::Event::GetNameC"></span><span class="target" id="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a"></span><em class="property">const</em> char *<code class="sig-name descname">GetName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK14SkeletonEngine5Event7GetNameEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> name. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine5Event16GetCategoryFlagsEv">
 <span id="_CPPv3NK14SkeletonEngine5Event16GetCategoryFlagsEv"></span><span id="_CPPv2NK14SkeletonEngine5Event16GetCategoryFlagsEv"></span><span id="SkeletonEngine::Event::GetCategoryFlagsC"></span><span class="target" id="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03"></span>int <code class="sig-name descname">GetCategoryFlags</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK14SkeletonEngine5Event16GetCategoryFlagsEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The <a class="reference internal" href="#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a>’s GetCategoryFlags. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK14SkeletonEngine5Event8ToStringEv">
 <span id="_CPPv3NK14SkeletonEngine5Event8ToStringEv"></span><span id="_CPPv2NK14SkeletonEngine5Event8ToStringEv"></span><span id="SkeletonEngine::Event::ToStringC"></span><span class="target" id="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c"></span>std::string <code class="sig-name descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14SkeletonEngine5Event8ToStringEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The string representation of the <a class="reference internal" href="#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a>. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N14SkeletonEngine5Event12IsInCategoryE13EventCategory">
 <span id="_CPPv3N14SkeletonEngine5Event12IsInCategoryE13EventCategory"></span><span id="_CPPv2N14SkeletonEngine5Event12IsInCategoryE13EventCategory"></span><span id="SkeletonEngine::Event::IsInCategory__EventCategory"></span><span class="target" id="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638"></span>bool <code class="sig-name descname">IsInCategory</code><span class="sig-paren">(</span><a class="reference internal" href="enum_namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc.html#_CPPv4N14SkeletonEngine13EventCategoryE" title="SkeletonEngine::EventCategory">EventCategory</a> <em>category</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SkeletonEngine5Event12IsInCategoryE13EventCategory" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>bool true if in given category, false otherwise </p>
+<dd><p>Check if this <a class="reference internal" href="#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> is in the given category.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if the <a class="reference internal" href="#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> is in the the EventCategory </p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>false otherwise </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code>: The category to check against. </p></li>
+</ul>
 </dd>
 </dl>
 </p>

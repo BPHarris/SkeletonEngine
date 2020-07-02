@@ -274,8 +274,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -444,7 +448,7 @@
 <dl class="cpp enum">
 <dt id="_CPPv4N14SkeletonEngine9EventTypeE">
 <span id="_CPPv3N14SkeletonEngine9EventTypeE"></span><span id="_CPPv2N14SkeletonEngine9EventTypeE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f"></span><em class="property">enum </em><code class="sig-prename descclassname">SkeletonEngine<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">EventType</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventTypeE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>SkeletonEngine <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> Type </p>
+<dd><p>SkeletonEngine EventType. </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType4NoneE">
@@ -454,72 +458,86 @@
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType12WindowClosedE">
 <span id="_CPPv3N14SkeletonEngine9EventType12WindowClosedE"></span><span id="_CPPv2N14SkeletonEngine9EventType12WindowClosedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7c87dff2b968b5c85baf1def063c776d"></span><em class="property">enumerator </em><code class="sig-name descname">WindowClosed</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType12WindowClosedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_window.html#class_skeleton_engine_1_1_window"><span class="std std-ref">Window</span></a> closed. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType13WindowResizedE">
 <span id="_CPPv3N14SkeletonEngine9EventType13WindowResizedE"></span><span id="_CPPv2N14SkeletonEngine9EventType13WindowResizedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51facbaad9b233665221bfc0a4a450a594cf"></span><em class="property">enumerator </em><code class="sig-name descname">WindowResized</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType13WindowResizedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_window.html#class_skeleton_engine_1_1_window"><span class="std std-ref">Window</span></a> resized. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType13WindowFocusedE">
 <span id="_CPPv3N14SkeletonEngine9EventType13WindowFocusedE"></span><span id="_CPPv2N14SkeletonEngine9EventType13WindowFocusedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa30b616e8eab20ea6423d55b0fb45c20b"></span><em class="property">enumerator </em><code class="sig-name descname">WindowFocused</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType13WindowFocusedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_window.html#class_skeleton_engine_1_1_window"><span class="std std-ref">Window</span></a> gained focused. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType15WindowLostFocusE">
 <span id="_CPPv3N14SkeletonEngine9EventType15WindowLostFocusE"></span><span id="_CPPv2N14SkeletonEngine9EventType15WindowLostFocusE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa1c2119b9d61e623975f13f1029f1d97c"></span><em class="property">enumerator </em><code class="sig-name descname">WindowLostFocus</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType15WindowLostFocusE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_window.html#class_skeleton_engine_1_1_window"><span class="std std-ref">Window</span></a> lost focus. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType11WindowMovedE">
 <span id="_CPPv3N14SkeletonEngine9EventType11WindowMovedE"></span><span id="_CPPv2N14SkeletonEngine9EventType11WindowMovedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fab94473d9dfc85f8fdbf5cb3b1d992bda"></span><em class="property">enumerator </em><code class="sig-name descname">WindowMoved</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType11WindowMovedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_window.html#class_skeleton_engine_1_1_window"><span class="std std-ref">Window</span></a> moved. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType7AppTickE">
 <span id="_CPPv3N14SkeletonEngine9EventType7AppTickE"></span><span id="_CPPv2N14SkeletonEngine9EventType7AppTickE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa559b408d45669603dbac61cd15984f13"></span><em class="property">enumerator </em><code class="sig-name descname">AppTick</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType7AppTickE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_application.html#class_skeleton_engine_1_1_application"><span class="std std-ref">Application</span></a> tick. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType9AppUpdateE">
 <span id="_CPPv3N14SkeletonEngine9EventType9AppUpdateE"></span><span id="_CPPv2N14SkeletonEngine9EventType9AppUpdateE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac177abb86f28dea426f2e3409e14bcda"></span><em class="property">enumerator </em><code class="sig-name descname">AppUpdate</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType9AppUpdateE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_application.html#class_skeleton_engine_1_1_application"><span class="std std-ref">Application</span></a> update. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType9AppRenderE">
 <span id="_CPPv3N14SkeletonEngine9EventType9AppRenderE"></span><span id="_CPPv2N14SkeletonEngine9EventType9AppRenderE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa4b2eb3c601042333ac1c0565ff58e3d6"></span><em class="property">enumerator </em><code class="sig-name descname">AppRender</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType9AppRenderE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_application.html#class_skeleton_engine_1_1_application"><span class="std std-ref">Application</span></a> render. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType10KeyPressedE">
 <span id="_CPPv3N14SkeletonEngine9EventType10KeyPressedE"></span><span id="_CPPv2N14SkeletonEngine9EventType10KeyPressedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac17e6984c1e5a887a49831beadee6bca"></span><em class="property">enumerator </em><code class="sig-name descname">KeyPressed</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType10KeyPressedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Key pressed (or repeated). </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType11KeyReleasedE">
 <span id="_CPPv3N14SkeletonEngine9EventType11KeyReleasedE"></span><span id="_CPPv2N14SkeletonEngine9EventType11KeyReleasedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa4a77f07c8ad223b71ab4ce78a63841ab"></span><em class="property">enumerator </em><code class="sig-name descname">KeyReleased</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType11KeyReleasedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Key released. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType18MouseButtonPressedE">
 <span id="_CPPv3N14SkeletonEngine9EventType18MouseButtonPressedE"></span><span id="_CPPv2N14SkeletonEngine9EventType18MouseButtonPressedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7349f643d689997b7c54bf93e4095f5c"></span><em class="property">enumerator </em><code class="sig-name descname">MouseButtonPressed</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType18MouseButtonPressedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Mouse clicked/mouse button pressed. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType19MouseButtonReleasedE">
 <span id="_CPPv3N14SkeletonEngine9EventType19MouseButtonReleasedE"></span><span id="_CPPv2N14SkeletonEngine9EventType19MouseButtonReleasedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7584c169de594c27f00084b93186fd7c"></span><em class="property">enumerator </em><code class="sig-name descname">MouseButtonReleased</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType19MouseButtonReleasedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Mouse unclicked/mouse button released. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType10MouseMovedE">
 <span id="_CPPv3N14SkeletonEngine9EventType10MouseMovedE"></span><span id="_CPPv2N14SkeletonEngine9EventType10MouseMovedE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac2770ad109c8063ce69a3608a9a16c08"></span><em class="property">enumerator </em><code class="sig-name descname">MouseMoved</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType10MouseMovedE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Mouse moved. </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine9EventType13MouseScrolledE">
 <span id="_CPPv3N14SkeletonEngine9EventType13MouseScrolledE"></span><span id="_CPPv2N14SkeletonEngine9EventType13MouseScrolledE"></span><span class="target" id="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa50edb169910041bb3c06f6e8322d74c1"></span><em class="property">enumerator </em><code class="sig-name descname">MouseScrolled</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine9EventType13MouseScrolledE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Mouse scolled up/down. </p>
+</dd></dl>
 
 </dd></dl>
 

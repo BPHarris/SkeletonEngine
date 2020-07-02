@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.18">
   <compound refid="class_skeleton_engine_1_1_application" kind="class"><name>SkeletonEngine::Application</name>
-    <member refid="class_skeleton_engine_1_1_application_1ace702edabc8e90af07224d82d210d608" kind="variable"><name>m_Window</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a92f9846a7cbcbf9aefb2e8c616d7e111" kind="variable"><name>m_Running</name></member>
+    <member refid="class_skeleton_engine_1_1_application_1ace702edabc8e90af07224d82d210d608" kind="variable"><name>m_Window</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a0ccf5dbca675babd9aba0203bd63d554" kind="function"><name>Application</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a33d11cf381554a653f725660bb2981d3" kind="function"><name>~Application</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a19ebb0f0318e9c4019c1c4d77b6265f6" kind="function"><name>Run</name></member>
@@ -46,17 +46,15 @@
     <member refid="class_skeleton_engine_1_1_event_dispatcher_1aca6f04eebd7cc035ad24f46758d1b3a0" kind="function"><name>Dispatch</name></member>
   </compound>
   <compound refid="class_skeleton_engine_1_1_key_event" kind="class"><name>SkeletonEngine::KeyEvent</name>
-    <member refid="class_skeleton_engine_1_1_key_event_1ae705206480025e0353d0b1b7bc37e653" kind="variable"><name>m_KeyCode</name></member>
-    <member refid="class_skeleton_engine_1_1_key_event_1a034ce7510999223f4477b0d6697563c5" kind="function"><name>GetKeyCode</name></member>
+    <member refid="class_skeleton_engine_1_1_key_event_1a6b74f1dd072006446fc3f0defcb4c769" kind="variable"><name>m_Keycode</name></member>
     <member refid="class_skeleton_engine_1_1_key_event_1ad7d5119a2c7a28b4f07e5d34a5faa435" kind="function"><name>GetCategoryFlags</name></member>
     <member refid="class_skeleton_engine_1_1_key_event_1a3b27b210824beb351908a22596790b10" kind="function"><name>KeyEvent</name></member>
   </compound>
   <compound refid="class_skeleton_engine_1_1_key_pressed_event" kind="class"><name>SkeletonEngine::KeyPressedEvent</name>
+    <member refid="class_skeleton_engine_1_1_key_pressed_event_1ac98e9afc5070ef67d52e83ba463ded89" kind="variable"><name>m_RepeatCount</name></member>
     <member refid="class_skeleton_engine_1_1_key_pressed_event_1a64f63fef153b17424839dd94d3d3fd28" kind="variable"><name>JUST_PRESSED</name></member>
     <member refid="class_skeleton_engine_1_1_key_pressed_event_1a81972bca6f53aaf99148aaa20d391618" kind="variable"><name>REPEATED</name></member>
-    <member refid="class_skeleton_engine_1_1_key_pressed_event_1ac98e9afc5070ef67d52e83ba463ded89" kind="variable"><name>m_RepeatCount</name></member>
     <member refid="class_skeleton_engine_1_1_key_pressed_event_1a5ac86d07ffaf73a70765dcddfb26d097" kind="function"><name>KeyPressedEvent</name></member>
-    <member refid="class_skeleton_engine_1_1_key_pressed_event_1acd605145e5b37d30c1a17787f4d490a4" kind="function"><name>GetRepeatCount</name></member>
     <member refid="class_skeleton_engine_1_1_key_pressed_event_1ad412a192912bb39a0c54ddf206ffd683" kind="function"><name>IsJustPressed</name></member>
     <member refid="class_skeleton_engine_1_1_key_pressed_event_1a5d2a5c94135e415d502c52ebee38613b" kind="function"><name>ToString</name></member>
     <member refid="class_skeleton_engine_1_1_key_pressed_event_1ae25eaa513e498692f64aa1076693a798" kind="function"><name>GetEventType</name></member>
@@ -74,12 +72,9 @@
     <member refid="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" kind="variable"><name>s_CoreLogger</name></member>
     <member refid="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802" kind="variable"><name>s_ClientLogger</name></member>
     <member refid="class_skeleton_engine_1_1_log_1af81dd8215db06bb58a8082dd7773878b" kind="function"><name>Init</name></member>
-    <member refid="class_skeleton_engine_1_1_log_1afce1f7b669686396496ef9829d329a3b" kind="function"><name>GetCoreLogger</name></member>
-    <member refid="class_skeleton_engine_1_1_log_1ae4d75be88c10bb59e3e1fb66c4098d34" kind="function"><name>GetClientLogger</name></member>
   </compound>
   <compound refid="class_skeleton_engine_1_1_mouse_button_event" kind="class"><name>SkeletonEngine::MouseButtonEvent</name>
     <member refid="class_skeleton_engine_1_1_mouse_button_event_1a1a3904fbff500ccd00d6570915853cfa" kind="variable"><name>m_Button</name></member>
-    <member refid="class_skeleton_engine_1_1_mouse_button_event_1ac445d8c52f2402781085b644c2e7f918" kind="function"><name>GetMouseButton</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_button_event_1ab2637737e542b0c13e35a2af4b1834f3" kind="function"><name>GetCategoryFlags</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_button_event_1a7e72b2965a004d7f98363b25ec414256" kind="function"><name>MouseButtonEvent</name></member>
   </compound>
@@ -101,8 +96,6 @@
     <member refid="class_skeleton_engine_1_1_mouse_moved_event_1af2366feb02f4b99f287db4d403d49753" kind="variable"><name>m_MouseX</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_moved_event_1aaa8bd2229fb353902aa918e81775181e" kind="variable"><name>m_MouseY</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_moved_event_1ad6413fe5a255cb6f260b2ec6abed5cde" kind="function"><name>MouseMovedEvent</name></member>
-    <member refid="class_skeleton_engine_1_1_mouse_moved_event_1a830a1f94f2eb549f505a4ea9a633a76a" kind="function"><name>GetX</name></member>
-    <member refid="class_skeleton_engine_1_1_mouse_moved_event_1a015ffd3e93053c76ced33d261f6cb9eb" kind="function"><name>GetY</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_moved_event_1a6cd907693c6df60695416ec72221e967" kind="function"><name>ToString</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_moved_event_1ad00946bde34f5738102a972d8500b837" kind="function"><name>GetEventType</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_moved_event_1a5af57b2bc28c7e4f5a9febca42416edd" kind="function"><name>GetName</name></member>
@@ -113,8 +106,6 @@
     <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a8e892dd72c1e309bd56ec2d6fb88c62b" kind="variable"><name>m_XOffset</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a5ac3591a2db0471f558da95c2600f416" kind="variable"><name>m_YOffset</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a2e1a2ea1c70a30a49a197e1cdee417b0" kind="function"><name>MouseScrolledEvent</name></member>
-    <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a7dee208e19c1ef8461f89b0b6132141b" kind="function"><name>GetXOffset</name></member>
-    <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a7a0e596a18006cba004ed7c34edea9b1" kind="function"><name>GetYOffset</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a77cc7463bc99f77b62809994b024e4d9" kind="function"><name>ToString</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a6c56e2732357335ac5c819baa86813a3" kind="function"><name>GetEventType</name></member>
     <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1ac07fde15ef95ce510bc7c9cacbc31cb5" kind="function"><name>GetName</name></member>
@@ -123,6 +114,7 @@
   </compound>
   <compound refid="class_skeleton_engine_1_1_window" kind="class"><name>SkeletonEngine::Window</name>
     <member refid="class_skeleton_engine_1_1_window_1adbb3feff4618a6866529ee5ca519917c" kind="typedef"><name>EventCallbackFn</name></member>
+    <member refid="class_skeleton_engine_1_1_window_1abbf537752f2c710bb01196da1b877fae" kind="function"><name>Create</name></member>
     <member refid="class_skeleton_engine_1_1_window_1a5a58caa3f44b110c3e1a7c6e5a6132c0" kind="function"><name>~Window</name></member>
     <member refid="class_skeleton_engine_1_1_window_1a1c3725a84f5ea63148fcbd94a16863a7" kind="function"><name>OnUpdate</name></member>
     <member refid="class_skeleton_engine_1_1_window_1ad13566cf97d7836815848d8b03faf971" kind="function"><name>GetTitle</name></member>
@@ -132,7 +124,6 @@
     <member refid="class_skeleton_engine_1_1_window_1a432631d4b321ab5f1a36b4320a83d14c" kind="function"><name>SetEventCallback</name></member>
     <member refid="class_skeleton_engine_1_1_window_1ae282dcedc8af578d9180d6bb4e0b658e" kind="function"><name>SetVSync</name></member>
     <member refid="class_skeleton_engine_1_1_window_1a353f9aa35b191c705c7a3af5822a1b22" kind="function"><name>IsVSync</name></member>
-    <member refid="class_skeleton_engine_1_1_window_1abbf537752f2c710bb01196da1b877fae" kind="function"><name>Create</name></member>
   </compound>
   <compound refid="class_skeleton_engine_1_1_window_closed_event" kind="class"><name>SkeletonEngine::WindowClosedEvent</name>
     <member refid="class_skeleton_engine_1_1_window_closed_event_1a6dcb7e6d5e586a7fb57d437c84fe6ab2" kind="function"><name>WindowClosedEvent</name></member>
@@ -166,8 +157,6 @@
     <member refid="class_skeleton_engine_1_1_window_moved_event_1a29ebdd4ef3a125d50fd8b2e716f73fe9" kind="variable"><name>m_X</name></member>
     <member refid="class_skeleton_engine_1_1_window_moved_event_1a7ff68e37245aa36775a0ba37c23e0314" kind="variable"><name>m_Y</name></member>
     <member refid="class_skeleton_engine_1_1_window_moved_event_1a76d43dc26b8462f56439232b67e86071" kind="function"><name>WindowMovedEvent</name></member>
-    <member refid="class_skeleton_engine_1_1_window_moved_event_1a65e4ab7aa8adc24bca41f51c3afe5a11" kind="function"><name>GetX</name></member>
-    <member refid="class_skeleton_engine_1_1_window_moved_event_1a7eeb6f364619df5b37c2c97f32bec8d6" kind="function"><name>GetY</name></member>
     <member refid="class_skeleton_engine_1_1_window_moved_event_1afdeae55d9adb3447ab394509cf78a2df" kind="function"><name>ToString</name></member>
     <member refid="class_skeleton_engine_1_1_window_moved_event_1ae107527c362be087f8c00b3990e54509" kind="function"><name>GetEventType</name></member>
     <member refid="class_skeleton_engine_1_1_window_moved_event_1a3e6153601ac1642d008efdd7c522d72d" kind="function"><name>GetName</name></member>
@@ -184,8 +173,6 @@
     <member refid="class_skeleton_engine_1_1_window_resized_event_1afe67e3fea2d5ea17893460e561aa4470" kind="variable"><name>m_Width</name></member>
     <member refid="class_skeleton_engine_1_1_window_resized_event_1ac4842403732288c76e040e8fea4a60ee" kind="variable"><name>m_Height</name></member>
     <member refid="class_skeleton_engine_1_1_window_resized_event_1aa5a135c3667dc403688b001c6d60b692" kind="function"><name>WindowResizedEvent</name></member>
-    <member refid="class_skeleton_engine_1_1_window_resized_event_1aefe49ec5c2319006d3992a4f63f123df" kind="function"><name>GetWidth</name></member>
-    <member refid="class_skeleton_engine_1_1_window_resized_event_1a69327157838de09249c29665b65426ff" kind="function"><name>GetHeight</name></member>
     <member refid="class_skeleton_engine_1_1_window_resized_event_1adf32ce7a5294c51e986ab2b7fe586974" kind="function"><name>ToString</name></member>
     <member refid="class_skeleton_engine_1_1_window_resized_event_1ab231247d8546c4168c4c0f14a382c49a" kind="function"><name>GetEventType</name></member>
     <member refid="class_skeleton_engine_1_1_window_resized_event_1a4c30e3431fb460c9ee57a26267471623" kind="function"><name>GetName</name></member>
@@ -197,6 +184,7 @@
     <member refid="class_skeleton_engine_1_1_windows_window_1a21870f44361a7f701b53d5587e43f0cf" kind="variable"><name>VSYNC_DISABLED</name></member>
     <member refid="class_skeleton_engine_1_1_windows_window_1a34b7d7cc71fd7a52b60aa2e6f764b109" kind="variable"><name>m_Window</name></member>
     <member refid="class_skeleton_engine_1_1_windows_window_1acc58215e1ba7ae7a55dfc3a78238b22b" kind="variable"><name>m_Data</name></member>
+    <member refid="class_skeleton_engine_1_1_windows_window_1a77bb6d944ef266abe49fe369932eabab" kind="function"><name>Init</name></member>
     <member refid="class_skeleton_engine_1_1_windows_window_1a7cc33ef7650a9112095405e65b683d39" kind="function"><name>WindowsWindow</name></member>
     <member refid="class_skeleton_engine_1_1_windows_window_1a13475119733e2c955aa8a6fe39920050" kind="function"><name>~WindowsWindow</name></member>
     <member refid="class_skeleton_engine_1_1_windows_window_1a1d742cb0684d631dc59597de1038723d" kind="function"><name>OnUpdate</name></member>
@@ -207,8 +195,7 @@
     <member refid="class_skeleton_engine_1_1_windows_window_1a9e49e06dee974758bcc8ba3631dea81f" kind="function"><name>SetEventCallback</name></member>
     <member refid="class_skeleton_engine_1_1_windows_window_1aa39ec82ed01ed56ca1f308997d7a0fce" kind="function"><name>SetVSync</name></member>
     <member refid="class_skeleton_engine_1_1_windows_window_1a21045a4e53e096af549868f97a73d7dc" kind="function"><name>IsVSync</name></member>
-    <member refid="class_skeleton_engine_1_1_windows_window_1a77bb6d944ef266abe49fe369932eabab" kind="function"><name>Init</name></member>
-    <member refid="class_skeleton_engine_1_1_windows_window_1ad34f2f9ae9d159c85b52d4ade075ba2d" kind="function"><name>Shutdown</name></member>
+    <member refid="class_skeleton_engine_1_1_windows_window_1ac8b4e9494fbb97df4f1886b8240ea07d" kind="function"><name>Close</name></member>
   </compound>
   <compound refid="namespace_skeleton_engine" kind="namespace"><name>SkeletonEngine</name>
     <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kind="enum"><name>EventType</name></member>
@@ -239,6 +226,7 @@
     <member refid="namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a" kind="function"><name>GLFWErrorCallback</name></member>
     <member refid="namespace_skeleton_engine_1a3ecba78e8136f5fde0386b52489c170d" kind="function"><name>CreateApplication</name></member>
     <member refid="namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882" kind="function"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="_windows_window_8cpp" kind="file"><name>WindowsWindow.cpp</name>
     <member refid="_windows_window_8cpp_1a4c442a29eba1657dc53ec8d5d948a65e" kind="define"><name>GET_WINDOW_DATA_AS</name></member>

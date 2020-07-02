@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="94" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="94" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="106" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="111" column="7" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="111" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="109" column="7" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="109" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="97" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="97" bodyend="97"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="112" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="112" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_event_dispatcher_1aca6f04eebd7cc035ad24f46758d1b3a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -76,15 +76,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="100" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="100" bodyend="108"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="115" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="115" bodyend="123"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> Dispatcher class. </para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_event_dispatcher" kindref="compound">EventDispatcher</ref> template class. </para>
     </detaileddescription>
-    <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="91" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="92" bodyend="112"/>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="103" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="104" bodyend="124"/>
     <listofallmembers>
       <member refid="class_skeleton_engine_1_1_event_dispatcher_1aca6f04eebd7cc035ad24f46758d1b3a0" prot="public" virt="non-virtual"><scope>SkeletonEngine::EventDispatcher</scope><name>Dispatch</name></member>
       <member refid="class_skeleton_engine_1_1_event_dispatcher_1aab24a45877617db578900550ded03dc9" prot="public" virt="non-virtual"><scope>SkeletonEngine::EventDispatcher</scope><name>EventDispatcher</name></member>

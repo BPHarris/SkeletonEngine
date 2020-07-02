@@ -8,6 +8,11 @@ File Window.h
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
+:ref:`namespace_SkeletonEngine` generic Window interface. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -20,6 +25,16 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Window.h``)
    :maxdepth: 1
 
    program_listing_file_SkeletonEngine_src_SkeletonEngine_Window.h.rst
+
+
+
+Detailed Description
+--------------------
+
+BP Harris 
+
+July 2020 
+
 
 
 
@@ -62,4 +77,11 @@ Classes
 - :ref:`exhale_struct_struct_skeleton_engine_1_1_window_properties`
 
 - :ref:`exhale_class_class_skeleton_engine_1_1_window`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882`
 

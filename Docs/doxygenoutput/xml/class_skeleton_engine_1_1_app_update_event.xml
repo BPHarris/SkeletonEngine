@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="112" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="112" bodyend="112"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="109" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="109" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_app_update_event_1a62ebdd93d0c6561117247a92de4b55ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
@@ -27,10 +27,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&apos;s EventType. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="114" column="83" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="114" bodyend="114"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="111" column="83" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="111" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_app_update_event_1ac062b230dd824661e0c91afafbd87b7e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>const char *</type>
@@ -41,10 +44,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> name. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="114" column="157" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="114" bodyend="114"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="111" column="157" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="111" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_app_update_event_1af598154199a6063498e3fecbfa2583ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>int</type>
@@ -55,10 +61,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&apos;s GetCategoryFlags. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="115" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="115" bodyend="115"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="112" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="112" bodyend="112"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -73,13 +82,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="114" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="114" bodyend="114"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="111" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="111" bodyend="111"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> App Update <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> class. </para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_app_update_event" kindref="compound">AppUpdateEvent</ref> class. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -105,7 +114,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="109" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="110" bodyend="116"/>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="106" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="107" bodyend="113"/>
     <listofallmembers>
       <member refid="class_skeleton_engine_1_1_app_update_event_1ac2c43b15d0cc4bea150e48f321acddf8" prot="public" virt="non-virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>AppUpdateEvent</name></member>
       <member refid="class_skeleton_engine_1_1_app_update_event_1af598154199a6063498e3fecbfa2583ea" prot="public" virt="virtual"><scope>SkeletonEngine::AppUpdateEvent</scope><name>GetCategoryFlags</name></member>
