@@ -10,7 +10,6 @@ Welcome to SkeletonEngine's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   about
    api/skeleton_engine
 
 
