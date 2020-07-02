@@ -6,6 +6,7 @@ This engine is a hobby and very much a work-in-progress, without much work or pr
 If you are actually looking for a *good*, *usable* engine and ended up here by accident, checkout [Godot](https://godotengine.org).
 
 - [Notes](#notes)
+- [Road Map](#road-map)
 - [Building SkeletonEngine](#building-skeletonengine)
   - [Requirements](#requirements)
   - [Windows](#windows)
@@ -32,6 +33,14 @@ TODO: Create proper logo
 TODO: Create banner-style logo
 
 TODO: Consistant capitalisation for folder names
+
+
+# Road Map
+
+- Get very basic window to compile on Linux
+- Implement features on Windows build until reasonable
+- Slowly add features to Linux build
+- OSX / macOS eventually
 
 
 # Building SkeletonEngine
