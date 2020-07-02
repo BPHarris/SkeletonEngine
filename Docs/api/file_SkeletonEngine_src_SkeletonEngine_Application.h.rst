@@ -8,6 +8,11 @@ File Application.h
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
+Basic :ref:`namespace_SkeletonEngine` Application interface. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -20,6 +25,16 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Application.h``)
    :maxdepth: 1
 
    program_listing_file_SkeletonEngine_src_SkeletonEngine_Application.h.rst
+
+
+
+Detailed Description
+--------------------
+
+BP Harris 
+
+July 2020 
+
 
 
 

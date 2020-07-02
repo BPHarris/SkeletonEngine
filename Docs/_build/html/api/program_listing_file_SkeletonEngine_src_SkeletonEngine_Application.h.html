@@ -272,8 +272,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -436,6 +440,11 @@
 
     <span class="k">class</span> <span class="nc">SE_API</span> <span class="n">Application</span>
     <span class="p">{</span>
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">bool</span> <span class="n">m_Running</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Window</span><span class="o">&gt;</span> <span class="n">m_Window</span><span class="p">;</span>
+
     <span class="k">public</span><span class="o">:</span>
         <span class="n">Application</span><span class="p">();</span>
         <span class="k">virtual</span> <span class="o">~</span><span class="n">Application</span><span class="p">();</span>
@@ -446,10 +455,8 @@
 
     <span class="k">private</span><span class="o">:</span>
         <span class="kt">bool</span> <span class="n">OnWindowClose</span><span class="p">(</span><span class="n">WindowClosedEvent</span><span class="o">&amp;</span> <span class="n">e</span><span class="p">);</span>
-
-        <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Window</span><span class="o">&gt;</span> <span class="n">m_Window</span><span class="p">;</span>
-        <span class="kt">bool</span> <span class="n">m_Running</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
     <span class="p">};</span>
+
 
     <span class="n">Application</span><span class="o">*</span> <span class="nf">CreateApplication</span><span class="p">();</span>
 

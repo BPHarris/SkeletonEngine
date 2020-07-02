@@ -274,8 +274,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -444,7 +448,7 @@
 <dl class="cpp enum">
 <dt id="_CPPv4N14SkeletonEngine13EventCategoryE">
 <span id="_CPPv3N14SkeletonEngine13EventCategoryE"></span><span id="_CPPv2N14SkeletonEngine13EventCategoryE"></span><span class="target" id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc"></span><em class="property">enum </em><code class="sig-prename descclassname">SkeletonEngine<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">EventCategory</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine13EventCategoryE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>SkeletonEngine <a class="reference internal" href="class_skeleton_engine_1_1_event.html#class_skeleton_engine_1_1_event"><span class="std std-ref">Event</span></a> Category </p>
+<dd><p>SkeletonEngine EventCategory </p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine13EventCategory4NoneE">
@@ -459,27 +463,32 @@
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine13EventCategory24EventCategoryApplicationE">
 <span id="_CPPv3N14SkeletonEngine13EventCategory24EventCategoryApplicationE"></span><span id="_CPPv2N14SkeletonEngine13EventCategory24EventCategoryApplicationE"></span><span class="target" id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941"></span><em class="property">enumerator </em><code class="sig-name descname">EventCategoryApplication</code> = BIT(0)<a class="headerlink" href="#_CPPv4N14SkeletonEngine13EventCategory24EventCategoryApplicationE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="class_skeleton_engine_1_1_application.html#class_skeleton_engine_1_1_application"><span class="std std-ref">Application</span></a> events </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine13EventCategory18EventCategoryInputE">
 <span id="_CPPv3N14SkeletonEngine13EventCategory18EventCategoryInputE"></span><span id="_CPPv2N14SkeletonEngine13EventCategory18EventCategoryInputE"></span><span class="target" id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca95f9c9fee20c17a3cf2027ce28bdad9a"></span><em class="property">enumerator </em><code class="sig-name descname">EventCategoryInput</code> = BIT(1)<a class="headerlink" href="#_CPPv4N14SkeletonEngine13EventCategory18EventCategoryInputE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Input events </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine13EventCategory21EventCategoryKeyboardE">
 <span id="_CPPv3N14SkeletonEngine13EventCategory21EventCategoryKeyboardE"></span><span id="_CPPv2N14SkeletonEngine13EventCategory21EventCategoryKeyboardE"></span><span class="target" id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca802c1853e839968d1c46a8e89923334a"></span><em class="property">enumerator </em><code class="sig-name descname">EventCategoryKeyboard</code> = BIT(2)<a class="headerlink" href="#_CPPv4N14SkeletonEngine13EventCategory21EventCategoryKeyboardE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Keyboard events </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine13EventCategory18EventCategoryMouseE">
 <span id="_CPPv3N14SkeletonEngine13EventCategory18EventCategoryMouseE"></span><span id="_CPPv2N14SkeletonEngine13EventCategory18EventCategoryMouseE"></span><span class="target" id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fcac5986e98fe1e40dc8e62b456b418e38f"></span><em class="property">enumerator </em><code class="sig-name descname">EventCategoryMouse</code> = BIT(3)<a class="headerlink" href="#_CPPv4N14SkeletonEngine13EventCategory18EventCategoryMouseE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Mouse events </p>
+</dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N14SkeletonEngine13EventCategory24EventCategoryMouseButtonE">
 <span id="_CPPv3N14SkeletonEngine13EventCategory24EventCategoryMouseButtonE"></span><span id="_CPPv2N14SkeletonEngine13EventCategory24EventCategoryMouseButtonE"></span><span class="target" id="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca27ceeb5913fce202a75e0c4f819b308a"></span><em class="property">enumerator </em><code class="sig-name descname">EventCategoryMouseButton</code> = BIT(4)<a class="headerlink" href="#_CPPv4N14SkeletonEngine13EventCategory24EventCategoryMouseButtonE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Mouse button events </p>
+</dd></dl>
 
 </dd></dl>
 

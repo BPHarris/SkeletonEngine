@@ -8,6 +8,11 @@ File sepch.h
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
+:ref:`namespace_SkeletonEngine` precompiled header file. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -20,6 +25,16 @@ Definition (``SkeletonEngine\src\sepch.h``)
    :maxdepth: 1
 
    program_listing_file_SkeletonEngine_src_sepch.h.rst
+
+
+
+Detailed Description
+--------------------
+
+BP Harris 
+
+July 2020 
+
 
 
 

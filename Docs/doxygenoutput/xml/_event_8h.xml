@@ -15,7 +15,7 @@
       </node>
       <node id="14">
         <label>Core.h</label>
-        <link refid="_core_8h_source"/>
+        <link refid="_core_8h"/>
       </node>
       <node id="8">
         <label>string</label>
@@ -34,7 +34,7 @@
       </node>
       <node id="13">
         <label>SkeletonEngine/Log.h</label>
-        <link refid="_log_8h_source"/>
+        <link refid="_log_8h"/>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
@@ -56,7 +56,7 @@
       </node>
       <node id="2">
         <label>sepch.h</label>
-        <link refid="sepch_8h_source"/>
+        <link refid="sepch_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -96,30 +96,36 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
+      <node id="7">
         <label>SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h</label>
-        <link refid="_mouse_event_8h_source"/>
+        <link refid="_mouse_event_8h"/>
       </node>
-      <node id="8">
+      <node id="9">
         <label>SkeletonEngine/src/Platform/Windows/WindowsWindow.h</label>
-        <link refid="_windows_window_8h_source"/>
+        <link refid="_windows_window_8h"/>
       </node>
-      <node id="4">
+      <node id="3">
+        <label>SkeletonEngine/src/SkeletonEngine/Application.cpp</label>
+        <link refid="_application_8cpp"/>
+      </node>
+      <node id="5">
         <label>SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h</label>
-        <link refid="_application_event_8h_source"/>
+        <link refid="_application_event_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>SkeletonEngine/src/SkeletonEngine/Application.h</label>
-        <link refid="_application_8h_source"/>
+        <link refid="_application_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>SkeletonEngine/src/SkeletonEngine/Window.h</label>
-        <link refid="_window_8h_source"/>
-        <childnode refid="8" relation="include">
+        <link refid="_window_8h"/>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
@@ -129,22 +135,22 @@
         <link refid="_event_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>SkeletonEngine/src/SkeletonEngine.h</label>
-        <link refid="_skeleton_engine_8h_source"/>
+        <link refid="_skeleton_engine_8h"/>
       </node>
-      <node id="5">
+      <node id="6">
         <label>SkeletonEngine/src/SkeletonEngine/Events/KeyEvent.h</label>
-        <link refid="_key_event_8h_source"/>
+        <link refid="_key_event_8h"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_skeleton_engine_1_1_event" prot="public">SkeletonEngine::Event</innerclass>
@@ -163,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="61" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="61" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="60" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="_event_8h_1abd52deea587a36ef619e596a0c691839" prot="public" static="no">
         <name>EVENT_CLASS_CATEGORY</name>
@@ -175,125 +181,127 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="65" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="65" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="64" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> event system. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>BP Harris </para>
+</simplesect>
+<simplesect kind="date"><para>July 2020 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="6"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sepch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SkeletonEngine/Core.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sepch_8h" kindref="compound">sepch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_core_8h" kindref="compound">SkeletonEngine/Core.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Events<sp/>in<sp/>the<sp/>SkeletonEngine<sp/>are<sp/>currently<sp/>blocking.</highlight></codeline>
-<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>At<sp/>some<sp/>point<sp/>this<sp/>should<sp/>be<sp/>changed<sp/>to<sp/>be<sp/>buffered<sp/>and<sp/>processed<sp/>in<sp/>the</highlight></codeline>
-<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>event<sp/>phase<sp/>of<sp/>the<sp/>update<sp/>stage.</highlight></codeline>
-<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>None<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Window<sp/>Events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WindowClosed,</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WindowResized,</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WindowFocused,</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WindowLostFocus,</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WindowMoved,</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Application<sp/>Events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AppTick,</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AppUpdate,</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AppRender,</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Keyboard<sp/>Events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KeyPressed,</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KeyReleased,</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Mouse<sp/>Events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MouseButtonPressed,</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MouseButtonReleased,</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MouseMoved,</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MouseScrolled</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Events<sp/>in<sp/>the<sp/>SkeletonEngine<sp/>are<sp/>currently<sp/>blocking.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>At<sp/>some<sp/>point<sp/>this<sp/>should<sp/>be<sp/>changed<sp/>to<sp/>be<sp/>buffered<sp/>and<sp/>processed<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>event<sp/>phase<sp/>of<sp/>the<sp/>update<sp/>stage.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>None<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7c87dff2b968b5c85baf1def063c776d" kindref="member">WindowClosed</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51facbaad9b233665221bfc0a4a450a594cf" kindref="member">WindowResized</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa30b616e8eab20ea6423d55b0fb45c20b" kindref="member">WindowFocused</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa1c2119b9d61e623975f13f1029f1d97c" kindref="member">WindowLostFocus</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fab94473d9dfc85f8fdbf5cb3b1d992bda" kindref="member">WindowMoved</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa559b408d45669603dbac61cd15984f13" kindref="member">AppTick</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac177abb86f28dea426f2e3409e14bcda" kindref="member">AppUpdate</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa4b2eb3c601042333ac1c0565ff58e3d6" kindref="member">AppRender</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac17e6984c1e5a887a49831beadee6bca" kindref="member">KeyPressed</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa4a77f07c8ad223b71ab4ce78a63841ab" kindref="member">KeyReleased</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7349f643d689997b7c54bf93e4095f5c" kindref="member">MouseButtonPressed</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7584c169de594c27f00084b93186fd7c" kindref="member">MouseButtonReleased</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac2770ad109c8063ce69a3608a9a16c08" kindref="member">MouseMoved</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa50edb169910041bb3c06f6e8322d74c1" kindref="member">MouseScrolled</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc" kindref="member">EventCategory</ref></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>None<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EventCategoryApplication<sp/><sp/><sp/><sp/>=<sp/>BIT(0),</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EventCategoryInput<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>BIT(1),</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EventCategoryKeyboard<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>BIT(2),</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EventCategoryMouse<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>BIT(3),</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EventCategoryMouseButton<sp/><sp/><sp/><sp/>=<sp/>BIT(4)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="49" refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc" kindref="member">EventCategory</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>None<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="52" refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref><sp/><sp/><sp/><sp/>=<sp/>BIT(0),<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca95f9c9fee20c17a3cf2027ce28bdad9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca95f9c9fee20c17a3cf2027ce28bdad9a" kindref="member">EventCategoryInput</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>BIT(1),<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca802c1853e839968d1c46a8e89923334a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca802c1853e839968d1c46a8e89923334a" kindref="member">EventCategoryKeyboard</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>BIT(2),<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fcac5986e98fe1e40dc8e62b456b418e38f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fcac5986e98fe1e40dc8e62b456b418e38f" kindref="member">EventCategoryMouse</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>BIT(3),<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca27ceeb5913fce202a75e0c4f819b308a" kindref="member">EventCategoryMouseButton</ref><sp/><sp/><sp/><sp/>=<sp/>BIT(4)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca27ceeb5913fce202a75e0c4f819b308a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENT_CLASS_TYPE(type)<sp/><sp/>static<sp/>EventType<sp/>GetStaticType()<sp/>{<sp/>return<sp/>EventType::##type;<sp/>}\</highlight></codeline>
-<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual<sp/>EventType<sp/>GetEventType()<sp/>const<sp/>override<sp/>{<sp/>return<sp/>GetStaticType();<sp/>}\</highlight></codeline>
-<codeline lineno="63"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual<sp/>const<sp/>char*<sp/>GetName()<sp/>const<sp/>override<sp/>{<sp/>return<sp/>#type;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENT_CLASS_CATEGORY(category)<sp/>virtual<sp/>int<sp/>GetCategoryFlags()<sp/>const<sp/>override<sp/>{<sp/>return<sp/>category;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENT_CLASS_TYPE(type)<sp/><sp/>static<sp/>EventType<sp/>GetStaticType()<sp/>{<sp/>return<sp/>EventType::##type;<sp/>}\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual<sp/>EventType<sp/>GetEventType()<sp/>const<sp/>override<sp/>{<sp/>return<sp/>GetStaticType();<sp/>}\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual<sp/>const<sp/>char*<sp/>GetName()<sp/>const<sp/>override<sp/>{<sp/>return<sp/>#type;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENT_CLASS_CATEGORY(category)<sp/>virtual<sp/>int<sp/>GetCategoryFlags()<sp/>const<sp/>override<sp/>{<sp/>return<sp/>category;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="class_skeleton_engine_1_1_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SE_API<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_skeleton_engine_1_1_event_dispatcher" kindref="compound">EventDispatcher</ref>;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref><sp/>GetEventType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>GetName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>GetCategoryFlags()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/>ToString()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>GetName();<sp/>}</highlight></codeline>
+<codeline lineno="68" refid="class_skeleton_engine_1_1_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SE_API<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_skeleton_engine_1_1_event_dispatcher" kindref="compound">EventDispatcher</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_Handled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77" refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref><sp/><ref refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b" kindref="member">GetEventType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" kindref="member">IsInCategory</ref>(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc" kindref="member">EventCategory</ref><sp/>category)</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>GetCategoryFlags()<sp/>&amp;<sp/>category;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80" refid="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a" kindref="member">GetName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03" kindref="member">GetCategoryFlags</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_Handled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="class_skeleton_engine_1_1_event_dispatcher" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_skeleton_engine_1_1_event_dispatcher" kindref="compound">EventDispatcher</ref></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>EventFn<sp/>=<sp/>std::function&lt;bool(T&amp;)&gt;;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_event_dispatcher" kindref="compound">EventDispatcher</ref>(<ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&amp;<sp/>event)<sp/>:<sp/>m_Event(event)<sp/>{}</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Dispatch(EventFn&lt;T&gt;<sp/>func)</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_Event.GetEventType()<sp/>==<sp/>T::GetStaticType())</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Event.m_Handled<sp/>=<sp/>func(*(T*)&amp;m_Event);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&amp;<sp/>m_Event;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="86" refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c" kindref="member">ToString</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>GetName();<sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" kindref="member">IsInCategory</ref>(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc" kindref="member">EventCategory</ref><sp/>category)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>GetCategoryFlags()<sp/>&amp;<sp/>category;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_skeleton_engine_1_1_event_dispatcher" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_skeleton_engine_1_1_event_dispatcher" kindref="compound">EventDispatcher</ref></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>EventFn<sp/>=<sp/>std::function&lt;bool(T&amp;)&gt;;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&amp;<sp/>m_Event;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_event_dispatcher" kindref="compound">EventDispatcher</ref>(<ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&amp;<sp/>event)<sp/>:<sp/>m_Event(event)<sp/>{}</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116" refid="namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&amp;<sp/>e)</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>e.ToString();</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Dispatch(EventFn&lt;T&gt;<sp/>func)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_Event.<ref refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b" kindref="member">GetEventType</ref>()<sp/>==<sp/>T::GetStaticType())</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Event.m_Handled<sp/>=<sp/>func(*(T*)&amp;m_Event);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&amp;<sp/>e)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>e.<ref refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c" kindref="member">ToString</ref>();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h"/>
   </compounddef>

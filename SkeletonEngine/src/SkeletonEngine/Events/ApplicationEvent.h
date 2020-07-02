@@ -1,6 +1,9 @@
-/** ApplicationEvent.h
- *
- * SkeletonEngine Application events.
+/**
+ * @file    ApplicationEvent.h
+ * @brief   SkeletonEngine Application events.
+ * 
+ * @author  BP Harris
+ * @date    July 2020
  */
 
 #pragma once
@@ -10,7 +13,7 @@
 
 namespace SkeletonEngine {
 
-	/** SkeletonEngine Window Closed Event class. */
+	/** SkeletonEngine WindowClosedEvent class. */
 	class SE_API WindowClosedEvent : public Event
 	{
 	public:
@@ -21,33 +24,30 @@ namespace SkeletonEngine {
 	};
 
 
-	/** SkeletonEngine Window Resized Event class. */
+	/** SkeletonEngine WindowResizedEvent class. */
 	class SE_API WindowResizedEvent : public Event
 	{
+	public:
+		unsigned int m_Width, m_Height;
+
 	public:
 		WindowResizedEvent(unsigned int width, unsigned int height)
 			: m_Width(width), m_Height(height) {}
 
-		inline unsigned int GetWidth() const { return m_Width;  }
-		inline unsigned int GetHeight() const { return m_Height; }
-
-		/** @return string  string representation of WindowResizedEvent */
+		/** @return std::string     string representation of WindowResizedEvent. */
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "WindowResizedEvent: (" << m_Width << ", " << m_Height << ")";
+			ss << "WindowResizedEvent(" << m_Width << ", " << m_Height << ")";
 			return ss.str();
 		}
 
 		EVENT_CLASS_TYPE(WindowResized)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
-
-	private:
-		unsigned int m_Width, m_Height;
 	};
 
 
-	/** SkeletonEngine Window Focused Event class. */
+	/** SkeletonEngine WindowFocusedEvent class. */
 	class SE_API WindowFocusedEvent : public Event
 	{
 	public:
@@ -58,7 +58,7 @@ namespace SkeletonEngine {
 	};
 
 
-	/** SkeletonEngine Window Lost Focus Event class. */
+	/** SkeletonEngine WindowLostFocusEvent class. */
 	class SE_API WindowLostFocusEvent : public Event
 	{
 	public:
@@ -69,32 +69,29 @@ namespace SkeletonEngine {
 	};
 
 
-	/** SkeletonEngine Window Lost Focus Event class. */
+	/** SkeletonEngine WindowLostFocusEvent class. */
 	class SE_API WindowMovedEvent : public Event
 	{
+	private:
+		unsigned int m_X, m_Y;
+
 	public:
 		WindowMovedEvent(unsigned int x, unsigned int y) : m_X(x), m_Y(y) {}
-
-		inline unsigned int GetX() const { return m_X; }
-		inline unsigned int GetY() const { return m_Y; }
 
 		/** @return string  string representation of WindowMovedEvent */
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "WindowMovedEvent: (" << m_X << ", " << m_Y << ")";
+			ss << "WindowMovedEvent(" << m_X << ", " << m_Y << ")";
 			return ss.str();
 		}
 
 		EVENT_CLASS_TYPE(WindowMoved)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
-
-	private:
-		unsigned int m_X, m_Y;
 	};
 
 
-	/** SkeletonEngine App Tick Event class. */
+	/** SkeletonEngine AppTickEvent class. */
 	class SE_API AppTickEvent : public Event
 	{
 	public:
@@ -105,7 +102,7 @@ namespace SkeletonEngine {
 	};
 
 
-	/** SkeletonEngine App Update Event class. */
+	/** SkeletonEngine AppUpdateEvent class. */
 	class SE_API AppUpdateEvent : public Event
 	{
 	public:
@@ -116,7 +113,7 @@ namespace SkeletonEngine {
 	};
 
 
-	/** SkeletonEngine App Render Event class. */
+	/** SkeletonEngine AppRenderEvent class. */
 	class SE_API AppRenderEvent : public Event
 	{
 	public:

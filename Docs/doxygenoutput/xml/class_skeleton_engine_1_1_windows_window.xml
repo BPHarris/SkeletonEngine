@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="19" column="18" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="19" bodyend="-1"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="22" column="18" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_skeleton_engine_1_1_windows_window_1a21870f44361a7f701b53d5587e43f0cf" prot="public" static="yes" mutable="no">
         <type>const int</type>
@@ -32,11 +32,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="20" column="18" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="20" bodyend="-1"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="23" column="18" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_skeleton_engine_1_1_windows_window_1a34b7d7cc71fd7a52b60aa2e6f764b109" prot="private" static="no" mutable="no">
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_windows_window_1a34b7d7cc71fd7a52b60aa2e6f764b109" prot="public" static="no" mutable="no">
         <type>GLFWwindow *</type>
         <definition>GLFWwindow* SkeletonEngine::WindowsWindow::m_Window</definition>
         <argsstring></argsstring>
@@ -44,11 +44,14 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Pointer to underlying GLFW <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="53" column="12" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="53" bodyend="-1"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="26" column="12" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="26" bodyend="-1"/>
       </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_skeleton_engine_1_1_windows_window_1acc58215e1ba7ae7a55dfc3a78238b22b" prot="private" static="no" mutable="no">
         <type>WindowData</type>
         <definition>WindowData SkeletonEngine::WindowsWindow::m_Data</definition>
@@ -60,7 +63,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="64" column="12" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="64" bodyend="-1"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="39" column="12" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1a77bb6d944ef266abe49fe369932eabab" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::WindowsWindow::Init</definition>
+        <argsstring>(const WindowProperties &amp;properties)</argsstring>
+        <name>Init</name>
+        <param>
+          <type>const <ref refid="struct_skeleton_engine_1_1_window_properties" kindref="compound">WindowProperties</ref> &amp;</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="42" column="14" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="26" bodyend="154"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -79,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="23" column="1" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="33" bodyend="33"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="45" column="1" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="162" bodyend="162"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1a13475119733e2c955aa8a6fe39920050" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -92,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="24" column="9" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="34" bodyend="34"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="46" column="9" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="163" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1a1d742cb0684d631dc59597de1038723d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -103,11 +125,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Handle <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> Update </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="26" column="6" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="177" bodyend="181"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="49" column="6" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="166" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1ab7546afe2f7df36e726e901d5c16f034" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -121,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="28" column="21" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="28" bodyend="28"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="52" column="21" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="52" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1ae78e4380ef3061c94710ac7b0807b691" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>unsigned int</type>
@@ -135,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="29" column="21" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="29" bodyend="29"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="53" column="21" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="53" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1a9e06b6e9258eae0c353f6f9bfc133c36" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>unsigned int</type>
@@ -149,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="30" column="21" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="30" bodyend="30"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="54" column="21" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="54" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1a90c4a3ce673f61126065909e33e83707" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -166,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="33" column="13" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="33" bodyend="42"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="58" column="13" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="58" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1a9e49e06dee974758bcc8ba3631dea81f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -184,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="44" column="13" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="44" bodyend="44"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="72" column="13" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="72" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1aa39ec82ed01ed56ca1f308997d7a0fce" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -199,11 +220,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>SetVSync to the given setting </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="45" column="6" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="185" bodyend="193"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="73" column="6" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="173" bodyend="177"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1a21045a4e53e096af549868f97a73d7dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -214,48 +234,23 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>bool true if VSync enabled, false otherwise </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="46" column="6" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="197" bodyend="200"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="74" column="6" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="180" bodyend="183"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1a77bb6d944ef266abe49fe369932eabab" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1ac8b4e9494fbb97df4f1886b8240ea07d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void SkeletonEngine::WindowsWindow::Init</definition>
-        <argsstring>(const WindowProperties &amp;properties)</argsstring>
-        <name>Init</name>
-        <param>
-          <type>const <ref refid="struct_skeleton_engine_1_1_window_properties" kindref="compound">WindowProperties</ref> &amp;</type>
-          <declname>properties</declname>
-          <defname>p</defname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Initialise new window </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="49" column="14" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="38" bodyend="165"/>
-      </memberdef>
-      <memberdef kind="function" id="class_skeleton_engine_1_1_windows_window_1ad34f2f9ae9d159c85b52d4ade075ba2d" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void SkeletonEngine::WindowsWindow::Shutdown</definition>
+        <definition>void SkeletonEngine::WindowsWindow::Close</definition>
         <argsstring>()</argsstring>
-        <name>Shutdown</name>
+        <name>Close</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Handle <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> Shutdown <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="50" column="14" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="169" bodyend="173"/>
+        <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="76" column="14" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp" bodystart="186" bodyend="190"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -287,8 +282,9 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="16" column="1" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="17" bodyend="65"/>
+    <location file="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" line="19" column="1" bodyfile="SkeletonEngine/src/Platform/Windows/WindowsWindow.h" bodystart="20" bodyend="77"/>
     <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_windows_window_1ac8b4e9494fbb97df4f1886b8240ea07d" prot="public" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>Close</name></member>
       <member refid="class_skeleton_engine_1_1_window_1abbf537752f2c710bb01196da1b877fae" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>Create</name></member>
       <member refid="class_skeleton_engine_1_1_window_1adbb3feff4618a6866529ee5ca519917c" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>EventCallbackFn</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1a9e06b6e9258eae0c353f6f9bfc133c36" prot="public" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>GetHeight</name></member>
@@ -297,11 +293,10 @@
       <member refid="class_skeleton_engine_1_1_windows_window_1a77bb6d944ef266abe49fe369932eabab" prot="private" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>Init</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1a21045a4e53e096af549868f97a73d7dc" prot="public" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>IsVSync</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1acc58215e1ba7ae7a55dfc3a78238b22b" prot="private" virt="non-virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>m_Data</name></member>
-      <member refid="class_skeleton_engine_1_1_windows_window_1a34b7d7cc71fd7a52b60aa2e6f764b109" prot="private" virt="non-virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>m_Window</name></member>
+      <member refid="class_skeleton_engine_1_1_windows_window_1a34b7d7cc71fd7a52b60aa2e6f764b109" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>m_Window</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1a1d742cb0684d631dc59597de1038723d" prot="public" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>OnUpdate</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1a9e49e06dee974758bcc8ba3631dea81f" prot="public" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>SetEventCallback</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1aa39ec82ed01ed56ca1f308997d7a0fce" prot="public" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>SetVSync</name></member>
-      <member refid="class_skeleton_engine_1_1_windows_window_1ad34f2f9ae9d159c85b52d4ade075ba2d" prot="private" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>Shutdown</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1a90c4a3ce673f61126065909e33e83707" prot="public" virt="virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>ToString</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1a21870f44361a7f701b53d5587e43f0cf" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>VSYNC_DISABLED</name></member>
       <member refid="class_skeleton_engine_1_1_windows_window_1a9b1bec0dfaa5f6439b232445d7d42f67" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowsWindow</scope><name>VSYNC_ENABLED</name></member>

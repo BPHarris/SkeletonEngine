@@ -23,6 +23,11 @@ Program Listing for File Application.h
    
        class SE_API Application
        {
+       private:
+           bool m_Running = true;
+       public:
+           std::unique_ptr<Window> m_Window;
+   
        public:
            Application();
            virtual ~Application();
@@ -33,10 +38,8 @@ Program Listing for File Application.h
        
        private:
            bool OnWindowClose(WindowClosedEvent& e);
-   
-           std::unique_ptr<Window> m_Window;
-           bool m_Running = true;
        };
+   
    
        Application* CreateApplication();
    

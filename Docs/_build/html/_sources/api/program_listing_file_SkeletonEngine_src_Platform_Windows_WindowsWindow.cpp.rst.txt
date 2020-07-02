@@ -12,7 +12,7 @@ Program Listing for File WindowsWindow.cpp
 
    
    #include "sepch.h"
-   #include "WindowsWindow.h"
+   #include "Platform/Windows/WindowsWindow.h"
    
    #include "SkeletonEngine/Events/ApplicationEvent.h"
    #include "SkeletonEngine/Events/KeyEvent.h"
@@ -28,16 +28,6 @@ Program Listing for File WindowsWindow.cpp
        {
            SE_CORE_ERROR("GLFW Error {}:{}", error, description);
        }
-   
-   
-       Window* Window::Create(const WindowProperties& porperties)
-       {
-           return new WindowsWindow(porperties);
-       }
-   
-   
-       WindowsWindow::WindowsWindow(const WindowProperties& p) { Init(p); }
-       WindowsWindow::~WindowsWindow() { Shutdown(); }
    
    
        void WindowsWindow::Init(const WindowProperties& p)
@@ -60,12 +50,13 @@ Program Listing for File WindowsWindow.cpp
                s_GLFWInitialized = true;
            }
    
+           // GLFW Window Setup
            m_Window = glfwCreateWindow((int)p.Width, (int)p.Height, p.Title.c_str(), nullptr, nullptr);
            glfwMakeContextCurrent(m_Window);
            glfwSetWindowUserPointer(m_Window, &m_Data);
-           SetVSync(true);
-   
            
+           SetVSync(true);
+                   
            /* GLFW Window callback macros */
    #define GET_WINDOW_DATA_AS(data)                WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
    #define SET_EVENT_CALLBACK(Type, data, ...)     Type event(__VA_ARGS__);\
@@ -170,11 +161,13 @@ Program Listing for File WindowsWindow.cpp
        }
    
    
-       void WindowsWindow::Shutdown()
+       Window* Window::Create(const WindowProperties& porperties)
        {
-           SE_CORE_INFO("Closed window {}", ToString());
-           glfwDestroyWindow(m_Window);
+           return new WindowsWindow(porperties);
        }
+   
+       WindowsWindow::WindowsWindow(const WindowProperties& p) { Init(p); }
+       WindowsWindow::~WindowsWindow() { Close(); }
    
    
        void WindowsWindow::OnUpdate()
@@ -186,11 +179,7 @@ Program Listing for File WindowsWindow.cpp
    
        void WindowsWindow::SetVSync(bool enabled)
        {
-           if (enabled)
-               glfwSwapInterval(VSYNC_ENABLED);
-           else
-               glfwSwapInterval(VSYNC_DISABLED);
-   
+           glfwSwapInterval(enabled ? VSYNC_ENABLED : VSYNC_DISABLED);
            m_Data.VSync = enabled;
        }
    
@@ -198,5 +187,12 @@ Program Listing for File WindowsWindow.cpp
        bool WindowsWindow::IsVSync() const
        {
            return m_Data.VSync;
+       }
+   
+   
+       void WindowsWindow::Close()
+       {
+           SE_CORE_INFO("Closed window {}", ToString());
+           glfwDestroyWindow(m_Window);
        }
    }

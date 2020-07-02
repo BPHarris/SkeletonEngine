@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="71" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="71" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="70" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="86" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="86" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="73" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -55,9 +55,9 @@
         <reimplementedby refid="class_skeleton_engine_1_1_window_closed_event_1ae07f55bb5bd082ae93c85401177b18a9">GetEventType</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_mouse_button_pressed_event_1a39d79017118b57c821ca6a2cd55f5341">GetEventType</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_window_resized_event_1ab231247d8546c4168c4c0f14a382c49a">GetEventType</reimplementedby>
-        <reimplementedby refid="class_skeleton_engine_1_1_key_pressed_event_1ae25eaa513e498692f64aa1076693a798">GetEventType</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_window_focused_event_1af90046b0305d43d24e06c8a7bf4aa1a7">GetEventType</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_mouse_button_released_event_1a7fcbd30b166789dc3298d6f3932745f9">GetEventType</reimplementedby>
+        <reimplementedby refid="class_skeleton_engine_1_1_key_pressed_event_1ae25eaa513e498692f64aa1076693a798">GetEventType</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_window_lost_focus_event_1abb30ec5640b7e432d85b9cc0bda4dd58">GetEventType</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_key_released_event_1a0fe332cda86a74bdf5c80a2049a84294">GetEventType</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_mouse_moved_event_1ad00946bde34f5738102a972d8500b837">GetEventType</reimplementedby>
@@ -69,10 +69,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&apos;s EventType. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="74" column="19"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="77" column="19"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>const char *</type>
@@ -82,9 +85,9 @@
         <reimplementedby refid="class_skeleton_engine_1_1_window_closed_event_1a6cd8c3bc340e84967f8a6c7be38762a8">GetName</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_mouse_button_pressed_event_1a896920b2fcfaee5c1e93827270263028">GetName</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_window_resized_event_1a4c30e3431fb460c9ee57a26267471623">GetName</reimplementedby>
-        <reimplementedby refid="class_skeleton_engine_1_1_key_pressed_event_1ada3b001409b48a0c5fa1637fc8a378ed">GetName</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_window_focused_event_1a2e7d19e900784b6155ec62fa010770ec">GetName</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_mouse_button_released_event_1a29e1e0a7ec36ed0b0b72df3bf2ac6837">GetName</reimplementedby>
+        <reimplementedby refid="class_skeleton_engine_1_1_key_pressed_event_1ada3b001409b48a0c5fa1637fc8a378ed">GetName</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_window_lost_focus_event_1adb8515582c5c05ce62d5892ff5ddcd2a">GetName</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_key_released_event_1a4e6c74940afe8533afd6d226a1fb06d6">GetName</reimplementedby>
         <reimplementedby refid="class_skeleton_engine_1_1_mouse_moved_event_1a5af57b2bc28c7e4f5a9febca42416edd">GetName</reimplementedby>
@@ -96,10 +99,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> name. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="75" column="20"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="80" column="20"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -121,10 +127,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&apos;s GetCategoryFlags. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="76" column="13"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="83" column="13"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -142,10 +151,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of the <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="77" column="21" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="77" bodyend="77"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="86" column="21" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="86" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -159,13 +171,25 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>bool true if in given category, false otherwise </para>
+<para>Check if this <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> is in the given category.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The category to check against. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> is in the the EventCategory </para>
+</simplesect>
+<simplesect kind="return"><para>false otherwise </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="80" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="80" bodyend="83"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="95" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="95" bodyend="98"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -275,7 +299,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="69" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="70" bodyend="87"/>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/Event.h" line="68" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/Event.h" bodystart="69" bodyend="99"/>
     <listofallmembers>
       <member refid="class_skeleton_engine_1_1_event_1aad5f38ccd490ea17008460423f52325a" prot="private" virt="non-virtual"><scope>SkeletonEngine::Event</scope><name>EventDispatcher</name></member>
       <member refid="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03" prot="public" virt="pure-virtual"><scope>SkeletonEngine::Event</scope><name>GetCategoryFlags</name></member>

@@ -17,47 +17,7 @@ Detailed Description
 
 WindowsWindow.cpp
 
-:ref:`namespace_SkeletonEngine` Windows :ref:`exhale_class_class_skeleton_engine_1_1_window` implementation.
-
-WindowsWindow.h
-
-:ref:`namespace_SkeletonEngine` Windows :ref:`exhale_class_class_skeleton_engine_1_1_window` interface.
-
-Application.cpp
-
-Basic :ref:`namespace_SkeletonEngine` :ref:`exhale_class_class_skeleton_engine_1_1_application`.
-
-Application.h
-
-Basic :ref:`namespace_SkeletonEngine` :ref:`exhale_class_class_skeleton_engine_1_1_application` interface.
-
-ApplicationEvent.h
-
-:ref:`namespace_SkeletonEngine` :ref:`exhale_class_class_skeleton_engine_1_1_application` events.
-
-Event.h
-
-:ref:`namespace_SkeletonEngine` event system.
-
-KeyEvent.h
-
-:ref:`namespace_SkeletonEngine` keyboard events.
-
-MouseEvent.h
-
-:ref:`namespace_SkeletonEngine` mouse events.
-
-Log.cpp
-
-Wrapper and interface to spdlog.
-
-Log.h
-
-Wrapper and interface to spdlog.
-
-Window.h
-
-:ref:`namespace_SkeletonEngine` generic :ref:`exhale_class_class_skeleton_engine_1_1_window` interface. 
+:ref:`namespace_SkeletonEngine` Windows :ref:`exhale_class_class_skeleton_engine_1_1_window` implementation. 
 
 
 
@@ -134,6 +94,8 @@ Functions
 - :ref:`exhale_function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a`
 
 - :ref:`exhale_function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9`
+
+- :ref:`exhale_function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882`
 
 
 Variables

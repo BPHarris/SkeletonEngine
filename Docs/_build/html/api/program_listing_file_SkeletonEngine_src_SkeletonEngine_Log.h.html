@@ -272,8 +272,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -438,10 +442,8 @@
     <span class="k">public</span><span class="o">:</span>
         <span class="k">static</span> <span class="kt">void</span> <span class="n">Init</span><span class="p">();</span>
 
-        <span class="kr">inline</span> <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="o">&gt;&amp;</span> <span class="n">GetCoreLogger</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">s_CoreLogger</span><span class="p">;</span> <span class="p">}</span>
-        <span class="kr">inline</span> <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="o">&gt;&amp;</span> <span class="n">GetClientLogger</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">s_ClientLogger</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">private</span><span class="o">:</span>
         <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="o">&gt;</span> <span class="n">s_CoreLogger</span><span class="p">;</span>
+
         <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="o">&gt;</span> <span class="n">s_ClientLogger</span><span class="p">;</span>
     <span class="p">};</span>
 
@@ -449,18 +451,17 @@
 
 
 <span class="c1">// Engine core loging macros</span>
-<span class="cp">#define SE_CORE_FATAL(...)  ::SkeletonEngine::Log::GetCoreLogger()-&gt;fatal(__VA_ARGS__)</span>
-<span class="cp">#define SE_CORE_ERROR(...)  ::SkeletonEngine::Log::GetCoreLogger()-&gt;error(__VA_ARGS__)</span>
-<span class="cp">#define SE_CORE_WARN(...)   ::SkeletonEngine::Log::GetCoreLogger()-&gt;warn(__VA_ARGS__)</span>
-<span class="cp">#define SE_CORE_INFO(...)   ::SkeletonEngine::Log::GetCoreLogger()-&gt;info(__VA_ARGS__)</span>
-<span class="cp">#define SE_CORE_TRACE(...)  ::SkeletonEngine::Log::GetCoreLogger()-&gt;trace(__VA_ARGS__)</span>
-
+<span class="cp">#define SE_CORE_FATAL(...)  ::SkeletonEngine::Log::s_CoreLogger-&gt;fatal(__VA_ARGS__)</span>
+<span class="cp">#define SE_CORE_ERROR(...)  ::SkeletonEngine::Log::s_CoreLogger-&gt;error(__VA_ARGS__)</span>
+<span class="cp">#define SE_CORE_WARN(...)   ::SkeletonEngine::Log::s_CoreLogger-&gt;warn(__VA_ARGS__)</span>
+<span class="cp">#define SE_CORE_INFO(...)   ::SkeletonEngine::Log::s_CoreLogger-&gt;info(__VA_ARGS__)</span>
+<span class="cp">#define SE_CORE_TRACE(...)  ::SkeletonEngine::Log::s_CoreLogger-&gt;trace(__VA_ARGS__)</span>
 <span class="c1">// Client application logging macros</span>
-<span class="cp">#define SE_FATAL(...)       ::SkeletonEngine::Log::GetClientLogger()-&gt;fatal(__VA_ARGS__)</span>
-<span class="cp">#define SE_ERROR(...)       ::SkeletonEngine::Log::GetClientLogger()-&gt;error(__VA_ARGS__)</span>
-<span class="cp">#define SE_WARN(...)        ::SkeletonEngine::Log::GetClientLogger()-&gt;warn(__VA_ARGS__)</span>
-<span class="cp">#define SE_INFO(...)        ::SkeletonEngine::Log::GetClientLogger()-&gt;info(__VA_ARGS__)</span>
-<span class="cp">#define SE_TRACE(...)       ::SkeletonEngine::Log::GetClientLogger()-&gt;trace(__VA_ARGS__)</span>
+<span class="cp">#define SE_FATAL(...)       ::SkeletonEngine::Log::s_ClientLogger-&gt;fatal(__VA_ARGS__)</span>
+<span class="cp">#define SE_ERROR(...)       ::SkeletonEngine::Log::s_ClientLogger-&gt;error(__VA_ARGS__)</span>
+<span class="cp">#define SE_WARN(...)        ::SkeletonEngine::Log::s_ClientLogger-&gt;warn(__VA_ARGS__)</span>
+<span class="cp">#define SE_INFO(...)        ::SkeletonEngine::Log::s_ClientLogger-&gt;info(__VA_ARGS__)</span>
+<span class="cp">#define SE_TRACE(...)       ::SkeletonEngine::Log::s_ClientLogger-&gt;trace(__VA_ARGS__)</span>
 </pre></div>
 </div>
 </div>

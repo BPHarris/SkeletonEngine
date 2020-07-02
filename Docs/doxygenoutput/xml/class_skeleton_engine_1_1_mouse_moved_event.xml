@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="85" column="7" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="85" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="70" column="7" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_skeleton_engine_1_1_mouse_moved_event_1aaa8bd2229fb353902aa918e81775181e" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="85" column="16" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="85" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="70" column="16" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -52,33 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="68" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="68" bodyend="68"/>
-      </memberdef>
-      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_moved_event_1a830a1f94f2eb549f505a4ea9a633a76a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>float</type>
-        <definition>float SkeletonEngine::MouseMovedEvent::GetX</definition>
-        <argsstring>() const</argsstring>
-        <name>GetX</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="70" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="70" bodyend="70"/>
-      </memberdef>
-      <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_moved_event_1a015ffd3e93053c76ced33d261f6cb9eb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>float</type>
-        <definition>float SkeletonEngine::MouseMovedEvent::GetY</definition>
-        <argsstring>() const</argsstring>
-        <name>GetY</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="71" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="71" bodyend="71"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="73" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="73" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_moved_event_1a6cd907693c6df60695416ec72221e967" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -95,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="74" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="74" bodyend="79"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="76" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="76" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_moved_event_1ad00946bde34f5738102a972d8500b837" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
@@ -106,10 +80,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&apos;s EventType. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="81" column="84" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="81" bodyend="81"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="83" column="84" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="83" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_moved_event_1a5af57b2bc28c7e4f5a9febca42416edd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>const char *</type>
@@ -120,10 +97,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref> name. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="81" column="158" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="81" bodyend="81"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="83" column="158" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="83" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_mouse_moved_event_1ae2ee8b3e88b47bbc0e99f22f2353f4d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>int</type>
@@ -134,10 +114,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The <ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&apos;s GetCategoryFlags. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="82" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="82" bodyend="82"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="84" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="84" bodyend="84"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -152,13 +135,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="81" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="81" bodyend="81"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="83" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="83" bodyend="83"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> MouseMoved event class. </para>
+<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_mouse_moved_event" kindref="compound">MouseMovedEvent</ref> class. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -184,14 +167,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="65" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="66" bodyend="86"/>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" line="67" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/MouseEvent.h" bodystart="68" bodyend="85"/>
     <listofallmembers>
       <member refid="class_skeleton_engine_1_1_mouse_moved_event_1ae2ee8b3e88b47bbc0e99f22f2353f4d3" prot="public" virt="virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_skeleton_engine_1_1_mouse_moved_event_1ad00946bde34f5738102a972d8500b837" prot="public" virt="virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>GetEventType</name></member>
       <member refid="class_skeleton_engine_1_1_mouse_moved_event_1a5af57b2bc28c7e4f5a9febca42416edd" prot="public" virt="virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>GetName</name></member>
       <member refid="class_skeleton_engine_1_1_mouse_moved_event_1a548dcbfd22ce9c638dbd3e112f721588" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>GetStaticType</name></member>
-      <member refid="class_skeleton_engine_1_1_mouse_moved_event_1a830a1f94f2eb549f505a4ea9a633a76a" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>GetX</name></member>
-      <member refid="class_skeleton_engine_1_1_mouse_moved_event_1a015ffd3e93053c76ced33d261f6cb9eb" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>GetY</name></member>
       <member refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" prot="public" virt="non-virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>IsInCategory</name></member>
       <member refid="class_skeleton_engine_1_1_event_1a7b196d51d636dac3b56aeb2089a1a833" prot="protected" virt="non-virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>m_Handled</name></member>
       <member refid="class_skeleton_engine_1_1_mouse_moved_event_1af2366feb02f4b99f287db4d403d49753" prot="private" virt="non-virtual"><scope>SkeletonEngine::MouseMovedEvent</scope><name>m_MouseX</name></member>

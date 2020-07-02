@@ -272,8 +272,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -442,23 +446,16 @@
     <span class="p">{</span>
         <span class="n">None</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
 
-        <span class="cm">/* Window Events */</span>
         <span class="n">WindowClosed</span><span class="p">,</span>
         <span class="n">WindowResized</span><span class="p">,</span>
         <span class="n">WindowFocused</span><span class="p">,</span>
         <span class="n">WindowLostFocus</span><span class="p">,</span>
         <span class="n">WindowMoved</span><span class="p">,</span>
-
-        <span class="cm">/* Application Events */</span>
         <span class="n">AppTick</span><span class="p">,</span>
         <span class="n">AppUpdate</span><span class="p">,</span>
         <span class="n">AppRender</span><span class="p">,</span>
-
-        <span class="cm">/* Keyboard Events */</span>
         <span class="n">KeyPressed</span><span class="p">,</span>
         <span class="n">KeyReleased</span><span class="p">,</span>
-
-        <span class="cm">/* Mouse Events */</span>
         <span class="n">MouseButtonPressed</span><span class="p">,</span>
         <span class="n">MouseButtonReleased</span><span class="p">,</span>
         <span class="n">MouseMoved</span><span class="p">,</span>
@@ -488,19 +485,22 @@
     <span class="p">{</span>
         <span class="k">friend</span> <span class="k">class</span> <span class="nc">EventDispatcher</span><span class="p">;</span>
 
+    <span class="k">protected</span><span class="o">:</span>
+        <span class="kt">bool</span> <span class="n">m_Handled</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+
     <span class="k">public</span><span class="o">:</span>
         <span class="k">virtual</span> <span class="n">EventType</span> <span class="n">GetEventType</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
         <span class="k">virtual</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="nf">GetName</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
         <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">GetCategoryFlags</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
         <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">GetName</span><span class="p">();</span> <span class="p">}</span>
 
         <span class="kr">inline</span> <span class="kt">bool</span> <span class="n">IsInCategory</span><span class="p">(</span><span class="n">EventCategory</span> <span class="n">category</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="k">return</span> <span class="n">GetCategoryFlags</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">category</span><span class="p">;</span>
         <span class="p">}</span>
-
-    <span class="k">protected</span><span class="o">:</span>
-        <span class="kt">bool</span> <span class="n">m_Handled</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
     <span class="p">};</span>
 
 
@@ -508,6 +508,9 @@
     <span class="p">{</span>
         <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
         <span class="k">using</span> <span class="n">EventFn</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span>
+
+    <span class="k">private</span><span class="o">:</span>
+        <span class="n">Event</span><span class="o">&amp;</span> <span class="n">m_Event</span><span class="p">;</span>
 
     <span class="k">public</span><span class="o">:</span>
         <span class="n">EventDispatcher</span><span class="p">(</span><span class="n">Event</span><span class="o">&amp;</span> <span class="n">event</span><span class="p">)</span> <span class="o">:</span> <span class="n">m_Event</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="p">{}</span>
@@ -522,9 +525,6 @@
             <span class="p">}</span>
             <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
         <span class="p">}</span>
-
-    <span class="k">private</span><span class="o">:</span>
-        <span class="n">Event</span><span class="o">&amp;</span> <span class="n">m_Event</span><span class="p">;</span>
     <span class="p">};</span>
 
 

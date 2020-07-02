@@ -272,8 +272,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -425,7 +429,7 @@
 <span id="program-listing-file-skeletonengine-src-platform-windows-windowswindow-cpp"></span><h1>Program Listing for File WindowsWindow.cpp<a class="headerlink" href="#program-listing-for-file-windowswindow-cpp" title="Permalink to this headline">¶</a></h1>
 <p>↰ <a class="reference internal" href="file_SkeletonEngine_src_Platform_Windows_WindowsWindow.cpp.html#file-skeletonengine-src-platform-windows-windowswindow-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">SkeletonEngine\src\Platform\Windows\WindowsWindow.cpp</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;sepch.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;WindowsWindow.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;Platform/Windows/WindowsWindow.h&quot;</span><span class="cp"></span>
 
 <span class="cp">#include</span> <span class="cpf">&quot;SkeletonEngine/Events/ApplicationEvent.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;SkeletonEngine/Events/KeyEvent.h&quot;</span><span class="cp"></span>
@@ -441,16 +445,6 @@
     <span class="p">{</span>
         <span class="n">SE_CORE_ERROR</span><span class="p">(</span><span class="s">&quot;GLFW Error {}:{}&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">,</span> <span class="n">description</span><span class="p">);</span>
     <span class="p">}</span>
-
-
-    <span class="n">Window</span><span class="o">*</span> <span class="n">Window</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">porperties</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">WindowsWindow</span><span class="p">(</span><span class="n">porperties</span><span class="p">);</span>
-    <span class="p">}</span>
-
-
-    <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">WindowsWindow</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span> <span class="n">Init</span><span class="p">(</span><span class="n">p</span><span class="p">);</span> <span class="p">}</span>
-    <span class="n">WindowsWindow</span><span class="o">::~</span><span class="n">WindowsWindow</span><span class="p">()</span> <span class="p">{</span> <span class="n">Shutdown</span><span class="p">();</span> <span class="p">}</span>
 
 
     <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span>
@@ -473,11 +467,12 @@
             <span class="n">s_GLFWInitialized</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
         <span class="p">}</span>
 
+        <span class="c1">// GLFW Window Setup</span>
         <span class="n">m_Window</span> <span class="o">=</span> <span class="n">glfwCreateWindow</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">p</span><span class="p">.</span><span class="n">Width</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">p</span><span class="p">.</span><span class="n">Height</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">Title</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span> <span class="k">nullptr</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
         <span class="n">glfwMakeContextCurrent</span><span class="p">(</span><span class="n">m_Window</span><span class="p">);</span>
         <span class="n">glfwSetWindowUserPointer</span><span class="p">(</span><span class="n">m_Window</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m_Data</span><span class="p">);</span>
-        <span class="n">SetVSync</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
 
+        <span class="n">SetVSync</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
 
         <span class="cm">/* GLFW Window callback macros */</span>
 <span class="cp">#define GET_WINDOW_DATA_AS(data)                WindowData&amp; data = *(WindowData*)glfwGetWindowUserPointer(window);</span>
@@ -583,11 +578,13 @@
     <span class="p">}</span>
 
 
-    <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">Shutdown</span><span class="p">()</span>
+    <span class="n">Window</span><span class="o">*</span> <span class="n">Window</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">porperties</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">SE_CORE_INFO</span><span class="p">(</span><span class="s">&quot;Closed window {}&quot;</span><span class="p">,</span> <span class="n">ToString</span><span class="p">());</span>
-        <span class="n">glfwDestroyWindow</span><span class="p">(</span><span class="n">m_Window</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">WindowsWindow</span><span class="p">(</span><span class="n">porperties</span><span class="p">);</span>
     <span class="p">}</span>
+
+    <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">WindowsWindow</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span> <span class="n">Init</span><span class="p">(</span><span class="n">p</span><span class="p">);</span> <span class="p">}</span>
+    <span class="n">WindowsWindow</span><span class="o">::~</span><span class="n">WindowsWindow</span><span class="p">()</span> <span class="p">{</span> <span class="n">Close</span><span class="p">();</span> <span class="p">}</span>
 
 
     <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">OnUpdate</span><span class="p">()</span>
@@ -599,11 +596,7 @@
 
     <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">SetVSync</span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
-            <span class="n">glfwSwapInterval</span><span class="p">(</span><span class="n">VSYNC_ENABLED</span><span class="p">);</span>
-        <span class="k">else</span>
-            <span class="nf">glfwSwapInterval</span><span class="p">(</span><span class="n">VSYNC_DISABLED</span><span class="p">);</span>
-
+        <span class="n">glfwSwapInterval</span><span class="p">(</span><span class="n">enabled</span> <span class="o">?</span> <span class="nl">VSYNC_ENABLED</span> <span class="p">:</span> <span class="n">VSYNC_DISABLED</span><span class="p">);</span>
         <span class="n">m_Data</span><span class="p">.</span><span class="n">VSync</span> <span class="o">=</span> <span class="n">enabled</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -611,6 +604,13 @@
     <span class="kt">bool</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">IsVSync</span><span class="p">()</span> <span class="k">const</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="n">m_Data</span><span class="p">.</span><span class="n">VSync</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="kt">void</span> <span class="n">WindowsWindow</span><span class="o">::</span><span class="n">Close</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">SE_CORE_INFO</span><span class="p">(</span><span class="s">&quot;Closed window {}&quot;</span><span class="p">,</span> <span class="n">ToString</span><span class="p">());</span>
+        <span class="n">glfwDestroyWindow</span><span class="p">(</span><span class="n">m_Window</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>

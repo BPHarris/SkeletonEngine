@@ -272,8 +272,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -439,24 +443,48 @@
         <span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">VSYNC_ENABLED</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
         <span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">VSYNC_DISABLED</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
+        <span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">m_Window</span><span class="p">;</span>
 
+    <span class="k">private</span><span class="o">:</span>
+        <span class="k">struct</span> <span class="n">WindowData</span>
+        <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Title</span><span class="p">;</span>
+            <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Width</span><span class="p">;</span>
+            <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Height</span><span class="p">;</span>
+            <span class="kt">bool</span> <span class="n">VSync</span><span class="p">;</span>
+
+            <span class="n">EventCallbackFn</span> <span class="n">EventCallback</span><span class="p">;</span>
+        <span class="p">};</span>
+
+        <span class="n">WindowData</span> <span class="n">m_Data</span><span class="p">;</span>
+
+    <span class="k">private</span><span class="o">:</span>
+        <span class="k">virtual</span> <span class="kt">void</span> <span class="n">Init</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">properties</span><span class="p">);</span>
+
+    <span class="k">public</span><span class="o">:</span>
         <span class="n">WindowsWindow</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">properties</span><span class="p">);</span>
         <span class="k">virtual</span> <span class="o">~</span><span class="n">WindowsWindow</span><span class="p">();</span>
 
+
         <span class="kt">void</span> <span class="nf">OnUpdate</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+
 
         <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetTitle</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_Data</span><span class="p">.</span><span class="n">Title</span><span class="p">;</span> <span class="p">}</span>
         <span class="kr">inline</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">GetWidth</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_Data</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span>  <span class="p">}</span>
         <span class="kr">inline</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">GetHeight</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_Data</span><span class="p">.</span><span class="n">Height</span><span class="p">;</span> <span class="p">}</span>
 
+
         <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span>
         <span class="p">{</span>
             <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">ss</span><span class="p">;</span>
-            <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;(&quot;</span>
-                    <span class="o">&lt;&lt;</span> <span class="s">&quot;WindowsWindow </span><span class="se">\&quot;</span><span class="s">&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">GetTitle</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">, &quot;</span>
-                    <span class="o">&lt;&lt;</span> <span class="n">GetWidth</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">GetHeight</span><span class="p">()</span>
-                    <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">IsVSync</span><span class="p">()</span> <span class="o">?</span> <span class="s">&quot;VSync&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+
+            <span class="n">ss</span>  <span class="o">&lt;&lt;</span> <span class="s">&quot;WindowsWindow(&quot;</span>
+                <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">GetTitle</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span>
+                <span class="o">&lt;&lt;</span> <span class="n">GetWidth</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, &quot;</span>
+                <span class="o">&lt;&lt;</span> <span class="n">GetHeight</span><span class="p">()</span>
+                <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">IsVSync</span><span class="p">()</span> <span class="o">?</span> <span class="s">&quot;, VSync&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
                 <span class="o">&lt;&lt;</span> <span class="s">&quot;)&quot;</span><span class="p">;</span>
+
             <span class="k">return</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
         <span class="p">}</span>
 
@@ -464,23 +492,7 @@
         <span class="kt">void</span> <span class="n">SetVSync</span><span class="p">(</span><span class="kt">bool</span> <span class="n">enabled</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
         <span class="kt">bool</span> <span class="nf">IsVSync</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span>
 
-    <span class="k">private</span><span class="o">:</span>
-        <span class="k">virtual</span> <span class="kt">void</span> <span class="n">Init</span><span class="p">(</span><span class="k">const</span> <span class="n">WindowProperties</span><span class="o">&amp;</span> <span class="n">properties</span><span class="p">);</span>
-        <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">Shutdown</span><span class="p">();</span>
-
-    <span class="k">private</span><span class="o">:</span>
-        <span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">m_Window</span><span class="p">;</span>
-
-        <span class="k">struct</span> <span class="n">WindowData</span>
-        <span class="p">{</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Title</span><span class="p">;</span>
-            <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">Width</span><span class="p">,</span> <span class="n">Height</span><span class="p">;</span>
-            <span class="kt">bool</span> <span class="n">VSync</span><span class="p">;</span>
-
-            <span class="n">EventCallbackFn</span> <span class="n">EventCallback</span><span class="p">;</span>
-        <span class="p">};</span>
-
-        <span class="n">WindowData</span> <span class="n">m_Data</span><span class="p">;</span>
+        <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">Close</span><span class="p">();</span>
     <span class="p">};</span>
 
 <span class="p">}</span>

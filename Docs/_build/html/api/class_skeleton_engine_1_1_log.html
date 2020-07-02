@@ -274,8 +274,12 @@
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Event&amp;)</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html">Function SkeletonEngine::operator&lt;&lt;(std::ostream&amp;, const Window&amp;)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -450,18 +454,49 @@
 <dl class="cpp function">
 <dt id="_CPPv4N14SkeletonEngine3Log4InitEv">
 <span id="_CPPv3N14SkeletonEngine3Log4InitEv"></span><span id="_CPPv2N14SkeletonEngine3Log4InitEv"></span><span id="SkeletonEngine::Log::Init"></span><span class="target" id="class_skeleton_engine_1_1_log_1af81dd8215db06bb58a8082dd7773878b"></span>void <code class="sig-name descname">Init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SkeletonEngine3Log4InitEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Initialise core and client log consoles. </p>
+<dd><p>Initialise core and client loggers. </p>
 </dd></dl>
 
-<dl class="cpp function">
-<dt id="_CPPv4N14SkeletonEngine3Log13GetCoreLoggerEv">
-<span id="_CPPv3N14SkeletonEngine3Log13GetCoreLoggerEv"></span><span id="_CPPv2N14SkeletonEngine3Log13GetCoreLoggerEv"></span><span id="SkeletonEngine::Log::GetCoreLogger"></span><span class="target" id="class_skeleton_engine_1_1_log_1afce1f7b669686396496ef9829d329a3b"></span>std::shared_ptr&lt;spdlog::logger&gt; &amp;<code class="sig-name descname">GetCoreLogger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SkeletonEngine3Log13GetCoreLoggerEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Attributes</p>
+<dl class="cpp var">
+<dt id="_CPPv4N14SkeletonEngine3Log12s_CoreLoggerE">
+<span id="_CPPv3N14SkeletonEngine3Log12s_CoreLoggerE"></span><span id="_CPPv2N14SkeletonEngine3Log12s_CoreLoggerE"></span><span id="SkeletonEngine::Log::s_CoreLogger__std::shared_ptr:spdlog::logger:"></span><span class="target" id="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209"></span>std::shared_ptr&lt;spdlog::logger&gt; <code class="sig-name descname">s_CoreLogger</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine3Log12s_CoreLoggerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Core engine logger.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1a16235c9ba69da98491b689d10d6ca015.html#_log_8h_1a16235c9ba69da98491b689d10d6ca015"><span class="std std-ref">SE_CORE_FATAL</span></a> </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1a64e03810f0d08c8ec23da8f09982bf32.html#_log_8h_1a64e03810f0d08c8ec23da8f09982bf32"><span class="std std-ref">SE_CORE_ERROR</span></a> </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1a25f73b073cea69f85a4505ab6c8b0edc.html#_log_8h_1a25f73b073cea69f85a4505ab6c8b0edc"><span class="std std-ref">SE_CORE_WARN</span></a> </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1a878083cd6d1f2aa2e277bf4a00a4b7fd.html#_log_8h_1a878083cd6d1f2aa2e277bf4a00a4b7fd"><span class="std std-ref">SE_CORE_INFO</span></a> </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1ab7df8661b1deddcc135c2c01c3b8bad0.html#_log_8h_1ab7df8661b1deddcc135c2c01c3b8bad0"><span class="std std-ref">SE_CORE_TRACE</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
-<dl class="cpp function">
-<dt id="_CPPv4N14SkeletonEngine3Log15GetClientLoggerEv">
-<span id="_CPPv3N14SkeletonEngine3Log15GetClientLoggerEv"></span><span id="_CPPv2N14SkeletonEngine3Log15GetClientLoggerEv"></span><span id="SkeletonEngine::Log::GetClientLogger"></span><span class="target" id="class_skeleton_engine_1_1_log_1ae4d75be88c10bb59e3e1fb66c4098d34"></span>std::shared_ptr&lt;spdlog::logger&gt; &amp;<code class="sig-name descname">GetClientLogger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14SkeletonEngine3Log15GetClientLoggerEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dl class="cpp var">
+<dt id="_CPPv4N14SkeletonEngine3Log14s_ClientLoggerE">
+<span id="_CPPv3N14SkeletonEngine3Log14s_ClientLoggerE"></span><span id="_CPPv2N14SkeletonEngine3Log14s_ClientLoggerE"></span><span id="SkeletonEngine::Log::s_ClientLogger__std::shared_ptr:spdlog::logger:"></span><span class="target" id="class_skeleton_engine_1_1_log_1a1df31b5ef5f18f015594aef729c5a802"></span>std::shared_ptr&lt;spdlog::logger&gt; <code class="sig-name descname">s_ClientLogger</code><a class="headerlink" href="#_CPPv4N14SkeletonEngine3Log14s_ClientLoggerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Client application logger.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1ae659d861ad82a50c501ea560c52c6d40.html#_log_8h_1ae659d861ad82a50c501ea560c52c6d40"><span class="std std-ref">SE_FATAL</span></a> </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1a208b4b6aa3c53ed09bd0d648e93786bd.html#_log_8h_1a208b4b6aa3c53ed09bd0d648e93786bd"><span class="std std-ref">SE_ERROR</span></a> </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1aa1ef56d1ab9455064a5dd142c67d81f3.html#_log_8h_1aa1ef56d1ab9455064a5dd142c67d81f3"><span class="std std-ref">SE_WARN</span></a> </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1ad790656eb6464dacefa324d901fca312.html#_log_8h_1ad790656eb6464dacefa324d901fca312"><span class="std std-ref">SE_INFO</span></a> </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="define__log_8h_1a9feabbef3b97529e335ac2f8a814a553.html#_log_8h_1a9feabbef3b97529e335ac2f8a814a553"><span class="std std-ref">SE_TRACE</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </dd></dl>
