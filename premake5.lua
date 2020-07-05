@@ -55,11 +55,11 @@ project "SkeletonEngine"
 
     filter "system:linux"
         systemversion "latest"
-        defines { "ENC_PLATFORM_LINUX" }
+        defines { "SE_PLATFORM_LINUX" }
 
     filter "system:macosx"
         systemversion "latest"
-        defines { "ENC_PLATFORM_MACOSX" }
+        defines { "SE_PLATFORM_MACOSX" }
   
     filter "configurations:Debug"
         defines "SE_DEBUG"
@@ -104,11 +104,11 @@ project "Demo"
 
     filter "system:linux"
         systemversion "latest"
-        defines { "ENC_PLATFORM_LINUX" }
+        defines { "SE_PLATFORM_LINUX" }
 
     filter "system:macosx"
         systemversion "latest"
-        defines { "ENC_PLATFORM_MACOSX" }
+        defines { "SE_PLATFORM_MACOSX" }
         
     filter "configurations:Debug"
         defines "SE_DEBUG"
