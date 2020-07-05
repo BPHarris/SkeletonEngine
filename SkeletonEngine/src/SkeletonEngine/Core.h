@@ -29,6 +29,12 @@
 	#else
 		#define SE_API __declspec(dllimport)
 	#endif // SE_BUILD_DLL
-#else
-	#error SkeletonEngine only supports windows, thus far.
+#endif
+
+#ifdef SE_PLATFORM_LINUX
+	#define SE_API __attribute__ ((visibility ("default")))
+#endif
+
+#ifndef SE_API
+	#error SkeletonEngine only supports Windows/Linux thus far.
 #endif // SE_PLATFORM_WINDOWS

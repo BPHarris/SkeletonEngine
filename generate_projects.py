@@ -42,12 +42,10 @@ def generate_projects(target : str) -> None:
 
 
 def docs() -> None:
-    print('docs'); quit()
     call('cd Docs && make html')
 
 
 def viewdocs() -> None:
-    print('viewdocs'); quit()
     # docs_index_relpath = 'Docs/_build/html/index.html', adjusted to system
     docs_index_relpath = join('Docs', '_build', 'html', 'index.html')
 
