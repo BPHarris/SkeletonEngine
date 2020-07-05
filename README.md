@@ -1,5 +1,5 @@
-# <img src="Resources/logo.png" alt="Logo" width="20"/> SkeletonEngine <!-- omit in toc -->
-Welcome SkeletonEngine <img src="Resources/logo.png" alt="Logo" width="10"/>
+# <img src="resources/logo.png" alt="Logo" width="20"/> SkeletonEngine <!-- omit in toc -->
+Welcome SkeletonEngine <img src="resources/logo.png" alt="Logo" width="10"/>
 
 This engine is a hobby and very much a work-in-progress, without much work or progress. Everything here is subject to change and the README is more of a notepad than an introduction right now.
 
@@ -24,9 +24,8 @@ If you are actually looking for a *good*, *usable* engine and ended up here by a
 - [LICENSE](#license)
 
 # Notes
-Why does `vendor/bin/premake5/*` get ignored by git? TODO: Fix it
 
-TODO: Create proper icon (to replace `Resources/logo.png`)
+TODO: Create proper icon (to replace `resources/logo.png`)
 
 TODO: Create proper logo
 
@@ -102,14 +101,14 @@ Run ```pip install exhale``` (for Python 3 `pip`)
 ## Windows
 Build the docs on Windows
 ```
-cd Docs
+cd docs
 make html
 ```
 
 ## Linux, OSX / macOS
 Build the docs on Linux or OSX / macOS
 ```
-cd Docs
+cd docs
 sphinx-build -M html . _build
 ```
 

@@ -125,7 +125,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # further.  For a list of options available for each theme, see the
 # documentation.
 
-html_logo = '../Resources/logo.png'
+html_logo = '../resources/logo.png'
 html_theme_options = {
     'navbar_title': project,                    # (Default: ``project`` value)
     'navbar_site_name': 'Site',                 # (Default: "Site")
