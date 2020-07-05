@@ -13,6 +13,6 @@ Makefile
 
 
 # Binaries
-**/bin/
+bin/
 bin-int/
-!vendor/bin/premake/
+!vendor/bin/
