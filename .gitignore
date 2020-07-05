@@ -16,3 +16,7 @@ Makefile
 bin/
 bin-int/
 !vendor/bin/
+
+
+# Python __pycache__
+__pycache__
