@@ -60,19 +60,22 @@ project "SkeletonEngine"
     filter "system:macosx"
         systemversion "latest"
         defines { "SE_PLATFORM_MACOSX" }
-  
+
+
     filter "configurations:Debug"
-        defines "SE_DEBUG"
         symbols "On"
-        defines { "SE_ENABLE_ASSERTS" }
+        buildoptions "/MDd"
+        defines { "SE_DEBUG", "SE_ENABLE_ASSERTS" }
     
     filter "configurations:Release"
-        defines "SE_RELEASE"
         optimize "On"
+        buildoptions "/MD"
+        defines { "SE_RELEASE" }
     
     filter "configurations:Dist"
-        defines "SE_DIST"
         optimize "On"
+        buildoptions "/MD"
+        defines { "SE_DIST" }
 
 
 project "Demo"
@@ -110,15 +113,18 @@ project "Demo"
         systemversion "latest"
         defines { "SE_PLATFORM_MACOSX" }
         
+
     filter "configurations:Debug"
-        defines "SE_DEBUG"
         symbols "On"
-        defines { "SE_ENABLE_ASSERTS" }
+        buildoptions "/MDd"
+        defines { "SE_DEBUG", "SE_ENABLE_ASSERTS" }
     
     filter "configurations:Release"
-        defines "SE_RELEASE"
         optimize "On"
+        buildoptions "/MD"
+        defines { "SE_RELEASE" }
     
     filter "configurations:Dist"
-        defines "SE_DIST"
         optimize "On"
+        buildoptions "/MD"
+        defines { "SE_DIST" }
