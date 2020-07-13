@@ -10,6 +10,7 @@
 
 /* ------------------------------------------------------------------------- */
 #include "SkeletonEngine/Application.h"
+#include "SkeletonEngine/Layer.h"
 #include "SkeletonEngine/Log.h"
 
 /* ------------------------------------------------------------------------- */

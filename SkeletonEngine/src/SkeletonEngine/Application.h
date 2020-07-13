@@ -2,16 +2,20 @@
  * @file    Application.h
  * @brief   Basic SkeletonEngine Application interface.
  * 
- * @author  BP Harris
+ * @author  Brandon Harris
  * @date    July 2020
  */
 
 #pragma once
 
 #include "Core.h"
-#include "SkeletonEngine/Window.h"
-#include "SkeletonEngine/Events/Event.h"
-#include "SkeletonEngine/Events/ApplicationEvent.h"
+#include "Window.h"
+#include "LayerStack.h"
+
+#include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
+
+
 
 
 namespace SkeletonEngine {
@@ -22,6 +26,7 @@ namespace SkeletonEngine {
 	private:
 		bool m_Running = true;
 	public:
+		LayerStack m_LayerStack;
 		std::unique_ptr<Window> m_Window;
 
 	public:
@@ -37,6 +42,12 @@ namespace SkeletonEngine {
 		 * @param   e   The event to dispatch.
 		 */
 		void OnEvent(Event& e);
+
+		/** Push the given layer to the layer stack. */
+		void PushLayer(Layer* layer);
+
+		/** Push the given overlay layer to the layer stack. */
+		void PushOverlay(Layer* overlay);
 	
 	private:
 		/**
