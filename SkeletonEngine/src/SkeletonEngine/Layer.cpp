@@ -9,12 +9,12 @@
 #include "sepch.h"
 #include "Layer.h"
 
+namespace SkeletonEngine
+{
 
-namespace SkeletonEngine {
+    Layer::Layer(const std::string &name)
+        : m_Name(name) {}
 
-	Layer::Layer(const std::string& name)
-		: m_Name(name) {}
-
-	Layer::~Layer() {}
+    Layer::~Layer() {}
 
 }

@@ -2,7 +2,7 @@
  * @file    EntryPoint.h
  * @brief   Contains SkeletonEngine program entry point.
  * 
- * @author  BP Harris
+ * @author  Brandon Harris (bpharris@pm.me)
  * @date    July 2020
  */
 
@@ -11,16 +11,15 @@
 
 #ifdef SE_PLATFORM_WINDOWS
 
-extern SkeletonEngine::Application* SkeletonEngine::CreateApplication();
+extern SkeletonEngine::Application *SkeletonEngine::CreateApplication();
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
-	SkeletonEngine::Log::Init();
+    SkeletonEngine::Log::Init();
 
-	auto app = SkeletonEngine::CreateApplication();
-	app->Run();
-	delete app;
+    auto app = SkeletonEngine::CreateApplication();
+    app->Run();
+    delete app;
 }
 
-#endif // SE_PLATFORM_WINDOWS
-
+#endif

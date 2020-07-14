@@ -2,7 +2,7 @@
  * @file    sepch.cpp
  * @brief   SkeletonEngine precompiled header corresponding *.cpp file.
  * 
- * @author  BP Harris
+ * @author  Brandon Harris (bpharris@pm.me)
  * @date    July 2020
  */
 

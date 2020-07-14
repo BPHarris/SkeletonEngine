@@ -11,23 +11,23 @@
 #include "Core.h"
 #include "Events/Event.h"
 
+namespace SkeletonEngine
+{
 
-namespace SkeletonEngine {
-	
-	/** SkeletonEngine Layer class. */
-	class SE_API Layer
-	{
-	public:
-		/** Layer name (for debug). */
-		std::string m_Name;
+    /** SkeletonEngine Layer class. */
+    class SE_API Layer
+    {
+    public:
+        /** Layer name (for debug). */
+        std::string m_Name;
 
-		Layer(const std::string& name = "Layer");
-		virtual ~Layer();
+        Layer(const std::string &name = "Layer");
+        virtual ~Layer();
 
-		virtual void OnAttach() {}
-		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
-		virtual void OnEvent(Event& event) {}
-	};
+        virtual void OnAttach() {}
+        virtual void OnDetach() {}
+        virtual void OnUpdate() {}
+        virtual void OnEvent(Event &event) {}
+    };
 
 }

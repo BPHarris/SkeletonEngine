@@ -8,26 +8,21 @@
 
 #include <SkeletonEngine.h>
 
-
 /** The Demo application. */
 class Demo : public SkeletonEngine::Application
 {
 public:
-	Demo()
-	{
+    Demo()
+    {
+    }
 
-	}
-
-	~Demo()
-	{
-
-	}
-
+    ~Demo()
+    {
+    }
 };
 
-
 /** @return SkeletonEngine::Application*    The Application to run. */
-SkeletonEngine::Application* SkeletonEngine::CreateApplication()
+SkeletonEngine::Application *SkeletonEngine::CreateApplication()
 {
-	return new Demo();
+    return new Demo();
 }

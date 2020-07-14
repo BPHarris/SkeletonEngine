@@ -2,7 +2,7 @@
  * @file    SkeletonEngine.h
  * @brief   General include, for use by SkeletonEngine applications.
  * 
- * @author  BP Harris
+ * @author  Brandon Harris (bpharris@pm.me)
  * @date    July 2020
  */
 
