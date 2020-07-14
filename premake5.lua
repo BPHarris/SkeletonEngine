@@ -11,8 +11,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root
 IncludeDir = {}
 IncludeDir["GLFW"] = "SkeletonEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "SkeletonEngine/vendor/Glad/include"
 
 include "SkeletonEngine/vendor/GLFW"
+include "SkeletonEngine/vendor/Glad"
 
 
 -- SkeletonEngine DLL Project
@@ -35,11 +37,13 @@ project "SkeletonEngine"
     includedirs {
         "%{prj.name}/src",                          -- SkeletonEngine/src
         "%{prj.name}/vendor/spdlog/include",        -- spdlog
-        "%{IncludeDir.GLFW}"                        -- GLFW
+        "%{IncludeDir.GLFW}",                       -- GLFW
+        "%{IncludeDir.Glad}",                       -- glad
     }
 
-    links { "GLFW", "opengl32.lib" }
+    links { "GLFW", "Glad", "opengl32.lib" }
 
+    defines { "GLFW_INCLUDE_NONE" }    
 
     filter "system:windows"
         cppdialect "C++17"

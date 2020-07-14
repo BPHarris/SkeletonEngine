@@ -13,6 +13,9 @@
 #include "SkeletonEngine/Events/KeyEvent.h"
 #include "SkeletonEngine/Events/MouseEvent.h"
 
+#include "glad/glad.h"
+
+
 namespace SkeletonEngine
 {
 
@@ -44,9 +47,12 @@ namespace SkeletonEngine
             s_GLFWInitialized = true;
         }
 
-        // GLFW Window Setup
         m_Window = glfwCreateWindow((int)p.Width, (int)p.Height, p.Title.c_str(), nullptr, nullptr);
+        
         glfwMakeContextCurrent(m_Window);
+        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+        SE_CORE_ASSERT(status, "Failed to initialise Glad.");
+        
         glfwSetWindowUserPointer(m_Window, &m_Data);
 
         SetVSync(true);
