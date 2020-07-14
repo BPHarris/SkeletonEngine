@@ -16,10 +16,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="23" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="23" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="25" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_application_1ad9f2397fbab7af8024d1393719a5d074" prot="public" static="no" mutable="no">
+        <type><ref refid="class_skeleton_engine_1_1_layer_stack" kindref="compound">LayerStack</ref></type>
+        <definition>LayerStack SkeletonEngine::Application::m_LayerStack</definition>
+        <argsstring></argsstring>
+        <name>m_LayerStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="28" column="20" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="class_skeleton_engine_1_1_application_1ace702edabc8e90af07224d82d210d608" prot="public" static="no" mutable="no">
         <type>std::unique_ptr&lt; <ref refid="class_skeleton_engine_1_1_window" kindref="compound">Window</ref> &gt;</type>
         <definition>std::unique_ptr&lt;Window&gt; SkeletonEngine::Application::m_Window</definition>
@@ -31,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="25" column="17" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="25" bodyend="-1"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="29" column="25" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -46,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="28" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="18" bodyend="22"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="32" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="21" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_application_1a33d11cf381554a653f725660bb2981d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -59,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="29" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="25" bodyend="25"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="33" column="17" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="27" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_application_1a19ebb0f0318e9c4019c1c4d77b6265f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="32" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="28" bodyend="34"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="36" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="29" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_application_1a30ff4ff8fcb0996db56e7eeb3a44d595" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -101,7 +114,43 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="39" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="37" bodyend="42"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="43" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="53" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_application_1af8f0856ace142a29f068a0d2cba1c9d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::Application::PushLayer</definition>
+        <argsstring>(Layer *layer)</argsstring>
+        <name>PushLayer</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Push the given layer to the layer stack. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="46" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_application_1aa67b0abe24a0c1f51ab2754c1fdba712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::Application::PushOverlay</definition>
+        <argsstring>(Layer *overlay)</argsstring>
+        <name>PushOverlay</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>overlay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Push the given overlay layer to the layer stack. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="49" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="48" bodyend="51"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -135,21 +184,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="49" column="6" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="45" bodyend="49"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="59" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.cpp" bodystart="66" bodyend="70"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref> class. </para>
+<para>SkeletonEngine <ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref> class. </para>
     </detaileddescription>
-    <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="20" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="21" bodyend="50"/>
+    <collaborationgraph>
+      <node id="1">
+        <label>SkeletonEngine::Application</label>
+        <link refid="class_skeleton_engine_1_1_application"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_LayerStack</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SkeletonEngine::LayerStack</label>
+        <link refid="class_skeleton_engine_1_1_layer_stack"/>
+      </node>
+    </collaborationgraph>
+    <location file="SkeletonEngine/src/SkeletonEngine/Application.h" line="22" column="5" bodyfile="SkeletonEngine/src/SkeletonEngine/Application.h" bodystart="23" bodyend="60"/>
     <listofallmembers>
       <member refid="class_skeleton_engine_1_1_application_1a0ccf5dbca675babd9aba0203bd63d554" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>Application</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1ad9f2397fbab7af8024d1393719a5d074" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>m_LayerStack</name></member>
       <member refid="class_skeleton_engine_1_1_application_1a92f9846a7cbcbf9aefb2e8c616d7e111" prot="private" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>m_Running</name></member>
       <member refid="class_skeleton_engine_1_1_application_1ace702edabc8e90af07224d82d210d608" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>m_Window</name></member>
       <member refid="class_skeleton_engine_1_1_application_1a30ff4ff8fcb0996db56e7eeb3a44d595" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>OnEvent</name></member>
       <member refid="class_skeleton_engine_1_1_application_1a3a288aa4ce55d75e07a45aade28a07b3" prot="private" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>OnWindowClose</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1af8f0856ace142a29f068a0d2cba1c9d1" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>PushLayer</name></member>
+      <member refid="class_skeleton_engine_1_1_application_1aa67b0abe24a0c1f51ab2754c1fdba712" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>PushOverlay</name></member>
       <member refid="class_skeleton_engine_1_1_application_1a19ebb0f0318e9c4019c1c4d77b6265f6" prot="public" virt="non-virtual"><scope>SkeletonEngine::Application</scope><name>Run</name></member>
       <member refid="class_skeleton_engine_1_1_application_1a33d11cf381554a653f725660bb2981d3" prot="public" virt="virtual"><scope>SkeletonEngine::Application</scope><name>~Application</name></member>
     </listofallmembers>

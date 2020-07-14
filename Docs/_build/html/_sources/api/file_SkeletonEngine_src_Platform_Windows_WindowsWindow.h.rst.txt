@@ -9,7 +9,7 @@ File WindowsWindow.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-:ref:`namespace_SkeletonEngine` Windows Window interface. 
+SkeletonEngine Windows Window interface. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\Platform\Windows\WindowsWindow.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 

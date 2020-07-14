@@ -9,7 +9,7 @@ File EntryPoint.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-Contains :ref:`namespace_SkeletonEngine` program entry point. 
+Contains SkeletonEngine program entry point. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\EntryPoint.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 

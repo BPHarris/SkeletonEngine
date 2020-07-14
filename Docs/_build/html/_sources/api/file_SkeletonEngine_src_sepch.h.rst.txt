@@ -9,7 +9,7 @@ File sepch.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-:ref:`namespace_SkeletonEngine` precompiled header file. 
+SkeletonEngine precompiled header file. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\sepch.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 
@@ -78,11 +78,15 @@ Included By
 
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Application.cpp`
 
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Window.h`
+
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Events_Event.h`
 
-- :ref:`file_SkeletonEngine_src_SkeletonEngine_Log.cpp`
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Layer.cpp`
 
-- :ref:`file_SkeletonEngine_src_SkeletonEngine_Window.h`
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_LayerStack.cpp`
+
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Log.cpp`
 
 
 

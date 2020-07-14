@@ -9,7 +9,7 @@ File ApplicationEvent.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-:ref:`namespace_SkeletonEngine` Application events. 
+SkeletonEngine Application events. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Events\ApplicationEvent.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 

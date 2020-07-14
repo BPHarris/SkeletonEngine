@@ -88,10 +88,10 @@
       </node>
     </incdepgraph>
     <briefdescription>
-<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> precompiled header corresponding *.cpp file. </para>
+<para>SkeletonEngine precompiled header corresponding *.cpp file. </para>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>BP Harris </para>
+<para><simplesect kind="author"><para>Brandon Harris (<ulink url="mailto:bpharris@pm.me">bpharris@pm.me</ulink>) </para>
 </simplesect>
 <simplesect kind="date"><para>July 2020 </para>
 </simplesect>

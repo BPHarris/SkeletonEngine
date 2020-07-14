@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Log.cpp``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 

@@ -9,7 +9,7 @@ File Event.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-:ref:`namespace_SkeletonEngine` event system. 
+SkeletonEngine event system. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Events\Event.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 
@@ -54,6 +54,10 @@ Included By
 -----------
 
 
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Window.h`
+
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Layer.h`
+
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Application.h`
 
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Events_ApplicationEvent.h`
@@ -61,8 +65,6 @@ Included By
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Events_KeyEvent.h`
 
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Events_MouseEvent.h`
-
-- :ref:`file_SkeletonEngine_src_SkeletonEngine_Window.h`
 
 
 
@@ -87,16 +89,16 @@ Enums
 -----
 
 
-- :ref:`exhale_enum_namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc`
+- :ref:`exhale_enum__event_8h_1a9483ee9efe595a8a90de26d14aef38fc`
 
-- :ref:`exhale_enum_namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f`
+- :ref:`exhale_enum__event_8h_1ac5c77e64f241de07cdb7f2de6ceea51f`
 
 
 Functions
 ---------
 
 
-- :ref:`exhale_function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9`
+- :ref:`exhale_function__event_8h_1ac0be4c19cb40bdcec8204a22bd41e5c9`
 
 
 Defines

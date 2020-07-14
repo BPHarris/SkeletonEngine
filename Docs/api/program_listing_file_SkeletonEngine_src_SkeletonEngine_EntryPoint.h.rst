@@ -16,9 +16,9 @@ Program Listing for File EntryPoint.h
    
    #ifdef SE_PLATFORM_WINDOWS
    
-   extern SkeletonEngine::Application* SkeletonEngine::CreateApplication();
+   extern SkeletonEngine::Application *SkeletonEngine::CreateApplication();
    
-   int main(int argc, char** argv)
+   int main(int argc, char **argv)
    {
        SkeletonEngine::Log::Init();
    
@@ -27,5 +27,4 @@ Program Listing for File EntryPoint.h
        delete app;
    }
    
-   #endif // SE_PLATFORM_WINDOWS
-   
+   #endif

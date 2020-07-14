@@ -14,18 +14,22 @@ Program Listing for File Application.h
    #pragma once
    
    #include "Core.h"
-   #include "SkeletonEngine/Window.h"
-   #include "SkeletonEngine/Events/Event.h"
-   #include "SkeletonEngine/Events/ApplicationEvent.h"
+   #include "Window.h"
+   #include "LayerStack.h"
    
+   #include "Events/Event.h"
+   #include "Events/ApplicationEvent.h"
    
-   namespace SkeletonEngine {
+   namespace SkeletonEngine
+   {
    
        class SE_API Application
        {
        private:
            bool m_Running = true;
+   
        public:
+           LayerStack m_LayerStack;
            std::unique_ptr<Window> m_Window;
    
        public:
@@ -34,13 +38,16 @@ Program Listing for File Application.h
    
            void Run();
    
-           void OnEvent(Event& e);
-       
+           void OnEvent(Event &e);
+   
+           void PushLayer(Layer *layer);
+   
+           void PushOverlay(Layer *overlay);
+   
        private:
-           bool OnWindowClose(WindowClosedEvent& e);
+           bool OnWindowClose(WindowClosedEvent &e);
        };
    
-   
-       Application* CreateApplication();
+       Application *CreateApplication();
    
    }

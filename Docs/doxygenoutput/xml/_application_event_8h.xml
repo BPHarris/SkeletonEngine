@@ -98,25 +98,31 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
+      <node id="4">
         <label>SkeletonEngine/src/SkeletonEngine/Application.cpp</label>
         <link refid="_application_8cpp"/>
+      </node>
+      <node id="2">
+        <label>SkeletonEngine/src/Platform/Windows/WindowsWindow.cpp</label>
+        <link refid="_windows_window_8cpp"/>
       </node>
       <node id="1">
         <label>SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h</label>
         <link refid="_application_event_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>SkeletonEngine/src/SkeletonEngine/Application.h</label>
-        <link refid="_application_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>SkeletonEngine/src/SkeletonEngine/Application.h</label>
+        <link refid="_application_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>SkeletonEngine/src/SkeletonEngine.h</label>
         <link refid="_skeleton_engine_8h"/>
       </node>
@@ -131,10 +137,10 @@
     <innerclass refid="class_skeleton_engine_1_1_app_render_event" prot="public">SkeletonEngine::AppRenderEvent</innerclass>
     <innernamespace refid="namespace_skeleton_engine">SkeletonEngine</innernamespace>
     <briefdescription>
-<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> Application events. </para>
+<para>SkeletonEngine Application events. </para>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>BP Harris </para>
+<para><simplesect kind="author"><para>Brandon Harris (<ulink url="mailto:bpharris@pm.me">bpharris@pm.me</ulink>) </para>
 </simplesect>
 <simplesect kind="date"><para>July 2020 </para>
 </simplesect>
@@ -146,8 +152,8 @@
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_event_8h" kindref="compound">Event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SkeletonEngine</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17" refid="class_skeleton_engine_1_1_window_closed_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_closed_event" kindref="compound">WindowClosedEvent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -155,101 +161,94 @@
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_closed_event" kindref="compound">WindowClosedEvent</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22" refid="class_skeleton_engine_1_1_window_closed_event_1a6cd8c3bc340e84967f8a6c7be38762a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowClosed)</highlight></codeline>
-<codeline lineno="23" refid="class_skeleton_engine_1_1_window_closed_event_1a24473ee73a69eb319739edebb5b55c01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref>)</highlight></codeline>
+<codeline lineno="23" refid="class_skeleton_engine_1_1_window_closed_event_1a24473ee73a69eb319739edebb5b55c01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryApplication)</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="class_skeleton_engine_1_1_window_resized_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_resized_event" kindref="compound">WindowResizedEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_Width,<sp/>m_Height;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_resized_event" kindref="compound">WindowResizedEvent</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height)</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_Width(width),<sp/>m_Height(height)<sp/>{}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="class_skeleton_engine_1_1_window_resized_event_1adf32ce7a5294c51e986ab2b7fe586974" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_skeleton_engine_1_1_window_resized_event_1adf32ce7a5294c51e986ab2b7fe586974" kindref="member">ToString</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override</highlight></codeline>
-<codeline lineno="39"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WindowResizedEvent(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Width<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Height<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="class_skeleton_engine_1_1_window_resized_event_1a4c30e3431fb460c9ee57a26267471623" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowResized)</highlight></codeline>
-<codeline lineno="46" refid="class_skeleton_engine_1_1_window_resized_event_1a60e82ef72be2d1c224037685a0a512d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref>)</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="class_skeleton_engine_1_1_window_focused_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_focused_event" kindref="compound">WindowFocusedEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_focused_event" kindref="compound">WindowFocusedEvent</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="class_skeleton_engine_1_1_window_focused_event_1a2e7d19e900784b6155ec62fa010770ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowFocused)</highlight></codeline>
-<codeline lineno="57" refid="class_skeleton_engine_1_1_window_focused_event_1ac5c03a79a85b991ccc20b12a4b2644ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref>)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="class_skeleton_engine_1_1_window_lost_focus_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_lost_focus_event" kindref="compound">WindowLostFocusEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_lost_focus_event" kindref="compound">WindowLostFocusEvent</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67" refid="class_skeleton_engine_1_1_window_lost_focus_event_1adb8515582c5c05ce62d5892ff5ddcd2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowLostFocus)</highlight></codeline>
-<codeline lineno="68" refid="class_skeleton_engine_1_1_window_lost_focus_event_1af7a84e5fe920f5aa9e7d69910fe72f64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref>)</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="class_skeleton_engine_1_1_window_moved_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_moved_event" kindref="compound">WindowMovedEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_X,<sp/>m_Y;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_moved_event" kindref="compound">WindowMovedEvent</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)<sp/>:<sp/>m_X(x),<sp/>m_Y(y)<sp/>{}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82" refid="class_skeleton_engine_1_1_window_moved_event_1afdeae55d9adb3447ab394509cf78a2df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_skeleton_engine_1_1_window_moved_event_1afdeae55d9adb3447ab394509cf78a2df" kindref="member">ToString</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override</highlight></codeline>
-<codeline lineno="83"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WindowMovedEvent(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_X<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Y<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27" refid="class_skeleton_engine_1_1_window_resized_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_resized_event" kindref="compound">WindowResizedEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_Width,<sp/>m_Height;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_resized_event" kindref="compound">WindowResizedEvent</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>m_Width(width),<sp/>m_Height(height)<sp/>{}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_skeleton_engine_1_1_window_resized_event_1adf32ce7a5294c51e986ab2b7fe586974" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_skeleton_engine_1_1_window_resized_event_1adf32ce7a5294c51e986ab2b7fe586974" kindref="member">ToString</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override</highlight></codeline>
+<codeline lineno="38"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WindowResizedEvent(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Width<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Height<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_skeleton_engine_1_1_window_resized_event_1a4c30e3431fb460c9ee57a26267471623" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowResized)</highlight></codeline>
+<codeline lineno="45" refid="class_skeleton_engine_1_1_window_resized_event_1a60e82ef72be2d1c224037685a0a512d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryApplication)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_skeleton_engine_1_1_window_focused_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_focused_event" kindref="compound">WindowFocusedEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_focused_event" kindref="compound">WindowFocusedEvent</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_skeleton_engine_1_1_window_focused_event_1a2e7d19e900784b6155ec62fa010770ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowFocused)</highlight></codeline>
+<codeline lineno="55" refid="class_skeleton_engine_1_1_window_focused_event_1ac5c03a79a85b991ccc20b12a4b2644ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryApplication)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_skeleton_engine_1_1_window_lost_focus_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_lost_focus_event" kindref="compound">WindowLostFocusEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_lost_focus_event" kindref="compound">WindowLostFocusEvent</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_skeleton_engine_1_1_window_lost_focus_event_1adb8515582c5c05ce62d5892ff5ddcd2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowLostFocus)</highlight></codeline>
+<codeline lineno="65" refid="class_skeleton_engine_1_1_window_lost_focus_event_1af7a84e5fe920f5aa9e7d69910fe72f64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryApplication)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_skeleton_engine_1_1_window_moved_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_window_moved_event" kindref="compound">WindowMovedEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_X,<sp/>m_Y;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_window_moved_event" kindref="compound">WindowMovedEvent</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)<sp/>:<sp/>m_X(x),<sp/>m_Y(y)<sp/>{}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_skeleton_engine_1_1_window_moved_event_1afdeae55d9adb3447ab394509cf78a2df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_skeleton_engine_1_1_window_moved_event_1afdeae55d9adb3447ab394509cf78a2df" kindref="member">ToString</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override</highlight></codeline>
+<codeline lineno="79"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;WindowMovedEvent(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_X<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>m_Y<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_skeleton_engine_1_1_window_moved_event_1a3e6153601ac1642d008efdd7c522d72d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowMoved)</highlight></codeline>
+<codeline lineno="86" refid="class_skeleton_engine_1_1_window_moved_event_1a15ff7153940ec26f730d15dd6a0d29ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryApplication)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="class_skeleton_engine_1_1_window_moved_event_1a3e6153601ac1642d008efdd7c522d72d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(WindowMoved)</highlight></codeline>
-<codeline lineno="90" refid="class_skeleton_engine_1_1_window_moved_event_1a15ff7153940ec26f730d15dd6a0d29ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref>)</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95" refid="class_skeleton_engine_1_1_app_tick_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_app_tick_event" kindref="compound">AppTickEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_app_tick_event" kindref="compound">AppTickEvent</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100" refid="class_skeleton_engine_1_1_app_tick_event_1ae5beef041f76e7ae66a7fdd53eaa8c4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(AppTick)</highlight></codeline>
-<codeline lineno="101" refid="class_skeleton_engine_1_1_app_tick_event_1a1a43292a18bee4cd4c9b978587aaa241" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref>)</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_skeleton_engine_1_1_app_tick_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_app_tick_event" kindref="compound">AppTickEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_app_tick_event" kindref="compound">AppTickEvent</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_skeleton_engine_1_1_app_tick_event_1ae5beef041f76e7ae66a7fdd53eaa8c4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(AppTick)</highlight></codeline>
+<codeline lineno="96" refid="class_skeleton_engine_1_1_app_tick_event_1a1a43292a18bee4cd4c9b978587aaa241" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryApplication)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_skeleton_engine_1_1_app_update_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_app_update_event" kindref="compound">AppUpdateEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_app_update_event" kindref="compound">AppUpdateEvent</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106" refid="class_skeleton_engine_1_1_app_update_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_app_update_event" kindref="compound">AppUpdateEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_app_update_event" kindref="compound">AppUpdateEvent</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111" refid="class_skeleton_engine_1_1_app_update_event_1ac062b230dd824661e0c91afafbd87b7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(AppUpdate)</highlight></codeline>
-<codeline lineno="112" refid="class_skeleton_engine_1_1_app_update_event_1af598154199a6063498e3fecbfa2583ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref>)</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="105" refid="class_skeleton_engine_1_1_app_update_event_1ac062b230dd824661e0c91afafbd87b7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(AppUpdate)</highlight></codeline>
+<codeline lineno="106" refid="class_skeleton_engine_1_1_app_update_event_1af598154199a6063498e3fecbfa2583ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryApplication)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_skeleton_engine_1_1_app_render_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_app_render_event" kindref="compound">AppRenderEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_app_render_event" kindref="compound">AppRenderEvent</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117" refid="class_skeleton_engine_1_1_app_render_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>SE_API<sp/><ref refid="class_skeleton_engine_1_1_app_render_event" kindref="compound">AppRenderEvent</ref><sp/>:<sp/>public<sp/><ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_app_render_event" kindref="compound">AppRenderEvent</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122" refid="class_skeleton_engine_1_1_app_render_event_1a44d115b88347baaec525ee40663e598b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(AppRender)</highlight></codeline>
-<codeline lineno="123" refid="class_skeleton_engine_1_1_app_render_event_1aee12a3952b5351f4c20e792fdae2c1fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(<ref refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kindref="member">EventCategoryApplication</ref>)</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115" refid="class_skeleton_engine_1_1_app_render_event_1a44d115b88347baaec525ee40663e598b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_TYPE(AppRender)</highlight></codeline>
+<codeline lineno="116" refid="class_skeleton_engine_1_1_app_render_event_1aee12a3952b5351f4c20e792fdae2c1fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVENT_CLASS_CATEGORY(EventCategoryApplication)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h"/>
   </compounddef>

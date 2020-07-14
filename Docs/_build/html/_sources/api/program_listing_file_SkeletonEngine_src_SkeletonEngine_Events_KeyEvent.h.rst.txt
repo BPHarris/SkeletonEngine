@@ -15,8 +15,8 @@ Program Listing for File KeyEvent.h
    
    #include "Event.h"
    
-   
-   namespace SkeletonEngine {
+   namespace SkeletonEngine
+   {
    
        class SE_API KeyEvent : public Event
        {
@@ -25,11 +25,10 @@ Program Listing for File KeyEvent.h
    
        public:
            EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
-       
+   
        protected:
            KeyEvent(int keycode) : m_Keycode(keycode) {}
        };
-   
    
        class SE_API KeyPressedEvent : public KeyEvent
        {
@@ -60,7 +59,6 @@ Program Listing for File KeyEvent.h
            EVENT_CLASS_TYPE(KeyPressed)
        };
    
-   
        class SE_API KeyReleasedEvent : public KeyEvent
        {
        public:
@@ -75,5 +73,5 @@ Program Listing for File KeyEvent.h
    
            EVENT_CLASS_TYPE(KeyReleased)
        };
-       
+   
    }

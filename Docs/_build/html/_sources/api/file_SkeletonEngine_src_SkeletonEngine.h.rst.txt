@@ -9,7 +9,7 @@ File SkeletonEngine.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-General include, for use by :ref:`namespace_SkeletonEngine` applications. 
+General include, for use by SkeletonEngine applications. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 
@@ -47,6 +47,8 @@ Includes
 - ``SkeletonEngine/Application.h``
 
 - ``SkeletonEngine/EntryPoint.h``
+
+- ``SkeletonEngine/Layer.h``
 
 - ``SkeletonEngine/Log.h``
 

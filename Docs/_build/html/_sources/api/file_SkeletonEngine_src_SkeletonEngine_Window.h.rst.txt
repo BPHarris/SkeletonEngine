@@ -9,7 +9,7 @@ File Window.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-:ref:`namespace_SkeletonEngine` generic Window interface. 
+SkeletonEngine generic Window interface. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Window.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 
@@ -83,5 +83,5 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882`
+- :ref:`exhale_function__window_8h_1a140f888ee606fff977ce98b18b685882`
 

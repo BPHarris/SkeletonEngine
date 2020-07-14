@@ -9,7 +9,7 @@ File Application.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-Basic :ref:`namespace_SkeletonEngine` Application interface. 
+Basic SkeletonEngine Application interface. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Application.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 
@@ -46,11 +46,13 @@ Includes
 
 - ``Core.h`` (:ref:`file_SkeletonEngine_src_SkeletonEngine_Core.h`)
 
-- ``SkeletonEngine/Events/ApplicationEvent.h``
+- ``Events/ApplicationEvent.h``
 
-- ``SkeletonEngine/Events/Event.h``
+- ``Events/Event.h``
 
-- ``SkeletonEngine/Window.h``
+- ``LayerStack.h`` (:ref:`file_SkeletonEngine_src_SkeletonEngine_LayerStack.h`)
+
+- ``Window.h`` (:ref:`file_SkeletonEngine_src_SkeletonEngine_Window.h`)
 
 
 
@@ -83,5 +85,5 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_namespace_skeleton_engine_1a3ecba78e8136f5fde0386b52489c170d`
+- :ref:`exhale_function__application_8h_1a3ecba78e8136f5fde0386b52489c170d`
 

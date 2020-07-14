@@ -15,8 +15,8 @@ Program Listing for File MouseEvent.h
    
    #include "Event.h"
    
-   
-   namespace SkeletonEngine {
+   namespace SkeletonEngine
+   {
    
        class SE_API MouseButtonEvent : public Event
        {
@@ -25,11 +25,10 @@ Program Listing for File MouseEvent.h
    
        public:
            EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
-       
+   
        protected:
            MouseButtonEvent(int button) : m_Button(button) {}
        };
-   
    
        class SE_API MouseButtonPressedEvent : public MouseButtonEvent
        {
@@ -46,7 +45,6 @@ Program Listing for File MouseEvent.h
            EVENT_CLASS_TYPE(MouseButtonPressed)
        };
    
-   
        class SE_API MouseButtonReleasedEvent : public MouseButtonEvent
        {
        public:
@@ -62,7 +60,6 @@ Program Listing for File MouseEvent.h
            EVENT_CLASS_TYPE(MouseButtonReleased)
        };
    
-   
        class SE_API MouseMovedEvent : public Event
        {
        private:
@@ -77,11 +74,10 @@ Program Listing for File MouseEvent.h
                ss << "MouseMovedEvent(" << m_MouseX << ", " << m_MouseY << ")";
                return ss.str();
            }
-           
+   
            EVENT_CLASS_TYPE(MouseMoved)
            EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
        };
-   
    
        class SE_API MouseScrolledEvent : public Event
        {

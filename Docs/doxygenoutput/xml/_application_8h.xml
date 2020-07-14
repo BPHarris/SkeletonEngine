@@ -3,18 +3,35 @@
   <compounddef id="_application_8h" kind="file" language="C++">
     <compoundname>Application.h</compoundname>
     <includes refid="_core_8h" local="yes">Core.h</includes>
-    <includes refid="_window_8h" local="yes">SkeletonEngine/Window.h</includes>
-    <includes refid="_event_8h" local="yes">SkeletonEngine/Events/Event.h</includes>
-    <includes refid="_application_event_8h" local="yes">SkeletonEngine/Events/ApplicationEvent.h</includes>
+    <includes refid="_window_8h" local="yes">Window.h</includes>
+    <includes refid="_layer_stack_8h" local="yes">LayerStack.h</includes>
+    <includes refid="_event_8h" local="yes">Events/Event.h</includes>
+    <includes refid="_application_event_8h" local="yes">Events/ApplicationEvent.h</includes>
     <includedby refid="_application_8cpp" local="yes">SkeletonEngine/src/SkeletonEngine/Application.cpp</includedby>
     <includedby refid="_skeleton_engine_8h" local="yes">SkeletonEngine/src/SkeletonEngine.h</includedby>
     <incdepgraph>
+      <node id="19">
+        <label>LayerStack.h</label>
+        <link refid="_layer_stack_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
       <node id="9">
         <label>functional</label>
       </node>
       <node id="2">
         <label>Core.h</label>
         <link refid="_core_8h"/>
+      </node>
+      <node id="20">
+        <label>Layer.h</label>
+        <link refid="_layer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
       </node>
       <node id="10">
         <label>string</label>
@@ -25,8 +42,8 @@
       <node id="17">
         <label>spdlog/fmt/ostr.h</label>
       </node>
-      <node id="19">
-        <label>SkeletonEngine/Events/ApplicationEvent.h</label>
+      <node id="21">
+        <label>Events/ApplicationEvent.h</label>
         <link refid="_application_event_8h"/>
         <childnode refid="18" relation="include">
         </childnode>
@@ -38,16 +55,18 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
       <node id="16">
         <label>spdlog/spdlog.h</label>
       </node>
       <node id="3">
-        <label>SkeletonEngine/Window.h</label>
+        <label>Window.h</label>
         <link refid="_window_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -143,10 +162,10 @@
     <innerclass refid="class_skeleton_engine_1_1_application" prot="public">SkeletonEngine::Application</innerclass>
     <innernamespace refid="namespace_skeleton_engine">SkeletonEngine</innernamespace>
     <briefdescription>
-<para>Basic <ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> Application interface. </para>
+<para>Basic SkeletonEngine Application interface. </para>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>BP Harris </para>
+<para><simplesect kind="author"><para>Brandon Harris (<ulink url="mailto:bpharris@pm.me">bpharris@pm.me</ulink>) </para>
 </simplesect>
 <simplesect kind="date"><para>July 2020 </para>
 </simplesect>
@@ -157,36 +176,43 @@
 <codeline lineno="9"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_core_8h" kindref="compound">Core.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_window_8h" kindref="compound">SkeletonEngine/Window.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_event_8h" kindref="compound">SkeletonEngine/Events/Event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_application_event_8h" kindref="compound">SkeletonEngine/Events/ApplicationEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref><sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="class_skeleton_engine_1_1_application" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SE_API<sp/><ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_Running<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Window&gt;<sp/>m_Window;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_window_8h" kindref="compound">Window.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_layer_stack_8h" kindref="compound">LayerStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_event_8h" kindref="compound">Events/Event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_application_event_8h" kindref="compound">Events/ApplicationEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SkeletonEngine</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_skeleton_engine_1_1_application" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SE_API<sp/><ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_Running<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref>();</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_layer_stack" kindref="compound">LayerStack</ref><sp/>m_LayerStack;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Window&gt;<sp/>m_Window;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Run();</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnEvent(<ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref>&amp;<sp/>e);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>OnWindowClose(<ref refid="class_skeleton_engine_1_1_window_closed_event" kindref="compound">WindowClosedEvent</ref>&amp;<sp/>e);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="namespace_skeleton_engine_1a3ecba78e8136f5fde0386b52489c170d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref>*<sp/><ref refid="namespace_skeleton_engine_1a3ecba78e8136f5fde0386b52489c170d" kindref="member">CreateApplication</ref>();</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Run();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnEvent(<ref refid="class_skeleton_engine_1_1_event" kindref="compound">Event</ref><sp/>&amp;e);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PushLayer(<ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref><sp/>*layer);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PushOverlay(<ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref><sp/>*overlay);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>OnWindowClose(<ref refid="class_skeleton_engine_1_1_window_closed_event" kindref="compound">WindowClosedEvent</ref><sp/>&amp;e);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="_application_8h_1a3ecba78e8136f5fde0386b52489c170d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_skeleton_engine_1_1_application" kindref="compound">Application</ref><sp/>*<ref refid="_application_8h_1a3ecba78e8136f5fde0386b52489c170d" kindref="member">CreateApplication</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="SkeletonEngine/src/SkeletonEngine/Application.h"/>
   </compounddef>

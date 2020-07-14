@@ -7,6 +7,10 @@
     <innerfile refid="_application_8h">Application.h</innerfile>
     <innerfile refid="_core_8h">Core.h</innerfile>
     <innerfile refid="_entry_point_8h">EntryPoint.h</innerfile>
+    <innerfile refid="_layer_8cpp">Layer.cpp</innerfile>
+    <innerfile refid="_layer_8h">Layer.h</innerfile>
+    <innerfile refid="_layer_stack_8cpp">LayerStack.cpp</innerfile>
+    <innerfile refid="_layer_stack_8h">LayerStack.h</innerfile>
     <innerfile refid="_log_8cpp">Log.cpp</innerfile>
     <innerfile refid="_log_8h">Log.h</innerfile>
     <innerfile refid="_window_8h">Window.h</innerfile>

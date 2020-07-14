@@ -15,8 +15,8 @@ Program Listing for File ApplicationEvent.h
    
    #include "Event.h"
    
-   
-   namespace SkeletonEngine {
+   namespace SkeletonEngine
+   {
    
        class SE_API WindowClosedEvent : public Event
        {
@@ -26,7 +26,6 @@ Program Listing for File ApplicationEvent.h
            EVENT_CLASS_TYPE(WindowClosed)
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
        };
-   
    
        class SE_API WindowResizedEvent : public Event
        {
@@ -48,7 +47,6 @@ Program Listing for File ApplicationEvent.h
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
        };
    
-   
        class SE_API WindowFocusedEvent : public Event
        {
        public:
@@ -58,7 +56,6 @@ Program Listing for File ApplicationEvent.h
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
        };
    
-   
        class SE_API WindowLostFocusEvent : public Event
        {
        public:
@@ -67,7 +64,6 @@ Program Listing for File ApplicationEvent.h
            EVENT_CLASS_TYPE(WindowLostFocus)
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
        };
-   
    
        class SE_API WindowMovedEvent : public Event
        {
@@ -88,7 +84,6 @@ Program Listing for File ApplicationEvent.h
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
        };
    
-   
        class SE_API AppTickEvent : public Event
        {
        public:
@@ -98,7 +93,6 @@ Program Listing for File ApplicationEvent.h
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
        };
    
-   
        class SE_API AppUpdateEvent : public Event
        {
        public:
@@ -107,7 +101,6 @@ Program Listing for File ApplicationEvent.h
            EVENT_CLASS_TYPE(AppUpdate)
            EVENT_CLASS_CATEGORY(EventCategoryApplication)
        };
-   
    
        class SE_API AppRenderEvent : public Event
        {

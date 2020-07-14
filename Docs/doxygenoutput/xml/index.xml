@@ -2,11 +2,14 @@
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.18">
   <compound refid="class_skeleton_engine_1_1_application" kind="class"><name>SkeletonEngine::Application</name>
     <member refid="class_skeleton_engine_1_1_application_1a92f9846a7cbcbf9aefb2e8c616d7e111" kind="variable"><name>m_Running</name></member>
+    <member refid="class_skeleton_engine_1_1_application_1ad9f2397fbab7af8024d1393719a5d074" kind="variable"><name>m_LayerStack</name></member>
     <member refid="class_skeleton_engine_1_1_application_1ace702edabc8e90af07224d82d210d608" kind="variable"><name>m_Window</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a0ccf5dbca675babd9aba0203bd63d554" kind="function"><name>Application</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a33d11cf381554a653f725660bb2981d3" kind="function"><name>~Application</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a19ebb0f0318e9c4019c1c4d77b6265f6" kind="function"><name>Run</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a30ff4ff8fcb0996db56e7eeb3a44d595" kind="function"><name>OnEvent</name></member>
+    <member refid="class_skeleton_engine_1_1_application_1af8f0856ace142a29f068a0d2cba1c9d1" kind="function"><name>PushLayer</name></member>
+    <member refid="class_skeleton_engine_1_1_application_1aa67b0abe24a0c1f51ab2754c1fdba712" kind="function"><name>PushOverlay</name></member>
     <member refid="class_skeleton_engine_1_1_application_1a3a288aa4ce55d75e07a45aade28a07b3" kind="function"><name>OnWindowClose</name></member>
   </compound>
   <compound refid="class_skeleton_engine_1_1_app_render_event" kind="class"><name>SkeletonEngine::AppRenderEvent</name>
@@ -32,7 +35,7 @@
   </compound>
   <compound refid="class_skeleton_engine_1_1_event" kind="class"><name>SkeletonEngine::Event</name>
     <member refid="class_skeleton_engine_1_1_event_1aad5f38ccd490ea17008460423f52325a" kind="friend"><name>EventDispatcher</name></member>
-    <member refid="class_skeleton_engine_1_1_event_1a7b196d51d636dac3b56aeb2089a1a833" kind="variable"><name>m_Handled</name></member>
+    <member refid="class_skeleton_engine_1_1_event_1a5fffccc519e04a47fab9bda3d5edc7f3" kind="variable"><name>Handled</name></member>
     <member refid="class_skeleton_engine_1_1_event_1a2efbac458aa5bc4765dc184d38faf57b" kind="function"><name>GetEventType</name></member>
     <member refid="class_skeleton_engine_1_1_event_1ac9f3b32b3daa34ba80928a38aa21de6a" kind="function"><name>GetName</name></member>
     <member refid="class_skeleton_engine_1_1_event_1afea89a02657a350612e3a948a533bc03" kind="function"><name>GetCategoryFlags</name></member>
@@ -40,7 +43,7 @@
     <member refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" kind="function"><name>IsInCategory</name></member>
   </compound>
   <compound refid="class_skeleton_engine_1_1_event_dispatcher" kind="class"><name>SkeletonEngine::EventDispatcher</name>
-    <member refid="class_skeleton_engine_1_1_event_dispatcher_1a6d58ac363343bc2ed0b88217cd558d34" kind="typedef"><name>EventFn</name></member>
+    <member refid="class_skeleton_engine_1_1_event_dispatcher_1a425b18854bd6f701cc8327d6aa69058f" kind="typedef"><name>EventFn</name></member>
     <member refid="class_skeleton_engine_1_1_event_dispatcher_1aaaf1f285397a5d01f7a0c97e52da7e01" kind="variable"><name>m_Event</name></member>
     <member refid="class_skeleton_engine_1_1_event_dispatcher_1aab24a45877617db578900550ded03dc9" kind="function"><name>EventDispatcher</name></member>
     <member refid="class_skeleton_engine_1_1_event_dispatcher_1aca6f04eebd7cc035ad24f46758d1b3a0" kind="function"><name>Dispatch</name></member>
@@ -67,6 +70,27 @@
     <member refid="class_skeleton_engine_1_1_key_released_event_1a0fe332cda86a74bdf5c80a2049a84294" kind="function"><name>GetEventType</name></member>
     <member refid="class_skeleton_engine_1_1_key_released_event_1a4e6c74940afe8533afd6d226a1fb06d6" kind="function"><name>GetName</name></member>
     <member refid="class_skeleton_engine_1_1_key_released_event_1a6870876a69a30a4043433672835e97ac" kind="function"><name>GetStaticType</name></member>
+  </compound>
+  <compound refid="class_skeleton_engine_1_1_layer" kind="class"><name>SkeletonEngine::Layer</name>
+    <member refid="class_skeleton_engine_1_1_layer_1ab07401c6c27efd9743725bea37c81274" kind="variable"><name>m_Name</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_1a8109c22c3c8f7e457e4d5abdd2852dbc" kind="function"><name>Layer</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_1ae9e3344123651ca1fe87be614e83e389" kind="function"><name>~Layer</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_1abafd962f7aa3944e2cf1abf15d5b553a" kind="function"><name>OnAttach</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_1ac7a5202cef05795faf19c5974543f087" kind="function"><name>OnDetach</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_1aa44611bcde267ef0e75a47a6d51d29ea" kind="function"><name>OnUpdate</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_1af25fd22a3b50cbe63c15451fcabbd8ab" kind="function"><name>OnEvent</name></member>
+  </compound>
+  <compound refid="class_skeleton_engine_1_1_layer_stack" kind="class"><name>SkeletonEngine::LayerStack</name>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a7a3f75c7ea7d2ccb47bf1dedbf6b4510" kind="variable"><name>m_Layers</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a61513290e09b6e698213336ddb4e3389" kind="variable"><name>m_LayerInsert</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a4757c46e9e76ae0288ebd32215a73734" kind="function"><name>LayerStack</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a4be298a86c696df432943e395542b8f9" kind="function"><name>~LayerStack</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a559ec34fe541e7b96c8da5cecc135c88" kind="function"><name>PushLayer</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a4492a4b77a44a2b51dae824e91270ad7" kind="function"><name>PushOverlay</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a672579ea82b15f1e44c91fbbf8296742" kind="function"><name>PopLayer</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a2c3daec1705c70f148472ff831f5ca6a" kind="function"><name>PopOverlay</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1ae3fda40ba9308aed71f4e2782add2262" kind="function"><name>begin</name></member>
+    <member refid="class_skeleton_engine_1_1_layer_stack_1a19d6a81f7a0b79f92a21b1e1675b7d29" kind="function"><name>end</name></member>
   </compound>
   <compound refid="class_skeleton_engine_1_1_log" kind="class"><name>SkeletonEngine::Log</name>
     <member refid="class_skeleton_engine_1_1_log_1acd47b4981b58c349ec413c7f20e12209" kind="variable"><name>s_CoreLogger</name></member>
@@ -113,7 +137,7 @@
     <member refid="class_skeleton_engine_1_1_mouse_scrolled_event_1a07195bc6618408d8ad06cd402ab3429a" kind="function"><name>GetStaticType</name></member>
   </compound>
   <compound refid="class_skeleton_engine_1_1_window" kind="class"><name>SkeletonEngine::Window</name>
-    <member refid="class_skeleton_engine_1_1_window_1adbb3feff4618a6866529ee5ca519917c" kind="typedef"><name>EventCallbackFn</name></member>
+    <member refid="class_skeleton_engine_1_1_window_1ae8702fa8e61771d2fd24766e05a7cff4" kind="typedef"><name>EventCallbackFn</name></member>
     <member refid="class_skeleton_engine_1_1_window_1abbf537752f2c710bb01196da1b877fae" kind="function"><name>Create</name></member>
     <member refid="class_skeleton_engine_1_1_window_1a5a58caa3f44b110c3e1a7c6e5a6132c0" kind="function"><name>~Window</name></member>
     <member refid="class_skeleton_engine_1_1_window_1a1c3725a84f5ea63148fcbd94a16863a7" kind="function"><name>OnUpdate</name></member>
@@ -198,35 +222,35 @@
     <member refid="class_skeleton_engine_1_1_windows_window_1ac8b4e9494fbb97df4f1886b8240ea07d" kind="function"><name>Close</name></member>
   </compound>
   <compound refid="namespace_skeleton_engine" kind="namespace"><name>SkeletonEngine</name>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kind="enum"><name>EventType</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7c87dff2b968b5c85baf1def063c776d" kind="enumvalue"><name>WindowClosed</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51facbaad9b233665221bfc0a4a450a594cf" kind="enumvalue"><name>WindowResized</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa30b616e8eab20ea6423d55b0fb45c20b" kind="enumvalue"><name>WindowFocused</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa1c2119b9d61e623975f13f1029f1d97c" kind="enumvalue"><name>WindowLostFocus</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fab94473d9dfc85f8fdbf5cb3b1d992bda" kind="enumvalue"><name>WindowMoved</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa559b408d45669603dbac61cd15984f13" kind="enumvalue"><name>AppTick</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac177abb86f28dea426f2e3409e14bcda" kind="enumvalue"><name>AppUpdate</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa4b2eb3c601042333ac1c0565ff58e3d6" kind="enumvalue"><name>AppRender</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac17e6984c1e5a887a49831beadee6bca" kind="enumvalue"><name>KeyPressed</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa4a77f07c8ad223b71ab4ce78a63841ab" kind="enumvalue"><name>KeyReleased</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7349f643d689997b7c54bf93e4095f5c" kind="enumvalue"><name>MouseButtonPressed</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa7584c169de594c27f00084b93186fd7c" kind="enumvalue"><name>MouseButtonReleased</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fac2770ad109c8063ce69a3608a9a16c08" kind="enumvalue"><name>MouseMoved</name></member>
-    <member refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51fa50edb169910041bb3c06f6e8322d74c1" kind="enumvalue"><name>MouseScrolled</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc" kind="enum"><name>EventCategory</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca452303e2266c6ac4143467be4cbcf105" kind="enumvalue"><name>None</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kind="enumvalue"><name>EventCategoryApplication</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca95f9c9fee20c17a3cf2027ce28bdad9a" kind="enumvalue"><name>EventCategoryInput</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca802c1853e839968d1c46a8e89923334a" kind="enumvalue"><name>EventCategoryKeyboard</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fcac5986e98fe1e40dc8e62b456b418e38f" kind="enumvalue"><name>EventCategoryMouse</name></member>
-    <member refid="namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fca27ceeb5913fce202a75e0c4f819b308a" kind="enumvalue"><name>EventCategoryMouseButton</name></member>
-    <member refid="namespace_skeleton_engine_1af5eaa32bc1a077e8c38a0664300149b3" kind="variable"><name>s_GLFWInitialized</name></member>
-    <member refid="namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a" kind="function"><name>GLFWErrorCallback</name></member>
-    <member refid="namespace_skeleton_engine_1a3ecba78e8136f5fde0386b52489c170d" kind="function"><name>CreateApplication</name></member>
-    <member refid="namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9" kind="function"><name>operator&lt;&lt;</name></member>
-    <member refid="namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51f" kind="enum"><name>EventType</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fca6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa7c87dff2b968b5c85baf1def063c776d" kind="enumvalue"><name>WindowClosed</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51facbaad9b233665221bfc0a4a450a594cf" kind="enumvalue"><name>WindowResized</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa30b616e8eab20ea6423d55b0fb45c20b" kind="enumvalue"><name>WindowFocused</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa1c2119b9d61e623975f13f1029f1d97c" kind="enumvalue"><name>WindowLostFocus</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fab94473d9dfc85f8fdbf5cb3b1d992bda" kind="enumvalue"><name>WindowMoved</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa559b408d45669603dbac61cd15984f13" kind="enumvalue"><name>AppTick</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fac177abb86f28dea426f2e3409e14bcda" kind="enumvalue"><name>AppUpdate</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa4b2eb3c601042333ac1c0565ff58e3d6" kind="enumvalue"><name>AppRender</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fac17e6984c1e5a887a49831beadee6bca" kind="enumvalue"><name>KeyPressed</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa4a77f07c8ad223b71ab4ce78a63841ab" kind="enumvalue"><name>KeyReleased</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa7349f643d689997b7c54bf93e4095f5c" kind="enumvalue"><name>MouseButtonPressed</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa7584c169de594c27f00084b93186fd7c" kind="enumvalue"><name>MouseButtonReleased</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fac2770ad109c8063ce69a3608a9a16c08" kind="enumvalue"><name>MouseMoved</name></member>
+    <member refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51fa50edb169910041bb3c06f6e8322d74c1" kind="enumvalue"><name>MouseScrolled</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fc" kind="enum"><name>EventCategory</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fca452303e2266c6ac4143467be4cbcf105" kind="enumvalue"><name>None</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fca6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fca81a5167f60ec1d80063d7aa442b15941" kind="enumvalue"><name>EventCategoryApplication</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fca95f9c9fee20c17a3cf2027ce28bdad9a" kind="enumvalue"><name>EventCategoryInput</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fca802c1853e839968d1c46a8e89923334a" kind="enumvalue"><name>EventCategoryKeyboard</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fcac5986e98fe1e40dc8e62b456b418e38f" kind="enumvalue"><name>EventCategoryMouse</name></member>
+    <member refid="_event_8h_1a9483ee9efe595a8a90de26d14aef38fca27ceeb5913fce202a75e0c4f819b308a" kind="enumvalue"><name>EventCategoryMouseButton</name></member>
+    <member refid="_windows_window_8cpp_1af5eaa32bc1a077e8c38a0664300149b3" kind="variable"><name>s_GLFWInitialized</name></member>
+    <member refid="_windows_window_8cpp_1a044879dfa14670d0e29b7636f947af2a" kind="function"><name>GLFWErrorCallback</name></member>
+    <member refid="_application_8h_1a3ecba78e8136f5fde0386b52489c170d" kind="function"><name>CreateApplication</name></member>
+    <member refid="_event_8h_1ac0be4c19cb40bdcec8204a22bd41e5c9" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="_window_8h_1a140f888ee606fff977ce98b18b685882" kind="function"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="_windows_window_8cpp" kind="file"><name>WindowsWindow.cpp</name>
     <member refid="_windows_window_8cpp_1a4c442a29eba1657dc53ec8d5d948a65e" kind="define"><name>GET_WINDOW_DATA_AS</name></member>
@@ -262,6 +286,14 @@
   <compound refid="_key_event_8h" kind="file"><name>KeyEvent.h</name>
   </compound>
   <compound refid="_mouse_event_8h" kind="file"><name>MouseEvent.h</name>
+  </compound>
+  <compound refid="_layer_8cpp" kind="file"><name>Layer.cpp</name>
+  </compound>
+  <compound refid="_layer_8h" kind="file"><name>Layer.h</name>
+  </compound>
+  <compound refid="_layer_stack_8cpp" kind="file"><name>LayerStack.cpp</name>
+  </compound>
+  <compound refid="_layer_stack_8h" kind="file"><name>LayerStack.h</name>
   </compound>
   <compound refid="_log_8cpp" kind="file"><name>Log.cpp</name>
   </compound>

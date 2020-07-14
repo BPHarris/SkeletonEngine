@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Log.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 
@@ -57,6 +57,8 @@ Included By
 
 
 - :ref:`file_SkeletonEngine_src_sepch.h`
+
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Application.cpp`
 
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Log.cpp`
 

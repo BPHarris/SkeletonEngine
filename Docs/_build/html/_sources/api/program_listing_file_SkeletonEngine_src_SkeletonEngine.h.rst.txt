@@ -15,6 +15,7 @@ Program Listing for File SkeletonEngine.h
    
    /* ------------------------------------------------------------------------- */
    #include "SkeletonEngine/Application.h"
+   #include "SkeletonEngine/Layer.h"
    #include "SkeletonEngine/Log.h"
    
    /* ------------------------------------------------------------------------- */

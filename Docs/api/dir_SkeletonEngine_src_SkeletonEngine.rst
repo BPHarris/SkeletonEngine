@@ -24,6 +24,10 @@ Files
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Application.h`
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Core.h`
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_EntryPoint.h`
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Layer.cpp`
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Layer.h`
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_LayerStack.cpp`
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_LayerStack.h`
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Log.cpp`
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Log.h`
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Window.h`

@@ -17,8 +17,8 @@ Program Listing for File Log.h
    #include "spdlog/spdlog.h"
    #include "spdlog/fmt/ostr.h"
    
-   
-   namespace SkeletonEngine {
+   namespace SkeletonEngine
+   {
    
        class SE_API Log
        {
@@ -32,16 +32,15 @@ Program Listing for File Log.h
    
    }
    
-   
    // Engine core loging macros
-   #define SE_CORE_FATAL(...)  ::SkeletonEngine::Log::s_CoreLogger->fatal(__VA_ARGS__)     
-   #define SE_CORE_ERROR(...)  ::SkeletonEngine::Log::s_CoreLogger->error(__VA_ARGS__)     
-   #define SE_CORE_WARN(...)   ::SkeletonEngine::Log::s_CoreLogger->warn(__VA_ARGS__)      
-   #define SE_CORE_INFO(...)   ::SkeletonEngine::Log::s_CoreLogger->info(__VA_ARGS__)      
-   #define SE_CORE_TRACE(...)  ::SkeletonEngine::Log::s_CoreLogger->trace(__VA_ARGS__)     
+   #define SE_CORE_FATAL(...) ::SkeletonEngine::Log::s_CoreLogger->fatal(__VA_ARGS__)  
+   #define SE_CORE_ERROR(...) ::SkeletonEngine::Log::s_CoreLogger->error(__VA_ARGS__)  
+   #define SE_CORE_WARN(...) ::SkeletonEngine::Log::s_CoreLogger->warn(__VA_ARGS__)    
+   #define SE_CORE_INFO(...) ::SkeletonEngine::Log::s_CoreLogger->info(__VA_ARGS__)    
+   #define SE_CORE_TRACE(...) ::SkeletonEngine::Log::s_CoreLogger->trace(__VA_ARGS__)  
    // Client application logging macros
-   #define SE_FATAL(...)       ::SkeletonEngine::Log::s_ClientLogger->fatal(__VA_ARGS__)   
-   #define SE_ERROR(...)       ::SkeletonEngine::Log::s_ClientLogger->error(__VA_ARGS__)   
-   #define SE_WARN(...)        ::SkeletonEngine::Log::s_ClientLogger->warn(__VA_ARGS__)    
-   #define SE_INFO(...)        ::SkeletonEngine::Log::s_ClientLogger->info(__VA_ARGS__)    
-   #define SE_TRACE(...)       ::SkeletonEngine::Log::s_ClientLogger->trace(__VA_ARGS__)   
+   #define SE_FATAL(...) ::SkeletonEngine::Log::s_ClientLogger->fatal(__VA_ARGS__)     
+   #define SE_ERROR(...) ::SkeletonEngine::Log::s_ClientLogger->error(__VA_ARGS__)     
+   #define SE_WARN(...) ::SkeletonEngine::Log::s_ClientLogger->warn(__VA_ARGS__)       
+   #define SE_INFO(...) ::SkeletonEngine::Log::s_ClientLogger->info(__VA_ARGS__)       
+   #define SE_TRACE(...) ::SkeletonEngine::Log::s_ClientLogger->trace(__VA_ARGS__)     

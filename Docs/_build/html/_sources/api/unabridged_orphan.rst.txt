@@ -80,6 +80,26 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_SkeletonEngine_src_SkeletonEngine_Layer.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_SkeletonEngine_src_SkeletonEngine_Layer.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_SkeletonEngine_src_SkeletonEngine_LayerStack.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_SkeletonEngine_src_SkeletonEngine_LayerStack.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_SkeletonEngine_src_SkeletonEngine_Log.cpp.rst
 
 .. toctree::

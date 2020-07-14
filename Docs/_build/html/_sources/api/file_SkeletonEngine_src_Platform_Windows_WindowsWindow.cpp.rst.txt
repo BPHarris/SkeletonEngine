@@ -8,6 +8,11 @@ File WindowsWindow.cpp
 
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
+
+WindowsWindow implementation. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -20,6 +25,16 @@ Definition (``SkeletonEngine\src\Platform\Windows\WindowsWindow.cpp``)
    :maxdepth: 1
 
    program_listing_file_SkeletonEngine_src_Platform_Windows_WindowsWindow.cpp.rst
+
+
+
+Detailed Description
+--------------------
+
+Brandon Harris (bpharris@pm.me) 
+
+July 2020 
+
 
 
 
@@ -55,7 +70,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a`
+- :ref:`exhale_function__windows_window_8cpp_1a044879dfa14670d0e29b7636f947af2a`
 
 
 Defines
@@ -73,5 +88,5 @@ Variables
 ---------
 
 
-- :ref:`exhale_variable_namespace_skeleton_engine_1af5eaa32bc1a077e8c38a0664300149b3`
+- :ref:`exhale_variable__windows_window_8cpp_1af5eaa32bc1a077e8c38a0664300149b3`
 

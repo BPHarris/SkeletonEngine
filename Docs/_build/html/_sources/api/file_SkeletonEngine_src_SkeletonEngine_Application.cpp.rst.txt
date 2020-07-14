@@ -9,7 +9,7 @@ File Application.cpp
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-Basic :ref:`namespace_SkeletonEngine` Application. 
+Basic SkeletonEngine Application. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Application.cpp``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 
@@ -45,6 +45,10 @@ Includes
 
 
 - ``Application.h`` (:ref:`file_SkeletonEngine_src_SkeletonEngine_Application.h`)
+
+- ``GLFW/glfw3.h``
+
+- ``Log.h`` (:ref:`file_SkeletonEngine_src_SkeletonEngine_Log.h`)
 
 - ``sepch.h`` (:ref:`file_SkeletonEngine_src_sepch.h`)
 

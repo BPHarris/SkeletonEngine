@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_skeleton_engine_1_1_layer_stack" kind="class" language="C++" prot="public">
+    <compoundname>SkeletonEngine::LayerStack</compoundname>
+    <includes refid="_layer_stack_8h" local="no">LayerStack.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_layer_stack_1a7a3f75c7ea7d2ccb47bf1dedbf6b4510" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> * &gt;</type>
+        <definition>std::vector&lt;Layer *&gt; SkeletonEngine::LayerStack::m_Layers</definition>
+        <argsstring></argsstring>
+        <name>m_Layers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="34" column="21" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_skeleton_engine_1_1_layer_stack_1a61513290e09b6e698213336ddb4e3389" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> * &gt;::iterator</type>
+        <definition>std::vector&lt;Layer *&gt;::iterator SkeletonEngine::LayerStack::m_LayerInsert</definition>
+        <argsstring></argsstring>
+        <name>m_LayerInsert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="35" column="32" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_skeleton_engine_1_1_layer_stack_1a4757c46e9e76ae0288ebd32215a73734" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::LayerStack::LayerStack</definition>
+        <argsstring>()</argsstring>
+        <name>LayerStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="21" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_layer_stack_1a4be298a86c696df432943e395542b8f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SkeletonEngine::LayerStack::~LayerStack</definition>
+        <argsstring>()</argsstring>
+        <name>~LayerStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="22" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.cpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_layer_stack_1a559ec34fe541e7b96c8da5cecc135c88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::LayerStack::PushLayer</definition>
+        <argsstring>(Layer *layer)</argsstring>
+        <name>PushLayer</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="24" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_layer_stack_1a4492a4b77a44a2b51dae824e91270ad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::LayerStack::PushOverlay</definition>
+        <argsstring>(Layer *overlay)</argsstring>
+        <name>PushOverlay</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>overlay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="25" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_layer_stack_1a672579ea82b15f1e44c91fbbf8296742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::LayerStack::PopLayer</definition>
+        <argsstring>(Layer *layer)</argsstring>
+        <name>PopLayer</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="27" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.cpp" bodystart="36" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_layer_stack_1a2c3daec1705c70f148472ff831f5ca6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SkeletonEngine::LayerStack::PopOverlay</definition>
+        <argsstring>(Layer *overlay)</argsstring>
+        <name>PopOverlay</name>
+        <param>
+          <type><ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> *</type>
+          <declname>overlay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="28" column="14" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.cpp" bodystart="47" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_layer_stack_1ae3fda40ba9308aed71f4e2782add2262" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> * &gt;::iterator</type>
+        <definition>std::vector&lt;Layer *&gt;::iterator SkeletonEngine::LayerStack::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="30" column="32" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_skeleton_engine_1_1_layer_stack_1a19d6a81f7a0b79f92a21b1e1675b7d29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_skeleton_engine_1_1_layer" kindref="compound">Layer</ref> * &gt;::iterator</type>
+        <definition>std::vector&lt;Layer *&gt;::iterator SkeletonEngine::LayerStack::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="31" column="32" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>SkeletonEngine <ref refid="class_skeleton_engine_1_1_layer_stack" kindref="compound">LayerStack</ref> class. </para>
+    </detaileddescription>
+    <location file="SkeletonEngine/src/SkeletonEngine/LayerStack.h" line="18" column="5" bodyfile="SkeletonEngine/src/SkeletonEngine/LayerStack.h" bodystart="19" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1ae3fda40ba9308aed71f4e2782add2262" prot="public" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>begin</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a19d6a81f7a0b79f92a21b1e1675b7d29" prot="public" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>end</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a4757c46e9e76ae0288ebd32215a73734" prot="public" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>LayerStack</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a61513290e09b6e698213336ddb4e3389" prot="private" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>m_LayerInsert</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a7a3f75c7ea7d2ccb47bf1dedbf6b4510" prot="private" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>m_Layers</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a672579ea82b15f1e44c91fbbf8296742" prot="public" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>PopLayer</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a2c3daec1705c70f148472ff831f5ca6a" prot="public" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>PopOverlay</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a559ec34fe541e7b96c8da5cecc135c88" prot="public" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>PushLayer</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a4492a4b77a44a2b51dae824e91270ad7" prot="public" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>PushOverlay</name></member>
+      <member refid="class_skeleton_engine_1_1_layer_stack_1a4be298a86c696df432943e395542b8f9" prot="public" virt="non-virtual"><scope>SkeletonEngine::LayerStack</scope><name>~LayerStack</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -23,7 +23,7 @@ Program Listing for File Core.h
    #else
        #define SE_ASSERT(x, ...)
        #define SE_CORE_ASSERT(x, ...)
-   #endif // SE_ENABLE_ASSERTS
+   #endif
    
    
    
@@ -33,7 +33,13 @@ Program Listing for File Core.h
            #define SE_API __declspec(dllexport)
        #else
            #define SE_API __declspec(dllimport)
-       #endif // SE_BUILD_DLL
-   #else
-       #error SkeletonEngine only supports windows, thus far.
-   #endif // SE_PLATFORM_WINDOWS
+       #endif
+   #endif
+   
+   #ifdef SE_PLATFORM_LINUX
+       #define SE_API __attribute__ ((visibility ("default")))
+   #endif
+   
+   #ifndef SE_API
+       #error SkeletonEngine only supports Windows/Linux thus far.
+   #endif

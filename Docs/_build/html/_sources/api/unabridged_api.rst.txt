@@ -73,6 +73,16 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   class_skeleton_engine_1_1_layer.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_skeleton_engine_1_1_layer_stack.rst
+
+.. toctree::
+   :maxdepth: 5
+
    class_skeleton_engine_1_1_log.rst
 
 .. toctree::
@@ -142,12 +152,12 @@ Enums
 .. toctree::
    :maxdepth: 5
 
-   enum_namespace_skeleton_engine_1a9483ee9efe595a8a90de26d14aef38fc.rst
+   enum__event_8h_1a9483ee9efe595a8a90de26d14aef38fc.rst
 
 .. toctree::
    :maxdepth: 5
 
-   enum_namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f.rst
+   enum__event_8h_1ac5c77e64f241de07cdb7f2de6ceea51f.rst
 
 Functions
 *********
@@ -156,22 +166,22 @@ Functions
 .. toctree::
    :maxdepth: 5
 
-   function_namespace_skeleton_engine_1a3ecba78e8136f5fde0386b52489c170d.rst
+   function__application_8h_1a3ecba78e8136f5fde0386b52489c170d.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_namespace_skeleton_engine_1a044879dfa14670d0e29b7636f947af2a.rst
+   function__windows_window_8cpp_1a044879dfa14670d0e29b7636f947af2a.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_namespace_skeleton_engine_1ac0be4c19cb40bdcec8204a22bd41e5c9.rst
+   function__event_8h_1ac0be4c19cb40bdcec8204a22bd41e5c9.rst
 
 .. toctree::
    :maxdepth: 5
 
-   function_namespace_skeleton_engine_1a140f888ee606fff977ce98b18b685882.rst
+   function__window_8h_1a140f888ee606fff977ce98b18b685882.rst
 
 Variables
 *********
@@ -180,7 +190,7 @@ Variables
 .. toctree::
    :maxdepth: 5
 
-   variable_namespace_skeleton_engine_1af5eaa32bc1a077e8c38a0664300149b3.rst
+   variable__windows_window_8cpp_1af5eaa32bc1a077e8c38a0664300149b3.rst
 
 Defines
 *******

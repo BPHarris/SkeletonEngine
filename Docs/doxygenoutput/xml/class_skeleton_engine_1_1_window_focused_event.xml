@@ -16,10 +16,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="54" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="54" bodyend="54"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="52" column="9" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="52" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_window_focused_event_1af90046b0305d43d24e06c8a7bf4aa1a7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
-        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <type><ref refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
         <definition>virtual EventType SkeletonEngine::WindowFocusedEvent::GetEventType</definition>
         <argsstring>() const override</argsstring>
         <name>GetEventType</name>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="56" column="87" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="56" bodyend="56"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="54" column="96" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="54" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_window_focused_event_1a2e7d19e900784b6155ec62fa010770ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>const char *</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="56" column="161" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="56" bodyend="56"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="54" column="171" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="54" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="class_skeleton_engine_1_1_window_focused_event_1ac5c03a79a85b991ccc20b12a4b2644ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>int</type>
@@ -67,12 +67,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="57" column="13" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="57" bodyend="57"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="55" column="21" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="55" bodyend="55"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
       <memberdef kind="function" id="class_skeleton_engine_1_1_window_focused_event_1a03ddd18bf41dca0cdf92c72caf061665" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="namespace_skeleton_engine_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
+        <type><ref refid="_event_8h_1ac5c77e64f241de07cdb7f2de6ceea51f" kindref="member">EventType</ref></type>
         <definition>static EventType SkeletonEngine::WindowFocusedEvent::GetStaticType</definition>
         <argsstring>()</argsstring>
         <name>GetStaticType</name>
@@ -82,13 +82,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="56" column="18" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="56" bodyend="56"/>
+        <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="54" column="26" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="54" bodyend="54"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="namespace_skeleton_engine" kindref="compound">SkeletonEngine</ref> <ref refid="class_skeleton_engine_1_1_window_focused_event" kindref="compound">WindowFocusedEvent</ref> class. </para>
+<para>SkeletonEngine <ref refid="class_skeleton_engine_1_1_window_focused_event" kindref="compound">WindowFocusedEvent</ref> class. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -114,14 +114,14 @@
         <link refid="class_skeleton_engine_1_1_event"/>
       </node>
     </collaborationgraph>
-    <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="51" column="1" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="52" bodyend="58"/>
+    <location file="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" line="49" column="5" bodyfile="SkeletonEngine/src/SkeletonEngine/Events/ApplicationEvent.h" bodystart="50" bodyend="56"/>
     <listofallmembers>
       <member refid="class_skeleton_engine_1_1_window_focused_event_1ac5c03a79a85b991ccc20b12a4b2644ab" prot="public" virt="virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>GetCategoryFlags</name></member>
       <member refid="class_skeleton_engine_1_1_window_focused_event_1af90046b0305d43d24e06c8a7bf4aa1a7" prot="public" virt="virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>GetEventType</name></member>
       <member refid="class_skeleton_engine_1_1_window_focused_event_1a2e7d19e900784b6155ec62fa010770ec" prot="public" virt="virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>GetName</name></member>
       <member refid="class_skeleton_engine_1_1_window_focused_event_1a03ddd18bf41dca0cdf92c72caf061665" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>GetStaticType</name></member>
+      <member refid="class_skeleton_engine_1_1_event_1a5fffccc519e04a47fab9bda3d5edc7f3" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>Handled</name></member>
       <member refid="class_skeleton_engine_1_1_event_1acb8a9f0206576799deedc02708c5d638" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>IsInCategory</name></member>
-      <member refid="class_skeleton_engine_1_1_event_1a7b196d51d636dac3b56aeb2089a1a833" prot="protected" virt="non-virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>m_Handled</name></member>
       <member refid="class_skeleton_engine_1_1_event_1ae4683c264ba25a1bd7e79ff8f70cfa9c" prot="public" virt="virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>ToString</name></member>
       <member refid="class_skeleton_engine_1_1_window_focused_event_1a7196b3b48b32075f2dbae9f1d503fefc" prot="public" virt="non-virtual"><scope>SkeletonEngine::WindowFocusedEvent</scope><name>WindowFocusedEvent</name></member>
     </listofallmembers>

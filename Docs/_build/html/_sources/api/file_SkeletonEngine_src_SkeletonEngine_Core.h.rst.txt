@@ -9,7 +9,7 @@ File Core.h
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
-Core defines for :ref:`namespace_SkeletonEngine`. 
+Core defines for SkeletonEngine. 
 
 
 
@@ -31,7 +31,7 @@ Definition (``SkeletonEngine\src\SkeletonEngine\Core.h``)
 Detailed Description
 --------------------
 
-BP Harris 
+Brandon Harris (bpharris@pm.me) 
 
 July 2020 
 
@@ -50,9 +50,13 @@ Included By
 
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Application.h`
 
-- :ref:`file_SkeletonEngine_src_SkeletonEngine_Events_Event.h`
-
 - :ref:`file_SkeletonEngine_src_SkeletonEngine_Window.h`
+
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_LayerStack.h`
+
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Layer.h`
+
+- :ref:`file_SkeletonEngine_src_SkeletonEngine_Events_Event.h`
 
 
 
