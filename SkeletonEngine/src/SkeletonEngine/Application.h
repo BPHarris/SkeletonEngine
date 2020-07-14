@@ -24,6 +24,9 @@ namespace SkeletonEngine
     private:
         bool m_Running = true;
 
+        /** Application singleton referene. */
+        static Application* s_Instance;
+
     public:
         LayerStack m_LayerStack;
         std::unique_ptr<Window> m_Window;
@@ -47,6 +50,9 @@ namespace SkeletonEngine
 
         /** Push the given overlay layer to the layer stack. */
         void PushOverlay(Layer *overlay);
+
+        /** @return a reference to the application singleton. */
+        inline static Application& Get() { return *s_Instance; }
 
     private:
         /**

@@ -14,6 +14,7 @@ class Demo : public SkeletonEngine::Application
 public:
     Demo()
     {
+        PushOverlay(new SkeletonEngine::ImGuiLayer());
     }
 
     ~Demo()

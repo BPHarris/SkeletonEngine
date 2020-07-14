@@ -12,9 +12,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "SkeletonEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "SkeletonEngine/vendor/Glad/include"
+IncludeDir["ImGui"] = "SkeletonEngine/vendor/imgui"
 
 include "SkeletonEngine/vendor/GLFW"
 include "SkeletonEngine/vendor/Glad"
+include "SkeletonEngine/vendor/imgui"
 
 
 -- SkeletonEngine DLL Project
@@ -39,9 +41,10 @@ project "SkeletonEngine"
         "%{prj.name}/vendor/spdlog/include",        -- spdlog
         "%{IncludeDir.GLFW}",                       -- GLFW
         "%{IncludeDir.Glad}",                       -- glad
+        "%{IncludeDir.ImGui}",                      -- ImGui
     }
 
-    links { "GLFW", "Glad", "opengl32.lib" }
+    links { "GLFW", "Glad", "ImGui", "opengl32.lib" }
 
     defines { "GLFW_INCLUDE_NONE" }    
 

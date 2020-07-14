@@ -9,10 +9,13 @@
 #pragma once
 
 /* ------------------------------------------------------------------------- */
+
 #include "SkeletonEngine/Application.h"
 #include "SkeletonEngine/Layer.h"
 #include "SkeletonEngine/Log.h"
 
+/* ------------------------------------------------------------------------- */
+#include "SkeletonEngine/ImGui/ImGuiLayer.h"
 /* ------------------------------------------------------------------------- */
 #include "SkeletonEngine/EntryPoint.h"
 /* ------------------------------------------------------------------------- */
