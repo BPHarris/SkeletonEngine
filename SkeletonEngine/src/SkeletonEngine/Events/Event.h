@@ -15,10 +15,10 @@ namespace SkeletonEngine
 {
 
     /* Events in the SkeletonEngine are currently blocking.
-	 * 
-	 * At some point this should be changed to be buffered and processed in the
-	 * event phase of the update stage.
-	 */
+     * 
+     * At some point this should be changed to be buffered and processed in the
+     * event phase of the update stage.
+     */
 
     /** SkeletonEngine EventType. */
     enum class EventType
@@ -85,12 +85,12 @@ namespace SkeletonEngine
         virtual std::string ToString() const { return GetName(); }
 
         /**
-		 * Check if this Event is in the given category.
-		 * 
-		 * @param   category    The category to check against.
-		 * @return              true if the Event is in the the EventCategory
-		 * @return              false otherwise
-		 */
+         * Check if this Event is in the given category.
+         * 
+         * @param   category    The category to check against.
+         * @return              true if the Event is in the the EventCategory
+         * @return              false otherwise
+         */
         inline bool IsInCategory(EventCategory category)
         {
             return GetCategoryFlags() & category;
@@ -122,12 +122,12 @@ namespace SkeletonEngine
     };
 
     /**
-	 * Operator overload for << and Event.
-	 * 
-	 * @param os    Left-hand side.
-	 * @param e     An Event instance.
-	 * @return      String concatination of os and e.
-	 */
+     * Operator overload for << and Event.
+     * 
+     * @param os    Left-hand side.
+     * @param e     An Event instance.
+     * @return      String concatination of os and e.
+     */
     inline std::ostream &operator<<(std::ostream &os, const Event &e)
     {
         return os << e.ToString();

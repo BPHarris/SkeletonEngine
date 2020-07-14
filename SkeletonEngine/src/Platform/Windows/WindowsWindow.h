@@ -23,7 +23,7 @@ namespace SkeletonEngine
         static const int VSYNC_DISABLED = 0;
 
         /** Pointer to underlying GLFW Window. */
-        GLFWwindow *m_Window;
+        GLFWwindow* m_Window;
 
     private:
         struct WindowData

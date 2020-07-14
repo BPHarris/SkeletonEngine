@@ -40,11 +40,11 @@ namespace SkeletonEngine
             : KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
         /**
-		 * Check if the key has just been pressed or if it is a repeated key.
-		 * 
-		 * @return  true if the key was just pressed.
-		 * @return  false otherwise (key is a repeat).
-		 */
+         * Check if the key has just been pressed or if it is a repeated key.
+         * 
+         * @return  true if the key was just pressed.
+         * @return  false otherwise (key is a repeat).
+         */
         inline bool IsJustPressed() const { return !m_RepeatCount; }
 
         /** @return string  string representation of KeyPressedEvent */
