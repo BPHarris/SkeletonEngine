@@ -14,93 +14,98 @@ namespace SkeletonEngine
 {
 
     /** SkeletonEngine MouseButtonEvent base class. */
-    class SE_API MouseButtonEvent : public Event
+    class SE_API MouseButtonEvent
     {
     public:
-        int m_Button;
-
-    public:
-        EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
-
+        int button;
     protected:
-        MouseButtonEvent(int button) : m_Button(button) {}
+        MouseButtonEvent(int button) : button(button) {}
     };
 
+    
     /** SkeletonEngine MouseButtonPressedEvent class. */
-    class SE_API MouseButtonPressedEvent : public MouseButtonEvent
+    class SE_API MouseButtonPressedEvent : public Event, public MouseButtonEvent
     {
     public:
-        MouseButtonPressedEvent(int button) : MouseButtonEvent(button) {}
+        MouseButtonPressedEvent(int button) :
+            EVENT(MouseButtonPressed, EventCategoryMouse | EventCategoryInput),
+            MouseButtonEvent(button)
+        {}
+        EVENT_STATIC_TYPE(MouseButtonPressed)
 
-        /** @return string  string representation of MouseButtonPressedEvent */
+        /** @return string representation of MouseButtonPressedEvent */
         std::string ToString() const override
         {
             std::stringstream ss;
-            ss << "MouseButtonPressedEvent(" << m_Button << ")";
+            ss << "MouseButtonPressedEvent(" << button << ")";
             return ss.str();
         }
-
-        EVENT_CLASS_TYPE(MouseButtonPressed)
     };
 
+    
     /** SkeletonEngine MouseButtonReleasedEvent class. */
-    class SE_API MouseButtonReleasedEvent : public MouseButtonEvent
+    class SE_API MouseButtonReleasedEvent : public Event, public MouseButtonEvent
     {
     public:
-        MouseButtonReleasedEvent(int button) : MouseButtonEvent(button) {}
+        MouseButtonReleasedEvent(int button) :
+            EVENT(MouseButtonReleased, EventCategoryMouse | EventCategoryInput),
+            MouseButtonEvent(button)
+        {}
+        EVENT_STATIC_TYPE(MouseButtonReleased)
 
-        /** @return string  string representation of MouseButtonReleasedEvent */
+        /** @return string representation of MouseButtonReleasedEvent */
         std::string ToString() const override
         {
             std::stringstream ss;
-            ss << "MouseButtonReleasedEvent(" << m_Button << ")";
+            ss << "MouseButtonReleasedEvent(" << button << ")";
             return ss.str();
         }
-
-        EVENT_CLASS_TYPE(MouseButtonReleased)
     };
 
+    
     /** SkeletonEngine MouseMovedEvent class. */
     class SE_API MouseMovedEvent : public Event
     {
-    private:
-        float m_MouseX, m_MouseY;
-
     public:
-        MouseMovedEvent(float x, float y) : m_MouseX(x), m_MouseY(y) {}
+        float x, y;
+        
+        MouseMovedEvent(float x, float y) :
+            EVENT(MouseMoved, EventCategoryMouse | EventCategoryInput),
+            x(x),
+            y(y)
+        {}
+        EVENT_STATIC_TYPE(MouseMoved)
 
-        /** @return string  string representation of MouseMovedEvent */
+        /** @return string representation of MouseMovedEvent */
         std::string ToString() const override
         {
             std::stringstream ss;
-            ss << "MouseMovedEvent(" << m_MouseX << ", " << m_MouseY << ")";
+            ss << "MouseMovedEvent(" << x << ", " << y << ")";
             return ss.str();
         }
-
-        EVENT_CLASS_TYPE(MouseMoved)
-        EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
     };
 
+    
     /** SkeletonEngine MouseScrolledEvent class. */
     class SE_API MouseScrolledEvent : public Event
     {
-    private:
-        float m_XOffset, m_YOffset;
-
     public:
-        MouseScrolledEvent(float xOffset, float yOffset)
-            : m_XOffset(xOffset), m_YOffset(yOffset) {}
+        float x_offset, y_offset;
 
-        /** @return string  string representation of MouseScrolledEvent */
+        MouseScrolledEvent(float x_offset, float y_offset) :
+            EVENT(MouseScrolled, EventCategoryMouse | EventCategoryInput),
+            x_offset(x_offset),
+            y_offset(y_offset)
+        {}
+        EVENT_STATIC_TYPE(MouseScrolled)
+
+        /** @return string representation of MouseScrolledEvent */
         std::string ToString() const override
         {
             std::stringstream ss;
-            ss << "MouseScrolledEvent(" << m_XOffset << ", " << m_YOffset << ")";
+            ss << "MouseScrolledEvent(" << x_offset << ", " << y_offset << ")";
             return ss.str();
         }
-
-        EVENT_CLASS_TYPE(MouseScrolled)
-        EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
     };
 
 }

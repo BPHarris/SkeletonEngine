@@ -13,71 +13,67 @@
 namespace SkeletonEngine
 {
 
-    /** SkeletonEngine KeyEvent base class. */
-    class SE_API KeyEvent : public Event
+    /** SkeletonEngine KeyEvent "interface". */
+    class SE_API KeyEvent
     {
     public:
-        int m_Keycode;
-
-    public:
-        EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
-
+        int keycode;
     protected:
-        KeyEvent(int keycode) : m_Keycode(keycode) {}
+        KeyEvent(int keycode) : keycode(keycode) {}
     };
 
+    
     /** SkeletonEngine KeyPressedEvent class. */
-    class SE_API KeyPressedEvent : public KeyEvent
+    class SE_API KeyPressedEvent : public Event, public KeyEvent
     {
     public:
-        int m_RepeatCount;
+        int repeat_count;
 
-    public:
         static const int JUST_PRESSED = 0;
         static const int REPEATED = 1;
 
-        KeyPressedEvent(int keycode, int repeatCount)
-            : KeyEvent(keycode), m_RepeatCount(repeatCount) {}
+        KeyPressedEvent(int keycode, int repeat_count) :
+            EVENT(KeyPressed, EventCategoryKeyboard | EventCategoryInput),
+            KeyEvent(keycode),
+            repeat_count(repeat_count)
+        {}
+        EVENT_STATIC_TYPE(KeyPressed)
 
-        /**
-         * Check if the key has just been pressed or if it is a repeated key.
-         * 
-         * @return  true if the key was just pressed.
-         * @return  false otherwise (key is a repeat).
-         */
-        inline bool IsJustPressed() const { return !m_RepeatCount; }
+        /** @return true if the key was just pressed, false otherwise. */
+        inline bool IsJustPressed() const { return !repeat_count; }
 
-        /** @return string  string representation of KeyPressedEvent */
+        /** @return string representation of KeyPressedEvent */
         std::string ToString() const override
         {
             std::stringstream ss;
 
             if (IsJustPressed())
-                ss << "KeyPressedEvent(" << m_Keycode << ", IsJustPressed)";
+                ss << "KeyPressedEvent(" << keycode << ", IsJustPressed)";
             else
-                ss << "KeyPressedEvent(" << m_Keycode << ", Repeats=" << m_RepeatCount << ")";
+                ss << "KeyPressedEvent(" << keycode << ", Repeats=" << repeat_count << ")";
 
             return ss.str();
         }
-
-        EVENT_CLASS_TYPE(KeyPressed)
     };
 
+
     /** SkeletonEngine KeyPressedEvent class. */
-    class SE_API KeyReleasedEvent : public KeyEvent
+    class SE_API KeyReleasedEvent : public Event, public KeyEvent
     {
     public:
-        KeyReleasedEvent(int keycode) : KeyEvent(keycode) {}
+        KeyReleasedEvent(int keycode) :
+            EVENT(KeyReleased, EventCategoryKeyboard | EventCategoryInput),
+            KeyEvent(keycode)
+        {}
+        EVENT_STATIC_TYPE(KeyReleased)
 
-        /** @return string  string representation of KeyReleasedEvent */
+        /** @return string representation of KeyReleasedEvent */
         std::string ToString() const override
         {
             std::stringstream ss;
-            ss << "KeyReleasedEvent(" << m_Keycode << ")";
+            ss << "KeyReleasedEvent(" << keycode << ")";
             return ss.str();
         }
-
-        EVENT_CLASS_TYPE(KeyReleased)
     };
 
 }

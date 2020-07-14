@@ -1,6 +1,6 @@
 /**
  * @file    ApplicationEvent.h
- * @brief   SkeletonEngine Application events.
+ * @brief   SkeletonEngine Application and Window events.
  * 
  * @author  Brandon Harris (bpharris@pm.me)
  * @date    July 2020
@@ -10,6 +10,7 @@
 
 #include "Event.h"
 
+
 namespace SkeletonEngine
 {
 
@@ -17,103 +18,99 @@ namespace SkeletonEngine
     class SE_API WindowClosedEvent : public Event
     {
     public:
-        WindowClosedEvent() {}
-
-        EVENT_CLASS_TYPE(WindowClosed)
-        EVENT_CLASS_CATEGORY(EventCategoryApplication)
+        WindowClosedEvent()
+            : EVENT(WindowClosed, EventCategoryApplication) {}
+        EVENT_STATIC_TYPE(WindowClosed)
     };
+
 
     /** SkeletonEngine WindowResizedEvent class. */
     class SE_API WindowResizedEvent : public Event
     {
     public:
-        unsigned int m_Width, m_Height;
+        unsigned int width, height;
 
-    public:
         WindowResizedEvent(unsigned int width, unsigned int height)
-            : m_Width(width), m_Height(height) {}
+            : EVENT(WindowResized, EventCategoryApplication), width(width), height(height) {}
+        EVENT_STATIC_TYPE(WindowResized)
 
-        /** @return std::string     string representation of WindowResizedEvent. */
+        /** @return string representation of WindowResizedEvent. */
         std::string ToString() const override
         {
             std::stringstream ss;
-            ss << "WindowResizedEvent(" << m_Width << ", " << m_Height << ")";
+            ss << "WindowResizedEvent(" << width << ", " << height << ")";
             return ss.str();
         }
-
-        EVENT_CLASS_TYPE(WindowResized)
-        EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
+
 
     /** SkeletonEngine WindowFocusedEvent class. */
     class SE_API WindowFocusedEvent : public Event
     {
     public:
-        WindowFocusedEvent() {}
-
-        EVENT_CLASS_TYPE(WindowFocused)
-        EVENT_CLASS_CATEGORY(EventCategoryApplication)
+        WindowFocusedEvent()
+            : EVENT(WindowFocused, EventCategoryApplication) {}
+        EVENT_STATIC_TYPE(WindowFocused)
     };
+
 
     /** SkeletonEngine WindowLostFocusEvent class. */
     class SE_API WindowLostFocusEvent : public Event
     {
     public:
-        WindowLostFocusEvent() {}
-
-        EVENT_CLASS_TYPE(WindowLostFocus)
-        EVENT_CLASS_CATEGORY(EventCategoryApplication)
+        WindowLostFocusEvent()
+            : EVENT(WindowLostFocus, EventCategoryApplication) {}
+        EVENT_STATIC_TYPE(WindowLostFocus)
     };
+
 
     /** SkeletonEngine WindowLostFocusEvent class. */
     class SE_API WindowMovedEvent : public Event
     {
-    private:
-        unsigned int m_X, m_Y;
-
     public:
-        WindowMovedEvent(unsigned int x, unsigned int y) : m_X(x), m_Y(y) {}
+        unsigned int x, y;
+
+        WindowMovedEvent(unsigned int x, unsigned int y)
+            : EVENT(WindowMoved, EventCategoryApplication), x(x), y(y) {}
+        EVENT_STATIC_TYPE(WindowMoved)
 
         /** @return string  string representation of WindowMovedEvent */
         std::string ToString() const override
         {
             std::stringstream ss;
-            ss << "WindowMovedEvent(" << m_X << ", " << m_Y << ")";
+            ss << "WindowMovedEvent(" << x << ", " << y << ")";
             return ss.str();
         }
-
-        EVENT_CLASS_TYPE(WindowMoved)
-        EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
+
 
     /** SkeletonEngine AppTickEvent class. */
     class SE_API AppTickEvent : public Event
     {
     public:
-        AppTickEvent() {}
-
-        EVENT_CLASS_TYPE(AppTick)
-        EVENT_CLASS_CATEGORY(EventCategoryApplication)
+        AppTickEvent()
+            : EVENT(AppTick, EventCategoryApplication) {}
+        EVENT_STATIC_TYPE(AppTick)
     };
+
 
     /** SkeletonEngine AppUpdateEvent class. */
     class SE_API AppUpdateEvent : public Event
     {
     public:
-        AppUpdateEvent() {}
-
-        EVENT_CLASS_TYPE(AppUpdate)
-        EVENT_CLASS_CATEGORY(EventCategoryApplication)
+        AppUpdateEvent()
+            : EVENT(AppUpdate, EventCategoryApplication) {}
+        EVENT_STATIC_TYPE(AppUpdate)
     };
+
 
     /** SkeletonEngine AppRenderEvent class. */
     class SE_API AppRenderEvent : public Event
     {
     public:
-        AppRenderEvent() {}
-
-        EVENT_CLASS_TYPE(AppRender)
-        EVENT_CLASS_CATEGORY(EventCategoryApplication)
+        AppRenderEvent()
+            : EVENT(AppRender, EventCategoryApplication) {}
+        EVENT_STATIC_TYPE(AppRender)
     };
 
 }

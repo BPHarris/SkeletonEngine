@@ -8,12 +8,31 @@
 
 #include <SkeletonEngine.h>
 
+
+class DebugLayer : public SkeletonEngine::Layer
+{
+public:
+    DebugLayer() : Layer("DebugLayer") {}
+
+    
+    ~DebugLayer() {}
+
+
+    void OnEvent(SkeletonEngine::Event &event) override
+    {
+        SE_TRACE("{0}", event);
+    }
+
+};
+
+
 /** The Demo application. */
 class Demo : public SkeletonEngine::Application
 {
 public:
     Demo()
     {
+        PushLayer(new DebugLayer());
         PushOverlay(new SkeletonEngine::ImGuiLayer());
     }
 
