@@ -1,5 +1,5 @@
 /**
- * @file    WindowsGlfwWindow.cpp
+ * @file    GlfwWindow.cpp
  * @brief   
  * 
  * @author  Brandon Harris (bpharris@pm.me)
@@ -7,7 +7,7 @@
  */
 
 #include "sepch.h"
-#include "WindowsGlfwWindow.h"
+#include "GlfwWindow.h"
 
 #include "SkeletonEngine/Events/ApplicationEvent.h"
 #include "SkeletonEngine/Events/KeyEvent.h"
@@ -20,17 +20,17 @@ namespace SkeletonEngine
 {
     Window* Window::Create(const WindowProperties& p)
     {
-        return new WindowsGlfwWindow(p);
+        return new GlfwWindow(p);
     }
 
 
-    WindowsGlfwWindow::WindowsGlfwWindow(const WindowProperties& p) { Init(p); }
-    WindowsGlfwWindow::~WindowsGlfwWindow() { Close(); }
+    GlfwWindow::GlfwWindow(const WindowProperties& p) { Init(p); }
+    GlfwWindow::~GlfwWindow() { Close(); }
     
 
-    void WindowsGlfwWindow::Init(const WindowProperties& p)
+    void GlfwWindow::Init(const WindowProperties& p)
     {
-        properties = WindowProperties(p.title, p.height, p.width);
+        properties = WindowProperties(p.title, p.width, p.height);
         SE_CORE_INFO("Created Window: {}", ToString());
 
         if (!g_GLFWInitialized)
@@ -50,40 +50,39 @@ namespace SkeletonEngine
         glfwSetWindowUserPointer(glfw_window, &properties);
 
         SetVSync(p.vsync);
-        SetVSync(!p.vsync);
         SetGlfwEventCallbacks();
     }
     
 
-    void WindowsGlfwWindow::OnUpdate()
+    void GlfwWindow::OnUpdate()
     {
         glfwPollEvents();
         glfwSwapBuffers(glfw_window);
     }
     
 
-    void WindowsGlfwWindow::Close()
+    void GlfwWindow::Close()
     {
         SE_CORE_INFO("Closed Window {0}", ToString());
         glfwDestroyWindow(glfw_window);
     }
     
 
-    void WindowsGlfwWindow::SetEventCallback(const EventCallbackType& callback)
+    void GlfwWindow::SetEventCallback(const EventCallbackType& callback)
     { 
         properties.EventCallback = callback;
     }
     
-    void WindowsGlfwWindow::SetVSync(bool enabled)
+    void GlfwWindow::SetVSync(bool enabled)
     {
         glfwSwapInterval((int)(properties.vsync = enabled));
     }
     
-    bool WindowsGlfwWindow::IsVSync() const { return properties.vsync; }
-    WindowProperties WindowsGlfwWindow::GetProperties() const { return properties; }
+    bool GlfwWindow::IsVSync() const { return properties.vsync; }
+    WindowProperties GlfwWindow::GetProperties() const { return properties; }
 
 
-    void WindowsGlfwWindow::SetGlfwEventCallbacks()
+    void GlfwWindow::SetGlfwEventCallbacks()
     {
         // I AM THE META PROGRAMMER HAHAHAHHAHAHAHAHAAHAHAH
         // TODO: Maybe make this tolerable code, eh?

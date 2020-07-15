@@ -61,7 +61,6 @@ namespace SkeletonEngine
         virtual void SetEventCallback(const EventCallbackType& callback) = 0;
         virtual void SetVSync(bool enabled) = 0;
         virtual bool IsVSync() const = 0;
-
         virtual WindowProperties GetProperties() const = 0;
 
         virtual std::string ToString() const { return "Window(" + GetProperties().ToString() + ")"; }

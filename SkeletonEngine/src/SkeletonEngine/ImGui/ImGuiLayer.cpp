@@ -14,6 +14,7 @@
 
 #include "SkeletonEngine/Application.h"
 
+// TODO: Remove relience on GLFW!
 #include "GLFW/glfw3.h"
 
 

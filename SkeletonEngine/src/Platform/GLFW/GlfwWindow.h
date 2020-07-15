@@ -1,5 +1,5 @@
 /**
- * @file    WindowsGlfwWindow.h
+ * @file    GlfwWindow.h
  * @brief   
  * 
  * @author  Brandon Harris (bpharris@pm.me)
@@ -24,14 +24,14 @@ namespace SkeletonEngine
     }
 
     
-    class WindowsGlfwWindow : public Window
+    class GlfwWindow : public Window
     {
     public:
         static const int VSYNC_ENABLED = 1;
         static const int VSYNC_DISABLED = 0;
 
-        WindowsGlfwWindow(const WindowProperties& window_properties);
-        virtual ~WindowsGlfwWindow();
+        GlfwWindow(const WindowProperties& window_properties);
+        virtual ~GlfwWindow();
 
         void OnUpdate() override;
         void Close() override;
@@ -43,7 +43,7 @@ namespace SkeletonEngine
 
         std::string ToString() const override
         { 
-            return "WindowsGlfwWindow(" + GetProperties().ToString() + ")";
+            return "GlfwWindow(" + GetProperties().ToString() + ")";
         }
 
     private:
