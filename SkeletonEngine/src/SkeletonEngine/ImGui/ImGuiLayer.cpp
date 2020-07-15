@@ -14,6 +14,7 @@
 
 #include "SkeletonEngine/Application.h"
 
+// TODO: Remove relience on GLFW!
 #include "GLFW/glfw3.h"
 
 
@@ -68,8 +69,9 @@ namespace SkeletonEngine
     {
         ImGuiIO& io = ImGui::GetIO();
 
-        Application& application = Application::Get();
-        io.DisplaySize = ImVec2(application.m_Window->GetWidth(), application.m_Window->GetHeight());
+        io.DisplaySize = ImVec2(
+            Application::Get().m_Window->GetProperties().width,
+            Application::Get().m_Window->GetProperties().height);
 
         float time = (float)glfwGetTime();
         io.DeltaTime = m_Time > 0.0f ? (time - m_Time) : (1.0f / 60.0f);
