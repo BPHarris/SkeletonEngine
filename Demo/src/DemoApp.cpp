@@ -42,7 +42,7 @@ public:
 };
 
 /** @return SkeletonEngine::Application*    The Application to run. */
-SkeletonEngine::Application *SkeletonEngine::CreateApplication()
+SkeletonEngine::Application* SkeletonEngine::CreateApplication()
 {
     return new Demo();
 }
