@@ -1,6 +1,6 @@
 /**
  * @file    Layer.cpp
- * @brief   SkeletonEngine Layer base class.
+ * @brief   SkeletonEngine Layer abstract base class.
  * 
  * @author  Brandon Harris (bpharris@pm.me)
  * @date    July 2020
@@ -11,10 +11,6 @@
 
 namespace SkeletonEngine
 {
-
-    Layer::Layer(const std::string &name)
-        : m_Name(name) {}
-
+    Layer::Layer(const std::string &name) : name(name) {}
     Layer::~Layer() {}
-
 }

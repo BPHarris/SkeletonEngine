@@ -1,6 +1,6 @@
 /**
  * @file    GlfwWindow.cpp
- * @brief   
+ * @brief   SkeletonEngine window for GLFW backend.
  * 
  * @author  Brandon Harris (bpharris@pm.me)
  * @date    July 2020
@@ -63,7 +63,7 @@ namespace SkeletonEngine
 
     void GlfwWindow::Close()
     {
-        SE_CORE_INFO("Closed Window {0}", ToString());
+        SE_CORE_INFO("Closed Window: {0}", ToString());
         glfwDestroyWindow(glfw_window);
     }
     

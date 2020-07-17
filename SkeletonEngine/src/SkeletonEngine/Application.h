@@ -24,7 +24,6 @@ namespace SkeletonEngine
     public:
         Window* window;
 
-    public:
         Application();
         virtual ~Application();
 

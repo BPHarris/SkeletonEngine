@@ -36,7 +36,7 @@ namespace SkeletonEngine
     {
         while (running)
         {
-            glClearColor(0.827, 0.329, 0.0, 1.0);
+            glClearColor(0.827f, 0.329f, 0.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
             for (auto layer : layer_stack)

@@ -1,6 +1,6 @@
 /**
  * @file    Layer.h
- * @brief   SkeletonEngine layer interface.
+ * @brief   SkeletonEngine layer abstract base class.
  * 
  * @author  Brandon Harris (bpharris@pm.me)
  * @date    July 2020
@@ -19,7 +19,7 @@ namespace SkeletonEngine
     {
     public:
         /** Layer name (for debug). */
-        std::string m_Name;
+        std::string name;
 
         Layer(const std::string &name = "Layer");
         virtual ~Layer();

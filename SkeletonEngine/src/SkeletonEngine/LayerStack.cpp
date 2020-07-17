@@ -14,42 +14,42 @@ namespace SkeletonEngine
 
     LayerStack::LayerStack()
     {
-        m_LayerInsert = m_Layers.begin();
+        layer_insert = layers.begin();
     }
 
     LayerStack::~LayerStack()
     {
-        for (auto layer : m_Layers)
+        for (auto layer : layers)
             delete layer;
     }
 
-    void LayerStack::PushLayer(Layer *layer)
+    void LayerStack::PushLayer(Layer* layer)
     {
-        m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer);
+        layer_insert = layers.emplace(layer_insert, layer);
     }
 
-    void LayerStack::PushOverlay(Layer *overlay)
+    void LayerStack::PushOverlay(Layer* overlay)
     {
-        m_Layers.emplace_back(overlay);
+        layers.emplace_back(overlay);
     }
 
-    void LayerStack::PopLayer(Layer *layer)
+    void LayerStack::PopLayer(Layer* layer)
     {
-        auto it = std::find(m_Layers.begin(), m_Layers.end(), layer);
+        auto it = std::find(layers.begin(), layers.end(), layer);
 
-        if (it != m_Layers.end())
+        if (it != layers.end())
         {
-            m_Layers.erase(it);
-            m_LayerInsert--;
+            layers.erase(it);
+            layer_insert--;
         }
     }
 
-    void LayerStack::PopOverlay(Layer *overlay)
+    void LayerStack::PopOverlay(Layer* overlay)
     {
-        auto it = std::find(m_Layers.begin(), m_Layers.end(), overlay);
+        auto it = std::find(layers.begin(), layers.end(), overlay);
 
-        if (it != m_Layers.end())
-            m_Layers.erase(it);
+        if (it != layers.end())
+            layers.erase(it);
     }
 
 }
