@@ -18,19 +18,11 @@
 
 namespace SkeletonEngine
 {
-
     /** SkeletonEngine Application class. */
     class SE_API Application
     {
-    private:
-        bool m_Running = true;
-
-        /** Application singleton referene. */
-        static Application* s_Instance;
-
     public:
-        LayerStack m_LayerStack;
-        std::unique_ptr<Window> m_Window;
+        Window* window;
 
     public:
         Application();
@@ -39,38 +31,35 @@ namespace SkeletonEngine
         /** Begin Application mainloop. */
         void Run();
 
-        /**
-		 * Dispatch the given Event e.
-		 * 
-		 * @param   e   The event to dispatch.
-		 */
-        void OnEvent(Event &e);
+        void OnEvent(Event& e);
 
-        /** Push the given layer to the layer stack. */
-        void PushLayer(Layer *layer);
+        void PushLayer(Layer* layer);
+        void PushOverlay(Layer* overlay);
 
-        /** Push the given overlay layer to the layer stack. */
-        void PushOverlay(Layer *overlay);
-
-        /** @return a reference to the application singleton. */
-        inline static Application& Get() { return *s_Instance; }
+        inline static Application& Get() { return *application_singleton; }
 
     private:
+        bool running = true;
+        LayerStack layer_stack;
+        static Application* application_singleton;
+
         /**
-		 * Handle a WindowClosedEvent.
-		 * 
-		 * @param   e   The WindowClosedEvent
-		 * @return      true if the event has been handled
-		 * @return      false otherwise
-		 */
-        bool OnWindowClose(WindowClosedEvent &e);
+         * Handle a WindowClosedEvent.
+         *
+         * @return true if the event has been handled, false otherwise
+         */
+        bool OnWindowClose(WindowClosedEvent& e);
     };
 
-    /**
-	 * To be defined in client application.
-	 * 
-	 * @return  Application*    A pointer to a Application instance.
-	 */
+    
+    /** To be defined in client application. */
     Application *CreateApplication();
+
+    
+    /** @return a pointer to the main application window. */
+    inline static Window* GetMainWindow()
+    {
+        return Application::Get().window;
+    }
 
 }

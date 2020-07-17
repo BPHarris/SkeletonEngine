@@ -19,42 +19,42 @@ namespace SkeletonEngine
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
-    Application* Application::s_Instance = nullptr;
+    Application* Application::application_singleton = nullptr;
 
     Application::Application()
     {
-        SE_CORE_ASSERT(s_Instance == nullptr, "Application already exists!");
-        s_Instance = this;
+        SE_CORE_ASSERT(application_singleton == nullptr, "Application already exists!");
+        application_singleton = this;
 
-        m_Window = std::unique_ptr<Window>(Window::Create());
-        m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+        window = Window::Create();
+        window ->SetEventCallback(BIND_EVENT_FN(OnEvent));
     }
 
-    Application::~Application() {}
+    Application::~Application() { delete window; }
 
     void Application::Run()
     {
-        while (m_Running)
+        while (running)
         {
             glClearColor(0.827, 0.329, 0.0, 1.0);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            for (auto layer : m_LayerStack)
+            for (auto layer : layer_stack)
                 layer->OnUpdate();
 
-            m_Window->OnUpdate();
+            window->OnUpdate();
         }
     }
 
     void Application::PushLayer(Layer *layer)
     {
-        m_LayerStack.PushLayer(layer);
+        layer_stack.PushLayer(layer);
         layer->OnAttach();
     }
 
     void Application::PushOverlay(Layer *overlay)
     {
-        m_LayerStack.PushOverlay(overlay);
+        layer_stack.PushOverlay(overlay);
         overlay->OnAttach();
     }
 
@@ -63,7 +63,7 @@ namespace SkeletonEngine
         EventDispatcher dispatcher(e);
         dispatcher.Dispatch<WindowClosedEvent>(BIND_EVENT_FN(OnWindowClose));
 
-        for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
+        for (auto it = layer_stack.end(); it != layer_stack.begin();)
         {
             (*--it)->OnEvent(e);
             if (e.is_handled)
@@ -73,7 +73,7 @@ namespace SkeletonEngine
 
     bool Application::OnWindowClose(WindowClosedEvent &e)
     {
-        m_Running = false;
+        running = false;
         return true;
     }
 }

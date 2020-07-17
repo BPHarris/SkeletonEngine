@@ -24,6 +24,7 @@ namespace SkeletonEngine
     }
 
     
+    /** SkeletonEngine window for GLFW backend. */
     class GlfwWindow : public Window
     {
     public:
