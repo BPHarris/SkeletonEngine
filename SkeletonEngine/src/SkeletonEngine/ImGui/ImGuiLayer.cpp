@@ -70,8 +70,8 @@ namespace SkeletonEngine
         ImGuiIO& io = ImGui::GetIO();
 
         io.DisplaySize = ImVec2(
-            Application::Get().m_Window->GetProperties().width,
-            Application::Get().m_Window->GetProperties().height);
+            Application::Get().m_Window->GetWidth(),
+            Application::Get().m_Window->GetHeight());
 
         float time = (float)glfwGetTime();
         io.DeltaTime = m_Time > 0.0f ? (time - m_Time) : (1.0f / 60.0f);

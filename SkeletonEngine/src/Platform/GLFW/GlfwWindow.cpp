@@ -67,19 +67,11 @@ namespace SkeletonEngine
         glfwDestroyWindow(glfw_window);
     }
     
-
-    void GlfwWindow::SetEventCallback(const EventCallbackType& callback)
-    { 
-        properties.EventCallback = callback;
-    }
     
     void GlfwWindow::SetVSync(bool enabled)
     {
         glfwSwapInterval((int)(properties.vsync = enabled));
     }
-    
-    bool GlfwWindow::IsVSync() const { return properties.vsync; }
-    WindowProperties GlfwWindow::GetProperties() const { return properties; }
 
 
     void GlfwWindow::SetGlfwEventCallbacks()

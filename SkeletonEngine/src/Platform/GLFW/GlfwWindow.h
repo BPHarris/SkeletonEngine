@@ -30,21 +30,15 @@ namespace SkeletonEngine
         static const int VSYNC_ENABLED = 1;
         static const int VSYNC_DISABLED = 0;
 
-        GlfwWindow(const WindowProperties& window_properties);
-        virtual ~GlfwWindow();
+        GlfwWindow(const WindowProperties& p);
+        ~GlfwWindow();
 
         void OnUpdate() override;
         void Close() override;
 
-        void SetEventCallback(const EventCallbackType& callback) override;
         void SetVSync(bool enabled) override;
-        bool IsVSync() const override;
-        WindowProperties GetProperties() const override;
 
-        std::string ToString() const override
-        { 
-            return "GlfwWindow(" + GetProperties().ToString() + ")";
-        }
+        std::string ToString() const override { return "Glfw" + Window::ToString(); }
 
     private:
         GLFWwindow* glfw_window;

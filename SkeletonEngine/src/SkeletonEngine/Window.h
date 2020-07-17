@@ -58,12 +58,20 @@ namespace SkeletonEngine
         virtual void OnUpdate() = 0;
         virtual void Close() = 0;
 
-        virtual void SetEventCallback(const EventCallbackType& callback) = 0;
-        virtual void SetVSync(bool enabled) = 0;
-        virtual bool IsVSync() const = 0;
-        virtual WindowProperties GetProperties() const = 0;
+        std::string  GetTitle()  const { return properties.title;  }
+        unsigned int GetWidth()  const { return properties.width;  }
+        unsigned int GetHeight() const { return properties.height; }
 
-        virtual std::string ToString() const { return "Window(" + GetProperties().ToString() + ")"; }
+        void SetEventCallback(const EventCallbackType& callback) { properties.EventCallback = callback; }
+        virtual void SetVSync(bool enabled) = 0;
+        bool IsVSync() const { return properties.vsync; };
+
+        // HACK: Only works when ((WindowProperties)properties)...
+        // Why?! properties is already of type WindowProperties
+        virtual std::string ToString() const
+        {
+            return "Window(" + ((WindowProperties)properties).ToString() + ")";
+        }
 
     protected:
         WindowProperties properties;
