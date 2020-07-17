@@ -4,6 +4,6 @@
 [submodule "SkeletonEngine/vendor/GLFW"]
 	path = SkeletonEngine/vendor/GLFW
 	url = https://github.com/BPHarris/glfw
-[submodule "SkeletonEngine\\vendor\\imgui"]
-	path = SkeletonEngine\\vendor\\imgui
+[submodule "SkeletonEngine/vendor/imgui"]
+	path = SkeletonEngine/vendor/imgui
 	url = https://github.com/bpharris/imgui
